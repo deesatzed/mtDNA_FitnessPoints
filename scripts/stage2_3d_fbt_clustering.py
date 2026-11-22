@@ -72,6 +72,8 @@ RNG_SEED = 20261122
 
 def build_chain_metadata(meta_data: dict, uniprot_to_mt_gene: dict[str, str]) -> dict[str, dict]:
     """Map PDB ID -> chain_id -> {gene_symbol, is_mtdna, uniprot_id, description}."""
+    u2hgnc_path = STRUCT_DIR / "uniprot_to_hgnc.json"
+    u2hgnc = json.loads(u2hgnc_path.read_text(encoding="utf-8")) if u2hgnc_path.exists() else {}
     out: dict[str, dict] = {}
     for entry in meta_data["data"]["entries"]:
         pid = entry["rcsb_id"]
@@ -90,7 +92,8 @@ def build_chain_metadata(meta_data: dict, uniprot_to_mt_gene: dict[str, str]) ->
                 if u in uniprot_to_mt_gene:
                     mt_gene = uniprot_to_mt_gene[u]
                     break
-            gene_label = mt_gene if mt_gene else (gnames[0] if gnames else desc[:24])
+            hgnc_sym = u2hgnc.get(uids[0]) if uids else None
+            gene_label = mt_gene if mt_gene else (hgnc_sym or (gnames[0] if gnames else desc[:24]))
             for ch in chains:
                 chain_map[ch] = {
                     "gene_symbol": gene_label,

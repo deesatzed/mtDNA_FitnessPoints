@@ -1,0 +1,38 @@
+{
+  "name": "finalist4_ATP6_I106V_human_rCRS",
+  "dialect": "alphafold3",
+  "version": 1,
+  "modelSeeds": [
+    20261122
+  ],
+  "sequences": [
+    {
+      "protein": {
+        "id": [
+          "A"
+        ],
+        "sequence": "MNENLFASFIAPTILGLPAAVLIILFPPLLIPTSKYLINNRLITTQQWLIKLTSKQMMTMHNTKGRTWSLMLVSLIIFIATTNLLGLLPHSFTPTTQLSMNLAMAVPLWAGTVIMGFRSKIKNALAHFLPQGTPTPLIPMLVIIETISLLIQPMALAVRLTANITAGHLLMHLIGSATLAMSTINLPSTLIIFTILILLTILEIAVALIQAYVFTLLVSLYLHDNT"
+      }
+    },
+    {
+      "ligand": {
+        "id": [
+          "L1"
+        ],
+        "ccdCodes": [
+          "ATP"
+        ]
+      }
+    },
+    {
+      "ligand": {
+        "id": [
+          "L2"
+        ],
+        "ccdCodes": [
+          "MG"
+        ]
+      }
+    }
+  ]
+}

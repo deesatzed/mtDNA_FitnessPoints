@@ -1,0 +1,5 @@
+gnomAD Database License & Policy Notification
+Timestamp: 2026-11-22T16:48:00-05:00
+Notice: User notified to review gnomAD policies and API terms at:
+- https://gnomad.broadinstitute.org/policies
+- https://gnomad.broadinstitute.org/data#api

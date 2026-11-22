@@ -1,0 +1,184 @@
+{
+  "alphafold_db_v6_buffers": [
+    {
+      "buffer_name": "Ciona_AOX",
+      "uniprot_id": "H2XKF9",
+      "role": "Ciona intestinalis Alternative Oxidase (Complex III/IV bypass)",
+      "sequence_length": 276,
+      "global_plddt": 63.88,
+      "frac_very_low_lt50": 0.464,
+      "frac_very_high_gt90": 0.42,
+      "pae_rigid_domain_summary": "132-276 (145 AA rigid catalytic core; 1-131 flexible MTS/N-tail)",
+      "cif_path": "data/afdb/H2XKF9/AF-H2XKF9-F1-model_v6.cif"
+    },
+    {
+      "buffer_name": "Yeast_NDI1",
+      "uniprot_id": "P32340",
+      "role": "S. cerevisiae Internal NADH Dehydrogenase (Complex I bypass)",
+      "sequence_length": 513,
+      "global_plddt": 90.31,
+      "frac_very_low_lt50": 0.082,
+      "frac_very_high_gt90": 0.813,
+      "pae_rigid_domain_summary": "46-513 (468 AA rigid FAD core; 1-45 MTS)",
+      "cif_path": "data/afdb/P32340/AF-P32340-F1-model_v6.cif"
+    },
+    {
+      "buffer_name": "Human_SOD2",
+      "uniprot_id": "P04179",
+      "role": "Human Mitochondrial Mn-Superoxide Dismutase (ROS sink)",
+      "sequence_length": 222,
+      "global_plddt": 93.19,
+      "frac_very_low_lt50": 0.05,
+      "frac_very_high_gt90": 0.883,
+      "pae_rigid_domain_summary": "24-222 (199 AA rigid core; 1-23 cleaved MTS)",
+      "cif_path": "data/afdb/P04179/AF-P04179-F1-model_v6.cif"
+    },
+    {
+      "buffer_name": "Human_UCP2",
+      "uniprot_id": "P55851",
+      "role": "Human Mitochondrial Uncoupling Protein 2 (proton-leak valve)",
+      "sequence_length": 309,
+      "global_plddt": 62.53,
+      "frac_very_low_lt50": 0.1,
+      "frac_very_high_gt90": 0.0,
+      "pae_rigid_domain_summary": "57-304 (248 AA dynamic transmembrane carrier)",
+      "cif_path": "data/afdb/P55851/AF-P55851-F1-model_v6.cif"
+    },
+    {
+      "buffer_name": "Human_PINK1",
+      "uniprot_id": "Q9BXM7",
+      "role": "Human PTEN-induced Kinase 1 (mitophagy sensor/effector)",
+      "sequence_length": 581,
+      "global_plddt": 77.25,
+      "frac_very_low_lt50": 0.193,
+      "frac_very_high_gt90": 0.52,
+      "pae_rigid_domain_summary": "268-544 (277 AA rigid kinase domain; 1-267 MTS/TM sensor)",
+      "cif_path": "data/afdb/Q9BXM7/AF-Q9BXM7-F1-model_v6.cif"
+    }
+  ],
+  "alphagenome_avi_promoter_scans": {
+    "NDUFA13": {
+      "gene": "NDUFA13",
+      "role": "Nuclear_OXPHOS_Partner",
+      "chromosome": "chr19",
+      "tss_hg38": 19516224,
+      "strand": "+",
+      "scanned_window": "chr19:19516204-19516244",
+      "snvs_above_phred10": 123,
+      "snvs_above_phred15": 38,
+      "max_avi_phred": 32.61,
+      "top_variant": "chr19:19516241:G>T",
+      "top_modality": "Start Lost",
+      "atlas_entity_url": "https://deepmind.google.com/science/alphagenome/atlas?q=NDUFA13&m=entity"
+    },
+    "UQCRFS1": {
+      "gene": "UQCRFS1",
+      "role": "Nuclear_OXPHOS_Partner",
+      "chromosome": "chr19",
+      "tss_hg38": 29213151,
+      "strand": "-",
+      "scanned_window": "chr19:29213131-29213171",
+      "snvs_above_phred10": 123,
+      "snvs_above_phred15": 39,
+      "max_avi_phred": 22.78,
+      "top_variant": "chr19:29213160:C>T",
+      "top_modality": "Cactus",
+      "atlas_entity_url": "https://deepmind.google.com/science/alphagenome/atlas?q=UQCRFS1&m=entity"
+    },
+    "ATP5MJ": {
+      "gene": "ATP5MJ",
+      "role": "Nuclear_OXPHOS_Partner",
+      "chromosome": "chr14",
+      "tss_hg38": 103921529,
+      "strand": "-",
+      "scanned_window": "chr14:103921509-103921549",
+      "snvs_above_phred10": 123,
+      "snvs_above_phred15": 49,
+      "max_avi_phred": 24.24,
+      "top_variant": "chr14:103921529:C>A",
+      "top_modality": "Cactus",
+      "atlas_entity_url": "https://deepmind.google.com/science/alphagenome/atlas?q=ATP5MJ&m=entity"
+    },
+    "SOD2": {
+      "gene": "SOD2",
+      "role": "Endogenous_Human_Buffer",
+      "chromosome": "chr6",
+      "tss_hg38": 159693241,
+      "strand": "-",
+      "scanned_window": "chr6:159693221-159693261",
+      "snvs_above_phred10": 123,
+      "snvs_above_phred15": 0,
+      "max_avi_phred": 11.54,
+      "top_variant": "chr6:159693241:T>G",
+      "top_modality": "PRO-cap",
+      "atlas_entity_url": "https://deepmind.google.com/science/alphagenome/atlas?q=SOD2&m=entity"
+    },
+    "UCP2": {
+      "gene": "UCP2",
+      "role": "Endogenous_Human_Buffer",
+      "chromosome": "chr11",
+      "tss_hg38": 73982843,
+      "strand": "-",
+      "scanned_window": "chr11:73982823-73982863",
+      "snvs_above_phred10": 123,
+      "snvs_above_phred15": 6,
+      "max_avi_phred": 19.53,
+      "top_variant": "chr11:73982830:C>G",
+      "top_modality": "PRO-cap",
+      "atlas_entity_url": "https://deepmind.google.com/science/alphagenome/atlas?q=UCP2&m=entity"
+    }
+  },
+  "db_transferability_rows_updated_with_alphagenome": 18,
+  "cofolding_manifests_exported": [
+    {
+      "slug": "finalist1_ND4L_A11T",
+      "mutation": "ND4L A11T (m.10500G>A)",
+      "editor": "DdCBE_DddA11_HC (0 bystanders)",
+      "af3_json": "data/cofolding_manifests/finalist1_ND4L_A11T_af3.json",
+      "boltz2_yaml": "data/cofolding_manifests/finalist1_ND4L_A11T_boltz2.yaml",
+      "ligands": []
+    },
+    {
+      "slug": "finalist2_COX3_W116R",
+      "mutation": "COX3 W116R (m.9552T>C)",
+      "editor": "TALED_AT_GC (0 bystanders)",
+      "af3_json": "data/cofolding_manifests/finalist2_COX3_W116R_af3.json",
+      "boltz2_yaml": "data/cofolding_manifests/finalist2_COX3_W116R_boltz2.yaml",
+      "ligands": [
+        "HEA"
+      ]
+    },
+    {
+      "slug": "finalist3_COX3_I165T",
+      "mutation": "COX3 I165T (m.9700T>C)",
+      "editor": "TALED_AT_GC (1 bystander)",
+      "af3_json": "data/cofolding_manifests/finalist3_COX3_I165T_af3.json",
+      "boltz2_yaml": "data/cofolding_manifests/finalist3_COX3_I165T_boltz2.yaml",
+      "ligands": [
+        "HEA"
+      ]
+    },
+    {
+      "slug": "finalist4_ATP6_I106V",
+      "mutation": "ATP6 I106V (m.8842A>G)",
+      "editor": "TALED_AT_GC (0 bystanders)",
+      "af3_json": "data/cofolding_manifests/finalist4_ATP6_I106V_af3.json",
+      "boltz2_yaml": "data/cofolding_manifests/finalist4_ATP6_I106V_boltz2.yaml",
+      "ligands": [
+        "ATP",
+        "MG"
+      ]
+    },
+    {
+      "slug": "finalist5_CYTB_M53T",
+      "mutation": "CYTB M53T (m.14904T>C)",
+      "editor": "TALED_AT_GC (0 bystanders)",
+      "af3_json": "data/cofolding_manifests/finalist5_CYTB_M53T_af3.json",
+      "boltz2_yaml": "data/cofolding_manifests/finalist5_CYTB_M53T_boltz2.yaml",
+      "ligands": [
+        "HEM",
+        "U10"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+ClinVar Database License & Policy Notification
+Timestamp: 2026-11-22T16:48:00-05:00
+Notice: User notified to review NCBI ClinVar terms at:
+- https://www.ncbi.nlm.nih.gov/clinvar/

@@ -131,6 +131,20 @@ Every phase ends with a human review checkpoint before advancing:
   1. **Statistically Significant Mitonuclear Interface Enrichment (`OR = 1.45, Fisher p = 0.044`):** `39.7%` (`52/131`) of extreme-adaptation candidates contact a human nuclear partner subunit within `4.5 Å` vs. `31.5%` background across the human OXPHOS proteome—quantitatively proving why mitonuclear compatibility (Stage 3) is the decisive engineering bottleneck.
   2. **4 Distinct FBT Structural-Physicochemical Payoff Equivalence Classes** (`CONSERVATIVE_TRANSMEMBRANE_DIAL` n=52, `HYDROPHOBIC_BULK_INTERFACE_SEAL` n=37, `POLARITY_GAIN_CHANNEL_REMODELING` n=34, `ELECTROSTATIC_CHARGE_REMODELING` n=8) populated into `fitness_payoff_profiles` (`256/256` rows) + rendered in `figures/stage2_3d_fbt_equivalence_clusters.png`. Also transparently decomposed 3D cross-hypoxia proximity (`9.71 Å` vs `12.26 Å`, `p = 0.007` in Complex I driven by 14 shared exact sites vs `15.25 Å` for strictly non-overlapping sites).
 
+### Stage 3 — **COMPLETE & VERIFIED (2026-11-22)**
+* **Live Safety Ground Truth (`stage3a_fetch_safety.py`):** Fetched `18,164` live human `gnomAD v3 chrM` variants + `513` ClinVar Pathogenic/LP + `1,891` ClinVar Benign/LB summaries; translated all true pathogenic single-nt rCRS records via NCBI Table 2.
+* **5/5 Answer-Key Controls PASSED (`stage3_structural_safety_editor_gate.py`, `tests/test_stage3.py`):**
+  * Tier 1: `ND1 Y30H` (`m.3394T>C`) $\rightarrow$ `Safe_Natural_Poly` (`gnomAD hom = 0.00911`); `ND1 A52T` (`m.3460G>A`) & `ATP6 L156R` (`m.8993T>G`) $\rightarrow$ `Contraindicated_Pathogenic`.
+  * Tier 2 Frozen Out-of-Sample: `ND4 R340H` (`m.11778G>A`) & minus-strand `ND6 M64V` (`m.14484T>C`) $\rightarrow$ `Contraindicated_Pathogenic`.
+* **Actionable Engineering Funnel (131 3D-mapped candidates):**
+  * `59.5%` (`78/131`) require transversions (`Not_Base_Editable_Transversion`); `42` pass as **`Motif_Grafting_BaseEdit`** (`12` with **0 nonsynonymous bystanders** in `±4 nt` window), including canonical **Bar-headed goose `COX3 W116R` (`m.9552T>C`, `TALED`, 0 bystanders)**, **Bird+Mammal `ND4L A11T` (`m.10500G>A`, `DddA11`, 0 bystanders)**, **3-way cross-hypoxia `ATP6 I106V` (`m.8842A>G`, `TALED`, 0 bystanders, `gnomAD 0.0023`)**, **Snow leopard + NMR `COX3 I165T` (`m.9700T>C`, `TALED`, `Safe_Natural_Poly`)**, and **`CYTB M53T` (`m.14904T>C`, `TALED`, 0 bystanders, contacts nuclear `UQCRFS1`)**.
+  * Automatically caught **Naked mole-rat `ND6 A74S`** as `Epistatic_Rescue_Required` (hits a confirmed human ClinVar pathogenic hotspot at `ND6` pos 74!).
+* **AlphaFold DB v6 & Live AlphaGenome AVI Integration (`stage3c_bioai_cofolding_export.py`):**
+  * Audited all 5 Stage-4 buffers (`H2XKF9` *Ciona* `AOX` rigid core `132–276` vs disordered N-tail `1–131`; `P32340` yeast `NDI1` pLDDT `90.31`; `P04179` human `SOD2` pLDDT `93.19`; `P55851` `UCP2` pLDDT `62.53`; `Q9BXM7` `PINK1` rigid kinase `268–544`).
+  * Ran live AlphaGenome `AVI` promoter saturation scans (`123` SNVs/gene) on contacting nuclear partners (`NDUFA13` max Phred `32.61`, `UQCRFS1` `22.78`, `ATP5MJ` `24.24`) and endogenous buffers (`UCP2` `19.53`, `SOD2` `11.54`); updated `18` SQLite rows + exported 5 ready-to-run **AlphaFold 3 JSON & Boltz-2 YAML** co-folding manifests (`data/cofolding_manifests/`).
+  * Loaded & annotated Human Complex IV (`9I6F`) in the interactive 3D Biomolecular Structure Viewer.
+
+
 
 
 

@@ -1,0 +1,28 @@
+{
+  "name": "finalist3_COX3_I165T_human_rCRS",
+  "dialect": "alphafold3",
+  "version": 1,
+  "modelSeeds": [
+    20261122
+  ],
+  "sequences": [
+    {
+      "protein": {
+        "id": [
+          "A"
+        ],
+        "sequence": "MTHQSHAYHMVKPSPWPLTGALSALLMTSGLAMWFHFHSMTLLMLGLLTNTLTMYQWWRDVTRESTYQGHHTPPVQKGLRYGMILFITSEVFFFAGFFWAFYHSSLAPTPQLGGHWPPTGITPLNPLEVPLLNTSVLLASGVSITWAHHSLMENNRNQMIQALLTTILLGLYFTLLQASEYFESPFTISDGIYGSTFFVATGFHGLHVIIGSTFLTICFIRQLMFHFTSKHHFGFEAAAWYWHFVDVVWLFLYVSIYWWGS"
+      }
+    },
+    {
+      "ligand": {
+        "id": [
+          "L1"
+        ],
+        "ccdCodes": [
+          "HEA"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "finalist5_CYTB_M53T_human_rCRS",
+  "dialect": "alphafold3",
+  "version": 1,
+  "modelSeeds": [
+    20261122
+  ],
+  "sequences": [
+    {
+      "protein": {
+        "id": [
+          "A"
+        ],
+        "sequence": "MTPMRKTNPLMKLINHSFIDLPTPSNISAWWNFGSLLGACLILQITTGLFLATHYSPDASTAFSSIAHITRDVNYGWIIRYLHANGASMFFICLFLHIGRGLYYGSFLYSETWNIGIILLLATMATAFMGYVLPWGQMSFWGATVITNLLSAIPYIGTDLVQWIWGGYSVDSPTLTRFFTFHFILPFIIAALATLHLLFLHETGSNNPLGITSHSDKITFHPYYTIKDALGLLLFLLSLMTLTLFSPDLLGDPDNYTLANPLNTPPHIKPEWYFLFAYTILRSVPNKLGGVLALLLSILILAMIPILHMSKQQSMMFRPLSQSLYWLLAADLLILTWIGGQPVSYPFTIIGQVASVLYFTTILILMPTISLIENKMLKWA"
+      }
+    },
+    {
+      "ligand": {
+        "id": [
+          "L1"
+        ],
+        "ccdCodes": [
+          "HEM"
+        ]
+      }
+    },
+    {
+      "ligand": {
+        "id": [
+          "L2"
+        ],
+        "ccdCodes": [
+          "U10"
+        ]
+      }
+    }
+  ]
+}
