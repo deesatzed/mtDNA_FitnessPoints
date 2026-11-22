@@ -144,6 +144,19 @@ Every phase ends with a human review checkpoint before advancing:
   * Ran live AlphaGenome `AVI` promoter saturation scans (`123` SNVs/gene) on contacting nuclear partners (`NDUFA13` max Phred `32.61`, `UQCRFS1` `22.78`, `ATP5MJ` `24.24`) and endogenous buffers (`UCP2` `19.53`, `SOD2` `11.54`); updated `18` SQLite rows + exported 5 ready-to-run **AlphaFold 3 JSON & Boltz-2 YAML** co-folding manifests (`data/cofolding_manifests/`).
   * Loaded & annotated Human Complex IV (`9I6F`) in the interactive 3D Biomolecular Structure Viewer.
 
+### Stage 4 — **COMPLETE & VERIFIED (2026-11-22)**
+* **Biophysical ODE + Energy Resistance Principle ($\mathrm{EP} = \dot{e}_R \cdot f^2$) Engine (`scripts/stage4_epistasis_synergy_uq.py`, `tests/test_stage4.py` 100% PASS):**
+  * Modeled acute 60-min ischemia-reperfusion (`pO2: 0.24 kPa -> 14.0 kPa`) across a 4-state ODE (`[W, Q_red, Succ, ATP]`) for Human WT `rCRS`, 5 Stage-3 Finalist Drivers (`COX3_W116R`, `ND4L_A11T`, `COX3_I165T`, `ATP6_I106V`, `CYTB_M53T`), 5 AFDB-audited Nuclear Buffers (`Yeast_NDI1`, `Human_SOD2`, `Ciona_AOX`, `Human_UCP2`, `Human_PINK1`), and all 25 Driver $\times$ Buffer combinations.
+  * **Solver Convergence:** `RK4 (dt=0.25 min)` vs adaptive `DOP853` and stiff `Radau` (`rtol=1e-10`) converged to `max |Delta| = 1.029e-07` (`W_end = 0.9290026` vs `0.9290027`).
+  * **Quantitative Trade-Off Proof ("No Free Lunch"):** Unbuffered **`COX3 W116R` (`m.9552T>C`)** rescues the ischemic ATP nadir (`0.099 -> 0.802`), **at the cost of** amplifying the reperfusion EP/RET-ROS cliff (`1.155 -> 1.486`, holding standalone viability to `0.1142`), while nuclear buffers alone clamp EP (`0.755–1.152`) yet fail ischemic ATP (`0.074–0.098`, viability `0.0015–0.0023`).
+  * **`N = 10,000` Latin Hypercube UQ (`+/-30%` priors across 8 parameters) Positive Epistasis:**
+    1. **`COX3_W116R` + `Yeast_NDI1` (`P32340`):** Median I/R viability **`0.4112`** (`[0.0005, 0.9653]`), Synergy **`S = 1.322x`**, Epistatic excess **`E_add = +0.1187`** (**`93.5%` LHS draws positive**), EP peak clamped `1.486 -> 1.044`, survival-cliff expansion **`+3.5 kPa`**.
+    2. **`COX3_W116R` + `Human_SOD2` (`P04179`):** Viability **`0.3703`**, **`S = 1.385x`**, **`E_add = +0.1149`** (**`95.1%` LHS positive**), cliff expansion `+2.3 kPa`.
+    3. **`COX3_W116R` + `Ciona_AOX` (`H2XKF9`):** Viability **`0.3095`**, **`S = 1.237x`**, **`E_add = +0.0849`** (**`92.5%` LHS positive**), EP peak `1.486 -> 1.198`, widest steady-state cliff expansion (**`+4.8 kPa`**).
+    4. **`COX3_W116R` + `Human_UCP2` (`P55851`):** Viability **`0.2888`**, **`S = 1.104x`**, **`E_add = +0.0529`**, lowest EP peak (**`0.859`**), cliff expansion `+4.6 kPa`.
+  * **`10,240`-Eval Saltelli–Sobol GSA:** Variance in synergy is governed by cellular flux demand `f_load` (`S_T = 0.5794`), base-edit heteroplasmy/effect size `drv_scale` (`0.4599`), O2 affinity `Km_O2_wt` (`0.2061`), and redox threshold `theta_GSH` (`0.1713`), defining exact quantitative benchtop targets for a prospective 4-arm human cybrid falsification protocol.
+  * Populated SQLite `epistatic_synergies` (`25/25` pairs) + cliff envelopes in `fitness_payoff_profiles`, wrote `data/stage4_epistasis_summary.json`, `data/stage4_report.md`, and `figures/stage4_epistasis_synergy_and_cliffs.png`.
+
 
 
 
