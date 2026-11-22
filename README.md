@@ -17,6 +17,7 @@ All 13 human mtDNA protein-coding genes (`NC_012920.1`, rCRS, `16,569 bp`) are e
 | **Stage 2: 3D Cryo-EM & FBT Clustering** | `scripts/stage2_3d_fbt_clustering.py` | 4 experimental human cryo-EM OXPHOS holocomplexes from RCSB PDB: **`9I4I`** (CI, 2.63 Å), **`9HZL`** (CIII, 2.52 Å), **`9I6F`** (CIV, 2.95 Å), **`8H9S`** (CV, 2.53 Å) + 85/85 UniProt→HGNC map | **131/131 (100%)** candidates mapped to 3D atomic coordinates; statistically significant **Mitonuclear Interface Enrichment (`39.7%` vs `31.5%`, `OR = 1.45, Fisher p = 0.044`)**; 4 FBT Payoff Equivalence Classes (`256/256` rows in `fitness_payoff_profiles`) |
 | **Stage 3: Safety, Base-Editor & Bio-AI Gate** | `scripts/stage3a_fetch_safety.py`, `scripts/stage3_structural_safety_editor_gate.py`, `scripts/stage3c_bioai_cofolding_export.py` | Live **`18,164` gnomAD v3 chrM** variants + **`513` ClinVar Pathogenic/LP** + **AlphaFold DB v6** (`pLDDT`/`PAE`) + live **AlphaGenome `AVI`** promoter scans (`123` SNVs/gene) | **5/5 answer-key controls passed** (Tier-1 + Frozen Tier-2 incl. minus-strand `ND6 M64V`); caught NMR `ND6 A74S` pathogenic hotspot; isolated **42** base-editable candidates (**12** with 0 bystanders, led by `TALED`-editable **`COX3 W116R` `m.9552T>C`**); exported 5 **AF3 JSON & Boltz-2 YAML** manifests |
 | **Stage 4: Epistasis ODE, UQ & GSA** | `scripts/stage4_epistasis_synergy_uq.py` | 4-state I/R ODE (`[W, Q_red, Succ, ATP]`) coupled to $\mathrm{EP} = \dot{e}_R \cdot f^2$; `N = 10,000` LHS (`±30%` priors); `10,240`-eval Saltelli-Sobol GSA | `RK4` vs `DOP853`/`Radau` converged (`max |Delta| = 1.029e-07`); proved non-monotonic ATP vs. RET-ROS trade-off and strong positive epistasis (**`COX3 W116R + Yeast NDI1`**, `S = 1.322x`, `E_add = +0.1187`, `93.5%` LHS positive; **`+ Human SOD2`**, `95.1%`; **`+ Ciona AOX`**, `+4.8 kPa` cliff expansion) |
+| **Stage 5: Hardening, 6 Proofs & Explorer** | `scripts/stage5_hardening_and_proofs.py`, `scripts/build_interactive_explorer.py` | Full-proteome ClinVar/gnomAD (`42` Path vs `935` Benign), 3D Dunbrack rotamer scans, ±2..±6 nt windows, 4 alt ODE forms + adversarial controls | Adjusted mitonuclear interface **`OR = 1.519` (`p = 0.027`)** vs non-sig Control Null; blind Tier-1→Tier-2 ClinVar **`AUROC = 0.888`**; 5/5 finalists clash-free in cryo-EM (`COX3 W116R` `3.21 Å`, `0` bystanders to `±6 nt`); `100%` supermodularity & `>=85–95%` clonal heteroplasmy threshold; standalone offline explorer (`app/mitofitness_explorer.html`) |
 
 ---
 
@@ -24,14 +25,17 @@ All 13 human mtDNA protein-coding genes (`NC_012920.1`, rCRS, `16,569 bp`) are e
 
 - **Design Decisions & Audit Trail:** `DESIGN_LOG.md`
 - **Database Schema & SQLite Catalog:** `schema/mitofitness_schema.sql`, `data/mitofitness.db`
+- **Interactive Offline Explorer:** `app/mitofitness_explorer.html` *(open directly in any browser — zero server needed)*
 - **Stage Reports:**
   - `data/stage1_report.md` (`data/stage1_convergent_summary.json`)
   - `data/stage2_report.md` (`data/stage2_3d_fbt_summary.json`)
   - `data/stage3_report.md` (`data/stage3_shortlist.json`)
   - `data/stage4_report.md` (`data/stage4_epistasis_summary.json`)
+  - `data/stage5_hardening_report.md` (`data/stage5_hardening_proofs.json`)
 - **Publication Figures:**
   - `figures/stage2_3d_fbt_equivalence_clusters.png`
   - `figures/stage4_epistasis_synergy_and_cliffs.png`
+  - `figures/stage5_hardening_and_proofs.png`
 - **Co-Folding Manifests (AF3 JSON & Boltz-2 YAML):** `data/cofolding_manifests/`
 - **Third-Party Data Attribution Licenses:** `.licenses/`
 
