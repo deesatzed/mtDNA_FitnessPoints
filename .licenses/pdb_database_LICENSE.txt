@@ -1,0 +1,4 @@
+RCSB PDB Database License & Usage Policy Notification
+Timestamp: 2026-11-22T16:32:45-05:00
+Notice: User notified to review RCSB PDB terms and usage policy at:
+- https://www.rcsb.org/pages/usage-policy
