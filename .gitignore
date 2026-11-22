@@ -1,3 +1,7 @@
+# Secrets & environment variables (NEVER commit!)
+.env
+.env.*
+
 # Python / uv
 .venv/
 __pycache__/

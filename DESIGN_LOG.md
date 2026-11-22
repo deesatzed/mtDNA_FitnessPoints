@@ -77,3 +77,49 @@
 * **Biophysical Model:** Couple the *MitoRestorer* Energy Resistance Principle ($\mathrm{EP} = \dot{e}_R \cdot f^2$) with an OXPHOS electron-flux / proton-leak / RET-ROS thermodynamic model conditioned on human physiological world states $W$ (e.g., acute ischemia-reperfusion $p\mathrm{O}_2$ drop & re-oxygenation surge, thermal/acidic stress, high-flux bioenergetic load).
 * **Synergy Discovery:** Evaluate Stage-3-passing mtDNA **drivers** paired against canonical nuclear **compensatory buffers** (*Ciona* `AOX`, yeast `NDI1`, `SOD2`, `UCP2`, `PINK1`/mitophagy), quantifying **positive epistasis ($S > 1$)** and expanded survival-cliff margins with `N = 10,000` Latin Hypercube Sampling (`LHS`) and Saltelli–Sobol global sensitivity analysis (matching *MitoRestorer* Paper III rigor).
 
+---
+
+## AlphaFold2 (`AFDB v6`) & AlphaGenome Integration Plan (Added 2026-11-22)
+
+* **AlphaGenome (`AVI` + Regulatory / Tissue Expression API, `ALPHAGENOME_API_KEY` configured in `.env`):**
+  * *Boundary:* Strictly applies to **nuclear chromosomes (`chr1–22, X, Y`)**, not circular `chrM`. Research-use molecular/functional framing only.
+  * *Stage 3 (Mitonuclear Partner Audit):* Query tissue-specific expression (heart, brain, skeletal muscle), isoform switches (`COX4I1` vs. hypoxia-inducible `COX4I2`), and `AVI` regulatory variant vulnerability for the exact nuclear OXPHOS subunits contacting candidate mtDNA sites ($\le 4.5\text{ \AA}$).
+  * *Stage 4 (Endogenous Buffer Regulatory Mapping):* Run promoter/enhancer saturation mutagenesis (`region` scan) on human endogenous nuclear buffers (`SOD2`, `UCP2`, `PINK1`, `PPARGC1A`, `NFE2L2`) plus clickable AlphaGenome Atlas deep-links.
+* **AlphaFold2 (`AlphaFold DB v6` — `pLDDT` + `PAE`) & AF3 / Boltz-2 Export:**
+  * *Stage 3/4 (Allotopic & Nuclear Buffer Structural Audit):* Fetch AFDB v6 models + `pLDDT`/`PAE` rigid-domain boundaries for *Ciona* `AOX` (no experimental PDB structure), yeast `NDI1`, and human `UCP2`, `SOD2`, `PINK1`.
+  * *Stage 3 (Disorder Guardrail):* Cross-check unresolved/low-resolution cryo-EM loops on human OXPHOS partners against AFDB v6 `pLDDT` (`< 50` = intrinsically disordered) to prevent false-positive steric clash calls.
+  * *End of Stage 3 (Co-Folding Manifests):* Auto-export validated **AlphaFold 3 JSON / Boltz-2 YAML** co-folding specs for the top 3–5 Safe, Compatible, Base-Editable finalists (mutant human mtDNA chain + contacting nuclear partners + cofactors).
+
+---
+
+## Phase-by-Phase Checkpoint & Sanity-Check Contract
+
+Every phase ends with a human review checkpoint before advancing:
+* **Phase 0:** Local `uv` `.venv` + SQLite/Postgres-compatible DB + verified human `rCRS` (`NC_012920.1`) 13-gene translation (Pass = 13/13 exact UniProt AA length match under NCBI Table 2).
+* **Stage 1:** Paired extreme-vs-control vertebrate mitogenomes (NCBI RefSeq), Tier 1 (6 calibration genes) $\rightarrow$ Tier 2 (all 13 genes frozen). Pass = recovers known benchmarks cleanly above naive frequency; auto-filters noisy columns.
+* **Stage 2:** Observable physicochemical + structural clustering (`HDBSCAN`/PCA). Pass = permutation-tested cross-stressor enrichment (reported honestly whether significant or null).
+* **Stage 3:** Live human cryo-EM holocomplexes + `AFDB v6` disorder/buffer audit + `ClinVar`/`gnomAD`/`MITOMAP` safety + `DdCBE`/`TALED` codon editability + `AlphaGenome` nuclear partner audit. Pass = Tier 1 catches `ND1`/`ATP6` pathogenic controls & passes adaptive controls; Tier 2 frozen catches `ND4 m.11778G>A` LHON out-of-sample.
+* **Stage 4:** Coupled Energy Resistance + OXPHOS redox/RET model with `N=10,000` `LHS` & Sobol GSA + `AlphaGenome` endogenous buffer regulatory scan + quantitative *in vitro* human cybrid falsification criteria.
+
+---
+
+## Execution Progress
+
+### Phase 0 — **COMPLETE & VERIFIED (2026-11-22)**
+* Isolated `uv` environment built (`.venv`, Python 3.13, `biopython`, `numpy`, `scipy`, `pandas`, `scikit-learn`, `matplotlib`, `requests`).
+* `.env` protected in `.gitignore`; confirmed `ALPHAGENOME_API_KEY` is present.
+* Created PostgreSQL-compatible 8-table schema (`schema/mitofitness_schema.sql`) and initialized `data/mitofitness.db`.
+* Fetched live Human `rCRS` (`NC_012920.1`, `16,569 bp`) and all 13 RefSeq proteins (`YP_003024026.1`–`YP_003024038.1`) via `ncbi-sequence-fetch`.
+* Automated test suite (`tests/test_phase0.py`) passed 100%: 13/13 genes match canonical UniProt lengths under NCBI Table 2 (including `ATA`/`ATT` start codons and `-` strand `ND6`), and all 5 landmark rCRS coordinate tests (`m.3394T>C -> ND1 Y30H`, `m.3460G>A -> ND1 A52T`, `m.8993T>G -> ATP6 L156R`, `m.11778G>A -> ND4 R340H`, `m.14484T>C -> ND6 M64V`) verified with zero offset errors.
+
+### Stage 1 — **COMPLETE & VERIFIED (2026-11-22)**
+* Fetched **44/44 complete wild vertebrate NCBI RefSeq mitogenomes** (`13/13` proteins each = `572` wild proteins + `13` human `rCRS` = `585` total) across **23 matched Extreme-vs-Control sister pairs** (`scripts/species_panel.py`, `scripts/stage1_fetch_mitogenomes.py`).
+* **Major Methodological Catch & Upgrade (`stage1_convergent_mining.py` v2):**
+  * Caught two classic convergent-evolution confounders during Stage 1 audit: (a) symmetric neutral `I<->V` homoplasy at high-entropy sites, and (b) uniform/entropy-only permutation inflation (`1.34x–1.69x` for Extreme radical shifts vs. `1.39x–1.99x` for matched Control radical shifts!).
+  * Proved honestly that genome-wide sequence overlap alone cannot distinguish adaptive cross-stressor convergence from 3D structural permissiveness—confirming why **3D cryo-EM structural mapping + FBT payoff clustering** (Stages 2–3) is essential.
+  * Implemented vertebrate consensus polarization (`k_ext_derived` vs `k_ctl_derived`) separating **65 Class I Conserved-Site Radical Rule-Breakers** (`41` Tier-1, `24` Tier-2 Frozen; automatically recovering canonical **Bar-headed goose `COX3 W116R`**, 97.8% invariant, Grantham `101.29`) and **70 Class II Directionally Biased Convergent Dials** (`32` Tier-1, `38` Tier-2 Frozen; `k_ext >= 2`, `net_bias >= +2`).
+  * Populated `256` allele-pair rows in `mt_alleles`; `tests/test_stage1.py` passed 100%.
+
+
+
+

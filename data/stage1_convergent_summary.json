@@ -1,0 +1,5588 @@
+{
+  "panel_species_loaded": 44,
+  "active_sister_pairs": 23,
+  "qc_passed_columns": 3774,
+  "branch_polarity_audit": {
+    "naive_extreme_vs_human_diff_events": 22627,
+    "total_extreme_derived_from_consensus": 2795,
+    "total_control_derived_from_consensus": 2431,
+    "ext_to_ctl_ratio_all": 1.15,
+    "conserved_radical_extreme_derived": 78,
+    "conserved_radical_control_derived": 84,
+    "ext_to_ctl_ratio_conserved_radical": 0.929
+  },
+  "discovery_counts": {
+    "class1_rulebreakers_total": 65,
+    "class1_tier1": 41,
+    "class1_tier2_frozen": 24,
+    "class2_directional_convergent_total": 70,
+    "class2_tier1": 32,
+    "class2_tier2_frozen": 38,
+    "db_mt_alleles_rows": 256
+  },
+  "benchmarks_recovered": [
+    {
+      "benchmark": "Bar-headed goose COX3 W116R (Scott et al. 2011 PNAS)",
+      "gene": "COX3",
+      "human_rcrs_aa_pos": 116,
+      "human_ref_aa": "W",
+      "consensus_aa": "W",
+      "consensus_frac": 0.978,
+      "shift": "W->R",
+      "grantham": 101.29,
+      "entropy": 0.154
+    }
+  ],
+  "rate_controlled_fbt_permutation_tests": {
+    "Derived_All_Altitude_vs_DivingSubterranean": {
+      "n_axis_a": 594,
+      "n_axis_b": 917,
+      "obs_overlap": 282,
+      "expected_rate_controlled": 283.36,
+      "fold_enrichment": 0.995,
+      "p_value_rate_controlled": 0.58084
+    },
+    "Derived_Radical50_Altitude_vs_DivingSubterranean": {
+      "n_axis_a": 321,
+      "n_axis_b": 486,
+      "obs_overlap": 123,
+      "expected_rate_controlled": 92.07,
+      "fold_enrichment": 1.336,
+      "p_value_rate_controlled": 0.0001
+    },
+    "Derived_Radical50_Altitude_vs_ArcticCold": {
+      "n_axis_a": 321,
+      "n_axis_b": 102,
+      "obs_overlap": 40,
+      "expected_rate_controlled": 23.61,
+      "fold_enrichment": 1.694,
+      "p_value_rate_controlled": 0.0002
+    },
+    "Derived_Radical50_DivingSubterranean_vs_ArcticCold": {
+      "n_axis_a": 486,
+      "n_axis_b": 102,
+      "obs_overlap": 51,
+      "expected_rate_controlled": 34.46,
+      "fold_enrichment": 1.48,
+      "p_value_rate_controlled": 0.0003
+    },
+    "Derived_Radical50_ArcticCold_vs_DesertHeat": {
+      "n_axis_a": 102,
+      "n_axis_b": 273,
+      "obs_overlap": 33,
+      "expected_rate_controlled": 20.34,
+      "fold_enrichment": 1.623,
+      "p_value_rate_controlled": 0.0011
+    },
+    "Control_Null_All_AltitudeCtl_vs_DivingCtl": {
+      "n_axis_a": 564,
+      "n_axis_b": 807,
+      "obs_overlap": 244,
+      "expected_rate_controlled": 236.12,
+      "fold_enrichment": 1.033,
+      "p_value_rate_controlled": 0.21378
+    },
+    "Control_Null_Radical50_AltitudeCtl_vs_DivingCtl": {
+      "n_axis_a": 282,
+      "n_axis_b": 411,
+      "obs_overlap": 91,
+      "expected_rate_controlled": 65.26,
+      "fold_enrichment": 1.394,
+      "p_value_rate_controlled": 0.0002
+    },
+    "Control_Null_Radical50_AltitudeCtl_vs_ArcticCtl": {
+      "n_axis_a": 282,
+      "n_axis_b": 103,
+      "obs_overlap": 36,
+      "expected_rate_controlled": 18.11,
+      "fold_enrichment": 1.988,
+      "p_value_rate_controlled": 0.0001
+    }
+  },
+  "gene_qc_stats": {
+    "ND1": {
+      "complex": "Complex_I",
+      "tier": 1,
+      "total_aa": 318,
+      "species_aligned": 44,
+      "qc_pass_cols": 318,
+      "qc_pass_pct": 100.0
+    },
+    "ND2": {
+      "complex": "Complex_I",
+      "tier": 1,
+      "total_aa": 347,
+      "species_aligned": 44,
+      "qc_pass_cols": 345,
+      "qc_pass_pct": 99.4
+    },
+    "COX1": {
+      "complex": "Complex_IV",
+      "tier": 1,
+      "total_aa": 513,
+      "species_aligned": 44,
+      "qc_pass_cols": 513,
+      "qc_pass_pct": 100.0
+    },
+    "ATP6": {
+      "complex": "Complex_V",
+      "tier": 1,
+      "total_aa": 226,
+      "species_aligned": 44,
+      "qc_pass_cols": 226,
+      "qc_pass_pct": 100.0
+    },
+    "COX3": {
+      "complex": "Complex_IV",
+      "tier": 1,
+      "total_aa": 261,
+      "species_aligned": 44,
+      "qc_pass_cols": 261,
+      "qc_pass_pct": 100.0
+    },
+    "CYTB": {
+      "complex": "Complex_III",
+      "tier": 1,
+      "total_aa": 380,
+      "species_aligned": 44,
+      "qc_pass_cols": 378,
+      "qc_pass_pct": 99.5
+    },
+    "COX2": {
+      "complex": "Complex_IV",
+      "tier": 2,
+      "total_aa": 227,
+      "species_aligned": 44,
+      "qc_pass_cols": 227,
+      "qc_pass_pct": 100.0
+    },
+    "ATP8": {
+      "complex": "Complex_V",
+      "tier": 2,
+      "total_aa": 68,
+      "species_aligned": 44,
+      "qc_pass_cols": 57,
+      "qc_pass_pct": 83.8
+    },
+    "ND3": {
+      "complex": "Complex_I",
+      "tier": 2,
+      "total_aa": 115,
+      "species_aligned": 44,
+      "qc_pass_cols": 115,
+      "qc_pass_pct": 100.0
+    },
+    "ND4L": {
+      "complex": "Complex_I",
+      "tier": 2,
+      "total_aa": 98,
+      "species_aligned": 44,
+      "qc_pass_cols": 98,
+      "qc_pass_pct": 100.0
+    },
+    "ND4": {
+      "complex": "Complex_I",
+      "tier": 2,
+      "total_aa": 459,
+      "species_aligned": 44,
+      "qc_pass_cols": 459,
+      "qc_pass_pct": 100.0
+    },
+    "ND5": {
+      "complex": "Complex_I",
+      "tier": 2,
+      "total_aa": 603,
+      "species_aligned": 44,
+      "qc_pass_cols": 603,
+      "qc_pass_pct": 100.0
+    },
+    "ND6": {
+      "complex": "Complex_I",
+      "tier": 2,
+      "total_aa": 174,
+      "species_aligned": 44,
+      "qc_pass_cols": 174,
+      "qc_pass_pct": 100.0
+    }
+  },
+  "class1_rulebreakers": [
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 31,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.956,
+      "alt_aa": "M",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 81.04,
+      "radicality": 2.839,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": 44.0,
+      "d_pol": -2.9,
+      "column_entropy": 0.262,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 181,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.911,
+      "alt_aa": "I",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 89.28,
+      "radicality": 3.647,
+      "d_hydro": 5.2,
+      "d_charge": 0.0,
+      "d_vol": 50.0,
+      "d_pol": -3.4,
+      "column_entropy": 0.522,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_WEDDELL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Leptonychotes weddellii",
+          "control": "Canis lupus"
+        },
+        {
+          "pair_id": "DIV_ELEPHANTSEAL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Mirounga angustirostris",
+          "control": "Phoca vitulina"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND2",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 3,
+      "human_ref_aa": "P",
+      "consensus_aa": "P",
+      "consensus_frac": 0.911,
+      "alt_aa": "I",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 95.38,
+      "radicality": 4.017,
+      "d_hydro": 6.1,
+      "d_charge": 0.0,
+      "d_vol": 78.5,
+      "d_pol": -2.8,
+      "column_entropy": 0.566,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 135,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.867,
+      "alt_aa": "A",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": -1.0,
+      "d_pol": -1.1,
+      "column_entropy": 0.567,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND1",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 208,
+      "human_ref_aa": "V",
+      "consensus_aa": "V",
+      "consensus_frac": 0.978,
+      "alt_aa": "C",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 191.23,
+      "radicality": 5.714,
+      "d_hydro": -1.7,
+      "d_charge": 0.0,
+      "d_vol": -29.0,
+      "d_pol": -0.4,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 334,
+      "human_ref_aa": "Y",
+      "consensus_aa": "Y",
+      "consensus_frac": 0.978,
+      "alt_aa": "D",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 159.94,
+      "radicality": 6.952,
+      "d_hydro": -2.2,
+      "d_charge": -1.0,
+      "d_vol": -82.0,
+      "d_pol": 6.8,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 218,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.978,
+      "alt_aa": "N",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 148.91,
+      "radicality": 5.934,
+      "d_hydro": -8.0,
+      "d_charge": 0.0,
+      "d_vol": -55.0,
+      "d_pol": 6.4,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 498,
+      "human_ref_aa": "C",
+      "consensus_aa": "C",
+      "consensus_frac": 0.978,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 111.67,
+      "radicality": 3.85,
+      "d_hydro": -3.3,
+      "d_charge": 0.0,
+      "d_vol": -23.0,
+      "d_pol": 3.7,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 99,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.978,
+      "alt_aa": "C",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 111.67,
+      "radicality": 3.85,
+      "d_hydro": 3.3,
+      "d_charge": 0.0,
+      "d_vol": 23.0,
+      "d_pol": -3.7,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 347,
+      "human_ref_aa": "G",
+      "consensus_aa": "G",
+      "consensus_frac": 0.978,
+      "alt_aa": "V",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 108.79,
+      "radicality": 4.058,
+      "d_hydro": 4.6,
+      "d_charge": 0.0,
+      "d_vol": 81.0,
+      "d_pol": -3.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 206,
+      "human_ref_aa": "K",
+      "consensus_aa": "K",
+      "consensus_frac": 0.978,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Arctic_Cold"
+      ],
+      "grantham": 105.57,
+      "radicality": 6.213,
+      "d_hydro": 5.7,
+      "d_charge": -1.0,
+      "d_vol": -88.0,
+      "d_pol": -3.2,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "COLD_REINDEER",
+          "axis": "Arctic_Cold",
+          "species": "Rangifer tarandus",
+          "control": "Odocoileus virginianus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 116,
+      "human_ref_aa": "W",
+      "consensus_aa": "W",
+      "consensus_frac": 0.978,
+      "alt_aa": "R",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 101.29,
+      "radicality": 5.627,
+      "d_hydro": -3.6,
+      "d_charge": 1.0,
+      "d_vol": -46.0,
+      "d_pol": 5.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_GOOSE",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Anser indicus",
+          "control": "Anser anser"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND1",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 50,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.978,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": -2.6,
+      "d_charge": 0.0,
+      "d_vol": 1.0,
+      "d_pol": 1.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 89,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.978,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": -2.6,
+      "d_charge": 0.0,
+      "d_vol": 1.0,
+      "d_pol": 1.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_BEAKED",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Ziphius cavirostris",
+          "control": "Tursiops truncatus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 152,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.978,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": -2.6,
+      "d_charge": 0.0,
+      "d_vol": 1.0,
+      "d_pol": 1.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 213,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.978,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": -1.0,
+      "d_pol": -1.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_TIT",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pseudopodoces humilis",
+          "control": "Parus major"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 310,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.978,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": -1.0,
+      "d_pol": -1.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND4L",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 39,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.978,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": -1.0,
+      "d_pol": -1.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 284,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.978,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": -1.0,
+      "d_pol": -1.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 368,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.978,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Arctic_Cold"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": -2.6,
+      "d_charge": 0.0,
+      "d_vol": 1.0,
+      "d_pol": 1.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "COLD_BEAR",
+          "axis": "Arctic_Cold",
+          "species": "Ursus maritimus",
+          "control": "Ursus americanus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 282,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.978,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": -2.6,
+      "d_charge": 0.0,
+      "d_vol": 1.0,
+      "d_pol": 1.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 343,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.978,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": -1.0,
+      "d_pol": -1.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND6",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 74,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.978,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": -2.6,
+      "d_charge": 0.0,
+      "d_vol": 1.0,
+      "d_pol": 1.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 200,
+      "human_ref_aa": "Q",
+      "consensus_aa": "Q",
+      "consensus_frac": 0.978,
+      "alt_aa": "Y",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 98.78,
+      "radicality": 3.246,
+      "d_hydro": 2.2,
+      "d_charge": 0.0,
+      "d_vol": 51.0,
+      "d_pol": -4.3,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 123,
+      "human_ref_aa": "P",
+      "consensus_aa": "P",
+      "consensus_frac": 0.978,
+      "alt_aa": "L",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 97.78,
+      "radicality": 3.929,
+      "d_hydro": 5.4,
+      "d_charge": 0.0,
+      "d_vol": 78.5,
+      "d_pol": -3.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 9,
+      "human_ref_aa": "P",
+      "consensus_aa": "P",
+      "consensus_frac": 0.978,
+      "alt_aa": "L",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 97.78,
+      "radicality": 3.929,
+      "d_hydro": 5.4,
+      "d_charge": 0.0,
+      "d_vol": 78.5,
+      "d_pol": -3.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 112,
+      "human_ref_aa": "P",
+      "consensus_aa": "P",
+      "consensus_frac": 0.978,
+      "alt_aa": "L",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Arctic_Cold"
+      ],
+      "grantham": 97.78,
+      "radicality": 3.929,
+      "d_hydro": 5.4,
+      "d_charge": 0.0,
+      "d_vol": 78.5,
+      "d_pol": -3.1,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "COLD_BEAR",
+          "axis": "Arctic_Cold",
+          "species": "Ursus maritimus",
+          "control": "Ursus americanus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 299,
+      "human_ref_aa": "L",
+      "consensus_aa": "L",
+      "consensus_frac": 0.978,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 96.19,
+      "radicality": 3.129,
+      "d_hydro": -2.0,
+      "d_charge": 0.0,
+      "d_vol": -80.0,
+      "d_pol": 3.2,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 246,
+      "human_ref_aa": "D",
+      "consensus_aa": "D",
+      "consensus_frac": 0.978,
+      "alt_aa": "G",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 93.77,
+      "radicality": 5.306,
+      "d_hydro": 3.1,
+      "d_charge": 1.0,
+      "d_vol": -51.0,
+      "d_pol": -4.0,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 228,
+      "human_ref_aa": "D",
+      "consensus_aa": "D",
+      "consensus_frac": 0.978,
+      "alt_aa": "T",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 85.08,
+      "radicality": 4.996,
+      "d_hydro": 2.8,
+      "d_charge": 1.0,
+      "d_vol": 7.0,
+      "d_pol": -4.4,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 231,
+      "human_ref_aa": "H",
+      "consensus_aa": "H",
+      "consensus_frac": 0.978,
+      "alt_aa": "Y",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 83.33,
+      "radicality": 2.948,
+      "d_hydro": 1.9,
+      "d_charge": -0.1,
+      "d_vol": 40.0,
+      "d_pol": -4.2,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 223,
+      "human_ref_aa": "Y",
+      "consensus_aa": "Y",
+      "consensus_frac": 0.978,
+      "alt_aa": "H",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 83.33,
+      "radicality": 2.948,
+      "d_hydro": -1.9,
+      "d_charge": 0.1,
+      "d_vol": -40.0,
+      "d_pol": 4.2,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 228,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.978,
+      "alt_aa": "M",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 81.04,
+      "radicality": 2.839,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": 44.0,
+      "d_pol": -2.9,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 53,
+      "human_ref_aa": "M",
+      "consensus_aa": "M",
+      "consensus_frac": 0.978,
+      "alt_aa": "T",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 81.04,
+      "radicality": 2.839,
+      "d_hydro": -2.6,
+      "d_charge": 0.0,
+      "d_vol": -44.0,
+      "d_pol": 2.9,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_TIT",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pseudopodoces humilis",
+          "control": "Parus major"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 320,
+      "human_ref_aa": "N",
+      "consensus_aa": "N",
+      "consensus_frac": 0.978,
+      "alt_aa": "G",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 79.35,
+      "radicality": 2.903,
+      "d_hydro": 3.1,
+      "d_charge": 0.0,
+      "d_vol": -53.0,
+      "d_pol": -2.6,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 295,
+      "human_ref_aa": "Q",
+      "consensus_aa": "Q",
+      "consensus_frac": 0.978,
+      "alt_aa": "P",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 75.14,
+      "radicality": 2.519,
+      "d_hydro": 1.9,
+      "d_charge": 0.0,
+      "d_vol": -52.5,
+      "d_pol": -2.5,
+      "column_entropy": 0.154,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_CHIRU",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pantholops hodgsonii",
+          "control": "Ovis aries"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND6",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 158,
+      "human_ref_aa": "W",
+      "consensus_aa": "W",
+      "consensus_frac": 0.956,
+      "alt_aa": "C",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 214.36,
+      "radicality": 6.738,
+      "d_hydro": 3.4,
+      "d_charge": 0.0,
+      "d_vol": -115.0,
+      "d_pol": 0.1,
+      "column_entropy": 0.307,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_GOOSE",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Anser indicus",
+          "control": "Anser anser"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ATP6",
+      "complex": "Complex_V",
+      "tier": 1,
+      "human_rcrs_aa_pos": 88,
+      "human_ref_aa": "L",
+      "consensus_aa": "L",
+      "consensus_frac": 0.956,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 144.08,
+      "radicality": 5.043,
+      "d_hydro": -4.6,
+      "d_charge": 0.0,
+      "d_vol": -79.0,
+      "d_pol": 4.3,
+      "column_entropy": 0.307,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 311,
+      "human_ref_aa": "K",
+      "consensus_aa": "K",
+      "consensus_frac": 0.956,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 120.53,
+      "radicality": 6.053,
+      "d_hydro": 3.1,
+      "d_charge": -1.0,
+      "d_vol": -87.0,
+      "d_pol": -2.1,
+      "column_entropy": 0.307,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_ELEPHANTSEAL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Mirounga angustirostris",
+          "control": "Phoca vitulina"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 311,
+      "human_ref_aa": "K",
+      "consensus_aa": "K",
+      "consensus_frac": 0.956,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 105.57,
+      "radicality": 6.213,
+      "d_hydro": 5.7,
+      "d_charge": -1.0,
+      "d_vol": -88.0,
+      "d_pol": -3.2,
+      "column_entropy": 0.307,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND1",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 65,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.956,
+      "alt_aa": "F",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 102.86,
+      "radicality": 3.648,
+      "d_hydro": 3.5,
+      "d_charge": 0.0,
+      "d_vol": 71.0,
+      "d_pol": -3.4,
+      "column_entropy": 0.307,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 52,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.956,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": -2.6,
+      "d_charge": 0.0,
+      "d_vol": 1.0,
+      "d_pol": 1.1,
+      "column_entropy": 0.307,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 16,
+      "human_ref_aa": "G",
+      "consensus_aa": "G",
+      "consensus_frac": 0.956,
+      "alt_aa": "D",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 93.77,
+      "radicality": 5.306,
+      "d_hydro": -3.1,
+      "d_charge": -1.0,
+      "d_vol": 51.0,
+      "d_pol": 4.0,
+      "column_entropy": 0.307,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_TIT",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pseudopodoces humilis",
+          "control": "Parus major"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 252,
+      "human_ref_aa": "P",
+      "consensus_aa": "P",
+      "consensus_frac": 0.956,
+      "alt_aa": "M",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 86.59,
+      "radicality": 3.194,
+      "d_hydro": 3.5,
+      "d_charge": 0.0,
+      "d_vol": 72.5,
+      "d_pol": -2.3,
+      "column_entropy": 0.307,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 279,
+      "human_ref_aa": "C",
+      "consensus_aa": "C",
+      "consensus_frac": 0.933,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 111.67,
+      "radicality": 3.85,
+      "d_hydro": -3.3,
+      "d_charge": 0.0,
+      "d_vol": -23.0,
+      "d_pol": 3.7,
+      "column_entropy": 0.353,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 198,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.933,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": -1.0,
+      "d_pol": -1.1,
+      "column_entropy": 0.353,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 417,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.933,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": -1.0,
+      "d_pol": -1.1,
+      "column_entropy": 0.353,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_TIT",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pseudopodoces humilis",
+          "control": "Parus major"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 378,
+      "human_ref_aa": "K",
+      "consensus_aa": "K",
+      "consensus_frac": 0.933,
+      "alt_aa": "N",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 93.88,
+      "radicality": 4.709,
+      "d_hydro": 0.4,
+      "d_charge": -1.0,
+      "d_vol": -63.0,
+      "d_pol": 0.3,
+      "column_entropy": 0.353,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_TIT",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pseudopodoces humilis",
+          "control": "Parus major"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND2",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 39,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.933,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": -2.6,
+      "d_charge": 0.0,
+      "d_vol": 1.0,
+      "d_pol": 1.1,
+      "column_entropy": 0.415,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 162,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.933,
+      "alt_aa": "S",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": -2.6,
+      "d_charge": 0.0,
+      "d_vol": 1.0,
+      "d_pol": 1.1,
+      "column_entropy": 0.415,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND3",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 17,
+      "human_ref_aa": "L",
+      "consensus_aa": "L",
+      "consensus_frac": 0.933,
+      "alt_aa": "P",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 97.78,
+      "radicality": 3.929,
+      "d_hydro": -5.4,
+      "d_charge": 0.0,
+      "d_vol": -78.5,
+      "d_pol": 3.1,
+      "column_entropy": 0.415,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND2",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 41,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.933,
+      "alt_aa": "T",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 89.28,
+      "radicality": 3.647,
+      "d_hydro": -5.2,
+      "d_charge": 0.0,
+      "d_vol": -50.0,
+      "d_pol": 3.4,
+      "column_entropy": 0.415,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 254,
+      "human_ref_aa": "V",
+      "consensus_aa": "V",
+      "consensus_frac": 0.933,
+      "alt_aa": "W",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 87.96,
+      "radicality": 3.588,
+      "d_hydro": -5.1,
+      "d_charge": 0.0,
+      "d_vol": 86.0,
+      "d_pol": -0.5,
+      "column_entropy": 0.415,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ATP6",
+      "complex": "Complex_V",
+      "tier": 1,
+      "human_rcrs_aa_pos": 32,
+      "human_ref_aa": "P",
+      "consensus_aa": "P",
+      "consensus_frac": 0.933,
+      "alt_aa": "K",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 102.71,
+      "radicality": 5.378,
+      "d_hydro": -2.3,
+      "d_charge": 1.0,
+      "d_vol": 86.5,
+      "d_pol": 3.3,
+      "column_entropy": 0.459,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 235,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.889,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": -1.0,
+      "d_pol": -1.1,
+      "column_entropy": 0.503,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND4L",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 85,
+      "human_ref_aa": "Y",
+      "consensus_aa": "Y",
+      "consensus_frac": 0.889,
+      "alt_aa": "H",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 83.33,
+      "radicality": 2.948,
+      "d_hydro": -1.9,
+      "d_charge": 0.1,
+      "d_vol": -40.0,
+      "d_pol": 4.2,
+      "column_entropy": 0.503,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 213,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.911,
+      "alt_aa": "I",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 89.28,
+      "radicality": 3.647,
+      "d_hydro": 5.2,
+      "d_charge": 0.0,
+      "d_vol": 50.0,
+      "d_pol": -3.4,
+      "column_entropy": 0.505,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 224,
+      "human_ref_aa": "Y",
+      "consensus_aa": "Y",
+      "consensus_frac": 0.911,
+      "alt_aa": "H",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 83.33,
+      "radicality": 2.948,
+      "d_hydro": -1.9,
+      "d_charge": 0.1,
+      "d_vol": -40.0,
+      "d_pol": 4.2,
+      "column_entropy": 0.505,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND2",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 321,
+      "human_ref_aa": "K",
+      "consensus_aa": "K",
+      "consensus_frac": 0.911,
+      "alt_aa": "N",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 93.88,
+      "radicality": 4.709,
+      "d_hydro": 0.4,
+      "d_charge": -1.0,
+      "d_vol": -63.0,
+      "d_pol": 0.3,
+      "column_entropy": 0.566,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND2",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 266,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.911,
+      "alt_aa": "T",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 89.28,
+      "radicality": 3.647,
+      "d_hydro": -5.2,
+      "d_charge": 0.0,
+      "d_vol": -50.0,
+      "d_pol": 3.4,
+      "column_entropy": 0.566,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 110,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.889,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": -1.0,
+      "d_pol": -1.1,
+      "column_entropy": 0.583,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 144,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.889,
+      "alt_aa": "T",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 89.28,
+      "radicality": 3.647,
+      "d_hydro": -5.2,
+      "d_charge": 0.0,
+      "d_vol": -50.0,
+      "d_pol": 3.4,
+      "column_entropy": 0.583,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 184,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.889,
+      "alt_aa": "T",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "grantham": 89.28,
+      "radicality": 3.647,
+      "d_hydro": -5.2,
+      "d_charge": 0.0,
+      "d_vol": -50.0,
+      "d_pol": 3.4,
+      "column_entropy": 0.583,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND2",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 204,
+      "human_ref_aa": "N",
+      "consensus_aa": "N",
+      "consensus_frac": 0.889,
+      "alt_aa": "Y",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Desert_Heat"
+      ],
+      "grantham": 142.23,
+      "radicality": 4.458,
+      "d_hydro": 2.2,
+      "d_charge": 0.0,
+      "d_vol": 80.0,
+      "d_pol": -5.4,
+      "column_entropy": 0.611,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_I_Conserved_RuleBreaker",
+      "gene": "ND4L",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 37,
+      "human_ref_aa": "M",
+      "consensus_aa": "M",
+      "consensus_frac": 0.911,
+      "alt_aa": "A",
+      "k_ext_derived": 1,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 1,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "grantham": 84.44,
+      "radicality": 2.379,
+      "d_hydro": -0.1,
+      "d_charge": 0.0,
+      "d_vol": -74.0,
+      "d_pol": 2.4,
+      "column_entropy": 0.611,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        }
+      ]
+    }
+  ],
+  "class2_convergent": [
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 57,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.622,
+      "alt_aa": "V",
+      "k_ext_derived": 8,
+      "k_ctl_derived": 1,
+      "net_directional_bias": 7,
+      "axes_hit": [
+        "Arctic_Cold",
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 29.61,
+      "radicality": 0.893,
+      "d_hydro": -0.3,
+      "d_charge": 0.0,
+      "d_vol": -27.0,
+      "d_pol": 0.7,
+      "column_entropy": 1.21,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_CHIRU",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pantholops hodgsonii",
+          "control": "Ovis aries"
+        },
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "COLD_BEAR",
+          "axis": "Arctic_Cold",
+          "species": "Ursus maritimus",
+          "control": "Ursus americanus"
+        },
+        {
+          "pair_id": "COLD_MUSKOX",
+          "axis": "Arctic_Cold",
+          "species": "Ovibos moschatus",
+          "control": "Capra hircus"
+        },
+        {
+          "pair_id": "HEAT_ORYX",
+          "axis": "Desert_Heat",
+          "species": "Oryx leucoryx",
+          "control": "Ovis aries"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 115,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.756,
+      "alt_aa": "V",
+      "k_ext_derived": 6,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 6,
+      "axes_hit": [
+        "Arctic_Cold",
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 29.61,
+      "radicality": 0.893,
+      "d_hydro": -0.3,
+      "d_charge": 0.0,
+      "d_vol": -27.0,
+      "d_pol": 0.7,
+      "column_entropy": 1.126,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_TIT",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pseudopodoces humilis",
+          "control": "Parus major"
+        },
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "DIV_ELEPHANTSEAL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Mirounga angustirostris",
+          "control": "Phoca vitulina"
+        },
+        {
+          "pair_id": "COLD_FOX",
+          "axis": "Arctic_Cold",
+          "species": "Vulpes lagopus",
+          "control": "Vulpes vulpes"
+        },
+        {
+          "pair_id": "HEAT_ORYX",
+          "axis": "Desert_Heat",
+          "species": "Oryx leucoryx",
+          "control": "Ovis aries"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 270,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.756,
+      "alt_aa": "V",
+      "k_ext_derived": 5,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 5,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 29.61,
+      "radicality": 0.893,
+      "d_hydro": -0.3,
+      "d_charge": 0.0,
+      "d_vol": -27.0,
+      "d_pol": 0.7,
+      "column_entropy": 1.034,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND1",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 313,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.556,
+      "alt_aa": "G",
+      "k_ext_derived": 5,
+      "k_ctl_derived": 1,
+      "net_directional_bias": 4,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 55.27,
+      "radicality": 1.631,
+      "d_hydro": 0.4,
+      "d_charge": 0.0,
+      "d_vol": -29.0,
+      "d_pol": -0.2,
+      "column_entropy": 1.323,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_CHIRU",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pantholops hodgsonii",
+          "control": "Ovis aries"
+        },
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        },
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 54,
+      "human_ref_aa": "F",
+      "consensus_aa": "F",
+      "consensus_frac": 0.822,
+      "alt_aa": "Y",
+      "k_ext_derived": 4,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 4,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 21.61,
+      "radicality": 1.514,
+      "d_hydro": -4.1,
+      "d_charge": 0.0,
+      "d_vol": 4.0,
+      "d_pol": 1.0,
+      "column_entropy": 0.772,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        },
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "DIV_BEAKED",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Ziphius cavirostris",
+          "control": "Tursiops truncatus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 469,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.578,
+      "alt_aa": "V",
+      "k_ext_derived": 5,
+      "k_ctl_derived": 2,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 29.61,
+      "radicality": 0.893,
+      "d_hydro": -0.3,
+      "d_charge": 0.0,
+      "d_vol": -27.0,
+      "d_pol": 0.7,
+      "column_entropy": 1.309,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        },
+        {
+          "pair_id": "DIV_WEDDELL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Leptonychotes weddellii",
+          "control": "Canis lupus"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX2",
+      "complex": "Complex_IV",
+      "tier": 2,
+      "human_rcrs_aa_pos": 2,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.933,
+      "alt_aa": "P",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 26.87,
+      "radicality": 1.506,
+      "d_hydro": -3.4,
+      "d_charge": 0.0,
+      "d_vol": 1.5,
+      "d_pol": -0.1,
+      "column_entropy": 0.353,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 76,
+      "human_ref_aa": "L",
+      "consensus_aa": "L",
+      "consensus_frac": 0.844,
+      "alt_aa": "I",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 4.86,
+      "radicality": 0.291,
+      "d_hydro": 0.7,
+      "d_charge": 0.0,
+      "d_vol": 0.0,
+      "d_pol": 0.3,
+      "column_entropy": 0.624,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ATP6",
+      "complex": "Complex_V",
+      "tier": 1,
+      "human_rcrs_aa_pos": 106,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.844,
+      "alt_aa": "V",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 29.61,
+      "radicality": 0.893,
+      "d_hydro": -0.3,
+      "d_charge": 0.0,
+      "d_vol": -27.0,
+      "d_pol": 0.7,
+      "column_entropy": 0.777,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "DIV_BEAKED",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Ziphius cavirostris",
+          "control": "Tursiops truncatus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 366,
+      "human_ref_aa": "M",
+      "consensus_aa": "M",
+      "consensus_frac": 0.6,
+      "alt_aa": "L",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 14.3,
+      "radicality": 0.821,
+      "d_hydro": 1.9,
+      "d_charge": 0.0,
+      "d_vol": 6.0,
+      "d_pol": -0.8,
+      "column_entropy": 0.971,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 433,
+      "human_ref_aa": "G",
+      "consensus_aa": "G",
+      "consensus_frac": 0.8,
+      "alt_aa": "N",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 79.35,
+      "radicality": 2.903,
+      "d_hydro": -3.1,
+      "d_charge": 0.0,
+      "d_vol": 53.0,
+      "d_pol": 2.6,
+      "column_entropy": 1.161,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 455,
+      "human_ref_aa": "T",
+      "consensus_aa": "L",
+      "consensus_frac": 0.756,
+      "alt_aa": "M",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 14.3,
+      "radicality": 0.821,
+      "d_hydro": -1.9,
+      "d_charge": 0.0,
+      "d_vol": -6.0,
+      "d_pol": 0.8,
+      "column_entropy": 1.187,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 173,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.644,
+      "alt_aa": "T",
+      "k_ext_derived": 4,
+      "k_ctl_derived": 2,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 57.75,
+      "radicality": 1.634,
+      "d_hydro": 0.1,
+      "d_charge": 0.0,
+      "d_vol": 29.0,
+      "d_pol": -0.6,
+      "column_entropy": 0.939,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "DIV_BEAKED",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Ziphius cavirostris",
+          "control": "Tursiops truncatus"
+        },
+        {
+          "pair_id": "DIV_WEDDELL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Leptonychotes weddellii",
+          "control": "Canis lupus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 84,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.8,
+      "alt_aa": "V",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 1,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 29.61,
+      "radicality": 0.893,
+      "d_hydro": -0.3,
+      "d_charge": 0.0,
+      "d_vol": -27.0,
+      "d_pol": 0.7,
+      "column_entropy": 0.823,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_TIT",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pseudopodoces humilis",
+          "control": "Parus major"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 407,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.667,
+      "alt_aa": "T",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 1,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 57.75,
+      "radicality": 1.634,
+      "d_hydro": 0.1,
+      "d_charge": 0.0,
+      "d_vol": 29.0,
+      "d_pol": -0.6,
+      "column_entropy": 0.918,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 172,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.667,
+      "alt_aa": "V",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 1,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 29.61,
+      "radicality": 0.893,
+      "d_hydro": -0.3,
+      "d_charge": 0.0,
+      "d_vol": -27.0,
+      "d_pol": 0.7,
+      "column_entropy": 1.159,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_YAK",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Bos grunniens",
+          "control": "Bos taurus"
+        },
+        {
+          "pair_id": "DIV_BEAKED",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Ziphius cavirostris",
+          "control": "Tursiops truncatus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4L",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 5,
+      "human_ref_aa": "Y",
+      "consensus_aa": "Y",
+      "consensus_frac": 0.644,
+      "alt_aa": "H",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 1,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 83.33,
+      "radicality": 2.948,
+      "d_hydro": -1.9,
+      "d_charge": 0.1,
+      "d_vol": -40.0,
+      "d_pol": 4.2,
+      "column_entropy": 1.3,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_YAK",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Bos grunniens",
+          "control": "Bos taurus"
+        },
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "HEAT_ORYX",
+          "axis": "Desert_Heat",
+          "species": "Oryx leucoryx",
+          "control": "Ovis aries"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4L",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 11,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.956,
+      "alt_aa": "T",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 58.02,
+      "radicality": 2.175,
+      "d_hydro": -2.5,
+      "d_charge": 0.0,
+      "d_vol": 30.0,
+      "d_pol": 0.5,
+      "column_entropy": 0.262,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_TIT",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pseudopodoces humilis",
+          "control": "Parus major"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX2",
+      "complex": "Complex_IV",
+      "tier": 2,
+      "human_rcrs_aa_pos": 47,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.956,
+      "alt_aa": "S",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 57.75,
+      "radicality": 1.634,
+      "d_hydro": -0.1,
+      "d_charge": 0.0,
+      "d_vol": -29.0,
+      "d_pol": 0.6,
+      "column_entropy": 0.262,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 165,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.867,
+      "alt_aa": "T",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 89.28,
+      "radicality": 3.647,
+      "d_hydro": -5.2,
+      "d_charge": 0.0,
+      "d_vol": -50.0,
+      "d_pol": 3.4,
+      "column_entropy": 0.689,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_LEOPARD",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Panthera uncia",
+          "control": "Panthera tigris"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 63,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.756,
+      "alt_aa": "T",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 89.28,
+      "radicality": 3.647,
+      "d_hydro": -5.2,
+      "d_charge": 0.0,
+      "d_vol": -50.0,
+      "d_pol": 3.4,
+      "column_entropy": 1.126,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_TIT",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pseudopodoces humilis",
+          "control": "Parus major"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 434,
+      "human_ref_aa": "N",
+      "consensus_aa": "N",
+      "consensus_frac": 0.733,
+      "alt_aa": "H",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": true,
+      "grantham": 68.35,
+      "radicality": 2.174,
+      "d_hydro": 0.3,
+      "d_charge": 0.1,
+      "d_vol": 40.0,
+      "d_pol": -1.2,
+      "column_entropy": 1.17,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND6",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 35,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.711,
+      "alt_aa": "G",
+      "k_ext_derived": 5,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 5,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 55.27,
+      "radicality": 1.631,
+      "d_hydro": 0.4,
+      "d_charge": 0.0,
+      "d_vol": -29.0,
+      "d_pol": -0.2,
+      "column_entropy": 1.155,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "DIV_WEDDELL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Leptonychotes weddellii",
+          "control": "Canis lupus"
+        },
+        {
+          "pair_id": "DIV_ELEPHANTSEAL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Mirounga angustirostris",
+          "control": "Phoca vitulina"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 429,
+      "human_ref_aa": "L",
+      "consensus_aa": "F",
+      "consensus_frac": 0.756,
+      "alt_aa": "Y",
+      "k_ext_derived": 4,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 4,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 21.61,
+      "radicality": 1.514,
+      "d_hydro": -4.1,
+      "d_charge": 0.0,
+      "d_vol": 4.0,
+      "d_pol": 1.0,
+      "column_entropy": 1.034,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "DIV_ELEPHANTSEAL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Mirounga angustirostris",
+          "control": "Phoca vitulina"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 244,
+      "human_ref_aa": "M",
+      "consensus_aa": "M",
+      "consensus_frac": 0.622,
+      "alt_aa": "L",
+      "k_ext_derived": 4,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 4,
+      "axes_hit": [
+        "Arctic_Cold",
+        "Desert_Heat",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 14.3,
+      "radicality": 0.821,
+      "d_hydro": 1.9,
+      "d_charge": 0.0,
+      "d_vol": 6.0,
+      "d_pol": -0.8,
+      "column_entropy": 1.078,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_CHIRU",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pantholops hodgsonii",
+          "control": "Ovis aries"
+        },
+        {
+          "pair_id": "COLD_MUSKOX",
+          "axis": "Arctic_Cold",
+          "species": "Ovibos moschatus",
+          "control": "Capra hircus"
+        },
+        {
+          "pair_id": "HEAT_ORYX",
+          "axis": "Desert_Heat",
+          "species": "Oryx leucoryx",
+          "control": "Ovis aries"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 264,
+      "human_ref_aa": "H",
+      "consensus_aa": "H",
+      "consensus_frac": 0.556,
+      "alt_aa": "Y",
+      "k_ext_derived": 4,
+      "k_ctl_derived": 1,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Arctic_Cold",
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 83.33,
+      "radicality": 2.948,
+      "d_hydro": 1.9,
+      "d_charge": -0.1,
+      "d_vol": 40.0,
+      "d_pol": -4.2,
+      "column_entropy": 1.118,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "COLD_BEAR",
+          "axis": "Arctic_Cold",
+          "species": "Ursus maritimus",
+          "control": "Ursus americanus"
+        },
+        {
+          "pair_id": "COLD_MUSKOX",
+          "axis": "Arctic_Cold",
+          "species": "Ovibos moschatus",
+          "control": "Capra hircus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND3",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 58,
+      "human_ref_aa": "V",
+      "consensus_aa": "V",
+      "consensus_frac": 0.889,
+      "alt_aa": "I",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 29.61,
+      "radicality": 0.893,
+      "d_hydro": 0.3,
+      "d_charge": 0.0,
+      "d_vol": 27.0,
+      "d_pol": -0.7,
+      "column_entropy": 0.503,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 128,
+      "human_ref_aa": "E",
+      "consensus_aa": "E",
+      "consensus_frac": 0.911,
+      "alt_aa": "D",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Arctic_Cold",
+        "Desert_Heat",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 44.6,
+      "radicality": 1.245,
+      "d_hydro": 0.0,
+      "d_charge": 0.0,
+      "d_vol": -29.0,
+      "d_pol": 0.7,
+      "column_entropy": 0.505,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_TIT",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pseudopodoces humilis",
+          "control": "Parus major"
+        },
+        {
+          "pair_id": "COLD_FOX",
+          "axis": "Arctic_Cold",
+          "species": "Vulpes lagopus",
+          "control": "Vulpes vulpes"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 116,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.844,
+      "alt_aa": "M",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 10.12,
+      "radicality": 0.86,
+      "d_hydro": -2.6,
+      "d_charge": 0.0,
+      "d_vol": -6.0,
+      "d_pol": 0.5,
+      "column_entropy": 0.758,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 552,
+      "human_ref_aa": "L",
+      "consensus_aa": "L",
+      "consensus_frac": 0.867,
+      "alt_aa": "S",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 144.08,
+      "radicality": 5.043,
+      "d_hydro": -4.6,
+      "d_charge": 0.0,
+      "d_vol": -79.0,
+      "d_pol": 4.3,
+      "column_entropy": 0.761,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 181,
+      "human_ref_aa": "F",
+      "consensus_aa": "F",
+      "consensus_frac": 0.8,
+      "alt_aa": "L",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Arctic_Cold",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 21.82,
+      "radicality": 0.831,
+      "d_hydro": 1.0,
+      "d_charge": 0.0,
+      "d_vol": -21.0,
+      "d_pol": -0.3,
+      "column_entropy": 0.875,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "DIV_ELEPHANTSEAL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Mirounga angustirostris",
+          "control": "Phoca vitulina"
+        },
+        {
+          "pair_id": "COLD_MAMMOTH",
+          "axis": "Arctic_Cold",
+          "species": "Mammuthus primigenius",
+          "control": "Elephas maximus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND1",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 7,
+      "human_ref_aa": "L",
+      "consensus_aa": "L",
+      "consensus_frac": 0.8,
+      "alt_aa": "I",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Arctic_Cold",
+        "Desert_Heat",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 4.86,
+      "radicality": 0.291,
+      "d_hydro": 0.7,
+      "d_charge": 0.0,
+      "d_vol": 0.0,
+      "d_pol": 0.3,
+      "column_entropy": 0.875,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "COLD_FOX",
+          "axis": "Arctic_Cold",
+          "species": "Vulpes lagopus",
+          "control": "Vulpes vulpes"
+        },
+        {
+          "pair_id": "HEAT_FOX",
+          "axis": "Desert_Heat",
+          "species": "Vulpes zerda",
+          "control": "Vulpes vulpes"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 443,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.822,
+      "alt_aa": "T",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 89.28,
+      "radicality": 3.647,
+      "d_hydro": -5.2,
+      "d_charge": 0.0,
+      "d_vol": -50.0,
+      "d_pol": 3.4,
+      "column_entropy": 0.925,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_BEAKED",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Ziphius cavirostris",
+          "control": "Tursiops truncatus"
+        },
+        {
+          "pair_id": "DIV_WEDDELL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Leptonychotes weddellii",
+          "control": "Canis lupus"
+        },
+        {
+          "pair_id": "DIV_ELEPHANTSEAL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Mirounga angustirostris",
+          "control": "Phoca vitulina"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ATP6",
+      "complex": "Complex_V",
+      "tier": 1,
+      "human_rcrs_aa_pos": 195,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.8,
+      "alt_aa": "V",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 3,
+      "axes_hit": [
+        "Arctic_Cold",
+        "Desert_Heat"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 29.61,
+      "radicality": 0.893,
+      "d_hydro": -0.3,
+      "d_charge": 0.0,
+      "d_vol": -27.0,
+      "d_pol": 0.7,
+      "column_entropy": 1.009,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "COLD_BEAR",
+          "axis": "Arctic_Cold",
+          "species": "Ursus maritimus",
+          "control": "Ursus americanus"
+        },
+        {
+          "pair_id": "HEAT_ORYX",
+          "axis": "Desert_Heat",
+          "species": "Oryx leucoryx",
+          "control": "Ovis aries"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 183,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.8,
+      "alt_aa": "V",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 1,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 29.61,
+      "radicality": 0.893,
+      "d_hydro": -0.3,
+      "d_charge": 0.0,
+      "d_vol": -27.0,
+      "d_pol": 0.7,
+      "column_entropy": 0.906,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "HEAT_ORYX",
+          "axis": "Desert_Heat",
+          "species": "Oryx leucoryx",
+          "control": "Ovis aries"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "CYTB",
+      "complex": "Complex_III",
+      "tier": 1,
+      "human_rcrs_aa_pos": 95,
+      "human_ref_aa": "F",
+      "consensus_aa": "F",
+      "consensus_frac": 0.556,
+      "alt_aa": "Y",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 1,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 21.61,
+      "radicality": 1.514,
+      "d_hydro": -4.1,
+      "d_charge": 0.0,
+      "d_vol": 4.0,
+      "d_pol": 1.0,
+      "column_entropy": 0.991,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "DIV_WEDDELL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Leptonychotes weddellii",
+          "control": "Canis lupus"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ATP6",
+      "complex": "Complex_V",
+      "tier": 1,
+      "human_rcrs_aa_pos": 180,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.756,
+      "alt_aa": "V",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 1,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 64.43,
+      "radicality": 2.331,
+      "d_hydro": 2.4,
+      "d_charge": 0.0,
+      "d_vol": 53.0,
+      "d_pol": -2.2,
+      "column_entropy": 1.034,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_BEAKED",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Ziphius cavirostris",
+          "control": "Tursiops truncatus"
+        },
+        {
+          "pair_id": "DIV_WEDDELL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Leptonychotes weddellii",
+          "control": "Canis lupus"
+        },
+        {
+          "pair_id": "DIV_ELEPHANTSEAL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Mirounga angustirostris",
+          "control": "Phoca vitulina"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 197,
+      "human_ref_aa": "D",
+      "consensus_aa": "D",
+      "consensus_frac": 0.622,
+      "alt_aa": "E",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 1,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 44.6,
+      "radicality": 1.245,
+      "d_hydro": 0.0,
+      "d_charge": 0.0,
+      "d_vol": 29.0,
+      "d_pol": -0.7,
+      "column_entropy": 1.078,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_WEDDELL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Leptonychotes weddellii",
+          "control": "Canis lupus"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 62,
+      "human_ref_aa": "T",
+      "consensus_aa": "I",
+      "consensus_frac": 0.556,
+      "alt_aa": "V",
+      "k_ext_derived": 3,
+      "k_ctl_derived": 1,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 29.61,
+      "radicality": 0.893,
+      "d_hydro": -0.3,
+      "d_charge": 0.0,
+      "d_vol": -27.0,
+      "d_pol": 0.7,
+      "column_entropy": 1.118,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 31,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.956,
+      "alt_aa": "M",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 81.04,
+      "radicality": 2.839,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": 44.0,
+      "d_pol": -2.9,
+      "column_entropy": 0.262,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 39,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.956,
+      "alt_aa": "T",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 58.02,
+      "radicality": 2.175,
+      "d_hydro": -2.5,
+      "d_charge": 0.0,
+      "d_vol": 30.0,
+      "d_pol": 0.5,
+      "column_entropy": 0.262,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ATP6",
+      "complex": "Complex_V",
+      "tier": 1,
+      "human_rcrs_aa_pos": 96,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.956,
+      "alt_aa": "A",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Arctic_Cold",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 58.02,
+      "radicality": 2.175,
+      "d_hydro": 2.5,
+      "d_charge": 0.0,
+      "d_vol": -30.0,
+      "d_pol": -0.5,
+      "column_entropy": 0.262,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_ELEPHANTSEAL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Mirounga angustirostris",
+          "control": "Phoca vitulina"
+        },
+        {
+          "pair_id": "COLD_MAMMOTH",
+          "axis": "Arctic_Cold",
+          "species": "Mammuthus primigenius",
+          "control": "Elephas maximus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND1",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 238,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.956,
+      "alt_aa": "S",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 57.75,
+      "radicality": 1.634,
+      "d_hydro": -0.1,
+      "d_charge": 0.0,
+      "d_vol": -29.0,
+      "d_pol": 0.6,
+      "column_entropy": 0.262,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 228,
+      "human_ref_aa": "G",
+      "consensus_aa": "G",
+      "consensus_frac": 0.956,
+      "alt_aa": "S",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 55.27,
+      "radicality": 1.631,
+      "d_hydro": -0.4,
+      "d_charge": 0.0,
+      "d_vol": 29.0,
+      "d_pol": 0.2,
+      "column_entropy": 0.262,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_CHIRU",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Pantholops hodgsonii",
+          "control": "Ovis aries"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 408,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.933,
+      "alt_aa": "V",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 69.5,
+      "radicality": 3.028,
+      "d_hydro": 4.9,
+      "d_charge": 0.0,
+      "d_vol": 23.0,
+      "d_pol": -2.7,
+      "column_entropy": 0.415,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND1",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 145,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.911,
+      "alt_aa": "S",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 57.75,
+      "radicality": 1.634,
+      "d_hydro": -0.1,
+      "d_charge": 0.0,
+      "d_vol": -29.0,
+      "d_pol": 0.6,
+      "column_entropy": 0.433,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 181,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.911,
+      "alt_aa": "I",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 89.28,
+      "radicality": 3.647,
+      "d_hydro": 5.2,
+      "d_charge": 0.0,
+      "d_vol": 50.0,
+      "d_pol": -3.4,
+      "column_entropy": 0.522,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_WEDDELL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Leptonychotes weddellii",
+          "control": "Canis lupus"
+        },
+        {
+          "pair_id": "DIV_ELEPHANTSEAL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Mirounga angustirostris",
+          "control": "Phoca vitulina"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND1",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 168,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.911,
+      "alt_aa": "S",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 57.75,
+      "radicality": 1.634,
+      "d_hydro": -0.1,
+      "d_charge": 0.0,
+      "d_vol": -29.0,
+      "d_pol": 0.6,
+      "column_entropy": 0.522,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND2",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 3,
+      "human_ref_aa": "P",
+      "consensus_aa": "P",
+      "consensus_frac": 0.911,
+      "alt_aa": "I",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 95.38,
+      "radicality": 4.017,
+      "d_hydro": 6.1,
+      "d_charge": 0.0,
+      "d_vol": 78.5,
+      "d_pol": -2.8,
+      "column_entropy": 0.566,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX3",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 135,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.867,
+      "alt_aa": "A",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": -1.0,
+      "d_pol": -1.1,
+      "column_entropy": 0.567,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 4,
+      "human_ref_aa": "D",
+      "consensus_aa": "N",
+      "consensus_frac": 0.889,
+      "alt_aa": "T",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 64.77,
+      "radicality": 2.43,
+      "d_hydro": 2.8,
+      "d_charge": 0.0,
+      "d_vol": 5.0,
+      "d_pol": -3.0,
+      "column_entropy": 0.611,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "COX1",
+      "complex": "Complex_IV",
+      "tier": 1,
+      "human_rcrs_aa_pos": 146,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.844,
+      "alt_aa": "A",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 58.02,
+      "radicality": 2.175,
+      "d_hydro": 2.5,
+      "d_charge": 0.0,
+      "d_vol": -30.0,
+      "d_pol": -0.5,
+      "column_entropy": 0.716,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND3",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 28,
+      "human_ref_aa": "N",
+      "consensus_aa": "N",
+      "consensus_frac": 0.867,
+      "alt_aa": "Y",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 142.23,
+      "radicality": 4.458,
+      "d_hydro": 2.2,
+      "d_charge": 0.0,
+      "d_vol": 80.0,
+      "d_pol": -5.4,
+      "column_entropy": 0.733,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "HEAT_CAMEL",
+          "axis": "Desert_Heat",
+          "species": "Camelus dromedarius",
+          "control": "Sus scrofa"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND1",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 314,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.844,
+      "alt_aa": "T",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 89.28,
+      "radicality": 3.647,
+      "d_hydro": -5.2,
+      "d_charge": 0.0,
+      "d_vol": -50.0,
+      "d_pol": 3.4,
+      "column_entropy": 0.838,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ATP6",
+      "complex": "Complex_V",
+      "tier": 1,
+      "human_rcrs_aa_pos": 67,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.822,
+      "alt_aa": "S",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 57.75,
+      "radicality": 1.634,
+      "d_hydro": -0.1,
+      "d_charge": 0.0,
+      "d_vol": -29.0,
+      "d_pol": 0.6,
+      "column_entropy": 0.853,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 401,
+      "human_ref_aa": "M",
+      "consensus_aa": "T",
+      "consensus_frac": 0.822,
+      "alt_aa": "S",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 57.75,
+      "radicality": 1.634,
+      "d_hydro": -0.1,
+      "d_charge": 0.0,
+      "d_vol": -29.0,
+      "d_pol": 0.6,
+      "column_entropy": 0.853,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND2",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 81,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.822,
+      "alt_aa": "P",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 73.35,
+      "radicality": 2.225,
+      "d_hydro": -0.8,
+      "d_charge": 0.0,
+      "d_vol": 0.5,
+      "d_pol": -1.2,
+      "column_entropy": 0.942,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_MONKEY",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Rhinopithecus bieti",
+          "control": "Macaca mulatta"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 581,
+      "human_ref_aa": "K",
+      "consensus_aa": "K",
+      "consensus_frac": 0.822,
+      "alt_aa": "Q",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 53.23,
+      "radicality": 3.574,
+      "d_hydro": 0.4,
+      "d_charge": -1.0,
+      "d_vol": -34.0,
+      "d_pol": -0.8,
+      "column_entropy": 0.942,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "DIV_BEAKED",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Ziphius cavirostris",
+          "control": "Tursiops truncatus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND6",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 163,
+      "human_ref_aa": "G",
+      "consensus_aa": "G",
+      "consensus_frac": 0.778,
+      "alt_aa": "S",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 55.27,
+      "radicality": 1.631,
+      "d_hydro": -0.4,
+      "d_charge": 0.0,
+      "d_vol": 29.0,
+      "d_pol": 0.2,
+      "column_entropy": 0.98,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND5",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 394,
+      "human_ref_aa": "H",
+      "consensus_aa": "L",
+      "consensus_frac": 0.822,
+      "alt_aa": "P",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 97.78,
+      "radicality": 3.929,
+      "d_hydro": -5.4,
+      "d_charge": 0.0,
+      "d_vol": -78.5,
+      "d_pol": 3.1,
+      "column_entropy": 0.986,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_SPERM",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Physeter macrocephalus",
+          "control": "Hippopotamus amphibius"
+        },
+        {
+          "pair_id": "DIV_BEAKED",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Ziphius cavirostris",
+          "control": "Tursiops truncatus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND2",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 231,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.8,
+      "alt_aa": "A",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": -1.0,
+      "d_pol": -1.1,
+      "column_entropy": 1.009,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "HEAT_ORYX",
+          "axis": "Desert_Heat",
+          "species": "Oryx leucoryx",
+          "control": "Ovis aries"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 413,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.711,
+      "alt_aa": "S",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 57.75,
+      "radicality": 1.634,
+      "d_hydro": -0.1,
+      "d_charge": 0.0,
+      "d_vol": -29.0,
+      "d_pol": 0.6,
+      "column_entropy": 1.046,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 100,
+      "human_ref_aa": "I",
+      "consensus_aa": "I",
+      "consensus_frac": 0.733,
+      "alt_aa": "T",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Arctic_Cold",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 89.28,
+      "radicality": 3.647,
+      "d_hydro": -5.2,
+      "d_charge": 0.0,
+      "d_vol": -50.0,
+      "d_pol": 3.4,
+      "column_entropy": 1.082,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "COLD_FOX",
+          "axis": "Arctic_Cold",
+          "species": "Vulpes lagopus",
+          "control": "Vulpes vulpes"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 258,
+      "human_ref_aa": "A",
+      "consensus_aa": "A",
+      "consensus_frac": 0.8,
+      "alt_aa": "S",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Arctic_Cold",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 99.13,
+      "radicality": 3.344,
+      "d_hydro": -2.6,
+      "d_charge": 0.0,
+      "d_vol": 1.0,
+      "d_pol": 1.1,
+      "column_entropy": 1.089,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_NMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Heterocephalus glaber",
+          "control": "Cavia porcellus"
+        },
+        {
+          "pair_id": "COLD_MUSKOX",
+          "axis": "Arctic_Cold",
+          "species": "Ovibos moschatus",
+          "control": "Capra hircus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND3",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 91,
+      "human_ref_aa": "S",
+      "consensus_aa": "A",
+      "consensus_frac": 0.733,
+      "alt_aa": "T",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 58.02,
+      "radicality": 2.175,
+      "d_hydro": -2.5,
+      "d_charge": 0.0,
+      "d_vol": 30.0,
+      "d_pol": 0.5,
+      "column_entropy": 1.098,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_BEAKED",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Ziphius cavirostris",
+          "control": "Tursiops truncatus"
+        },
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND6",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 15,
+      "human_ref_aa": "G",
+      "consensus_aa": "G",
+      "consensus_frac": 0.667,
+      "alt_aa": "C",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 158.23,
+      "radicality": 5.06,
+      "d_hydro": 2.9,
+      "d_charge": 0.0,
+      "d_vol": 52.0,
+      "d_pol": -3.5,
+      "column_entropy": 1.107,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "SUB_BMR",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Nannospalax galili",
+          "control": "Mus musculus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 58,
+      "human_ref_aa": "S",
+      "consensus_aa": "S",
+      "consensus_frac": 0.733,
+      "alt_aa": "T",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 57.75,
+      "radicality": 1.634,
+      "d_hydro": 0.1,
+      "d_charge": 0.0,
+      "d_vol": 29.0,
+      "d_pol": -0.6,
+      "column_entropy": 1.226,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_WEDDELL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Leptonychotes weddellii",
+          "control": "Canis lupus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND2",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 320,
+      "human_ref_aa": "T",
+      "consensus_aa": "T",
+      "consensus_frac": 0.778,
+      "alt_aa": "M",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Arctic_Cold"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 81.04,
+      "radicality": 2.839,
+      "d_hydro": 2.6,
+      "d_charge": 0.0,
+      "d_vol": 44.0,
+      "d_pol": -2.9,
+      "column_entropy": 1.28,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "COLD_BEAR",
+          "axis": "Arctic_Cold",
+          "species": "Ursus maritimus",
+          "control": "Ursus americanus"
+        },
+        {
+          "pair_id": "COLD_REINDEER",
+          "axis": "Arctic_Cold",
+          "species": "Rangifer tarandus",
+          "control": "Odocoileus virginianus"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND4L",
+      "complex": "Complex_I",
+      "tier": 2,
+      "human_rcrs_aa_pos": 2,
+      "human_ref_aa": "P",
+      "consensus_aa": "S",
+      "consensus_frac": 0.622,
+      "alt_aa": "T",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Diving_Subterranean_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 57.75,
+      "radicality": 1.634,
+      "d_hydro": 0.1,
+      "d_charge": 0.0,
+      "d_vol": 29.0,
+      "d_pol": -0.6,
+      "column_entropy": 1.326,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "DIV_WEDDELL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Leptonychotes weddellii",
+          "control": "Canis lupus"
+        },
+        {
+          "pair_id": "DIV_ELEPHANTSEAL",
+          "axis": "Diving_Subterranean_Hypoxia",
+          "species": "Mirounga angustirostris",
+          "control": "Phoca vitulina"
+        }
+      ]
+    },
+    {
+      "discovery_class": "Class_II_Directional_Convergent_Dial",
+      "gene": "ND2",
+      "complex": "Complex_I",
+      "tier": 1,
+      "human_rcrs_aa_pos": 158,
+      "human_ref_aa": "S",
+      "consensus_aa": "A",
+      "consensus_frac": 0.511,
+      "alt_aa": "G",
+      "k_ext_derived": 2,
+      "k_ctl_derived": 0,
+      "net_directional_bias": 2,
+      "axes_hit": [
+        "Desert_Heat",
+        "High_Altitude_Hypoxia"
+      ],
+      "cross_hypoxia_equivalence": false,
+      "grantham": 60.0,
+      "radicality": 2.163,
+      "d_hydro": -2.2,
+      "d_charge": 0.0,
+      "d_vol": -28.0,
+      "d_pol": 0.9,
+      "column_entropy": 1.334,
+      "column_gap_fraction": 0.0,
+      "pairs": [
+        {
+          "pair_id": "ALT_PIKA",
+          "axis": "High_Altitude_Hypoxia",
+          "species": "Ochotona curzoniae",
+          "control": "Oryctolagus cuniculus"
+        },
+        {
+          "pair_id": "HEAT_JERBOA",
+          "axis": "Desert_Heat",
+          "species": "Jaculus jaculus",
+          "control": "Rattus norvegicus"
+        }
+      ]
+    }
+  ]
+}

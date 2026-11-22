@@ -1,0 +1,5 @@
+NCBI Sequence Fetch License & Policy Notification
+Timestamp: 2026-11-22T16:07:30-05:00
+Notice: User notified to review NCBI terms of use and policies at:
+- https://www.ncbi.nlm.nih.gov/
+- https://www.ncbi.nlm.nih.gov/home/about/policies/
