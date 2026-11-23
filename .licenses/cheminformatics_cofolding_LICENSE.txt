@@ -1,0 +1,5 @@
+cheminformatics-cofolding License Acceptance Record
+Timestamp: 2026-11-23T06:05:00-05:00
+Selected Engine: Boltz-2 (--engine boltz2)
+License: MIT License (Wohlwend et al. / Boltz-2 open-source weights, commercial-safe)
+User Confirmation: Explicitly confirmed via ask_question on 2026-11-23.

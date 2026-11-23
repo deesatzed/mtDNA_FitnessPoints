@@ -1,0 +1,6 @@
+rdkit-general License Notification Record
+Timestamp: 2026-11-23T06:05:00-05:00
+Tools & Licenses:
+- RDKit: BSD 3-Clause License (Landrum et al.)
+- OPSIN: Apache 2.0 (https://opsin.ch.cam.ac.uk)
+- PubChem PUG REST: https://pubchem.ncbi.nlm.nih.gov/docs/citation-guidelines

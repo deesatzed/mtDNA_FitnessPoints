@@ -1,0 +1,515 @@
+{
+  "boltz2_cofolding_wt_vs_mutant": [
+    {
+      "pair": "COX3_W116R + COX6A1",
+      "pdb_id": "9I6F",
+      "engine": "Boltz-2 (MIT License, ColabFold MSA, Apple Silicon MPS)",
+      "wt": {
+        "confidence_score": 0.9213,
+        "ptm": 0.9012,
+        "iptm": 0.9216,
+        "complex_plddt": 0.9212,
+        "complex_iplddt": 0.9237,
+        "complex_ipde_A": 1.058,
+        "chainA_rmsd_vs_cryoem_A": 1.205,
+        "dimer_rmsd_vs_cryoem_A": 1.537,
+        "min_interface_ca_A": 4.23
+      },
+      "mutant": {
+        "confidence_score": 0.924,
+        "ptm": 0.8985,
+        "iptm": 0.9172,
+        "complex_plddt": 0.9257,
+        "complex_iplddt": 0.9268,
+        "complex_ipde_A": 1.185,
+        "chainA_rmsd_vs_cryoem_A": 1.034,
+        "dimer_rmsd_vs_cryoem_A": 1.41,
+        "min_interface_ca_A": 4.2
+      },
+      "delta_iptm": -0.0043,
+      "delta_complex_plddt": 0.0045,
+      "wt_vs_mut_chainA_rmsd_A": 0.647,
+      "wt_vs_mut_dimer_rmsd_A": 0.697,
+      "wt_vs_mut_10A_pocket_rmsd_A": 0.309,
+      "verdict": "INTERFACE_PRESERVED_HIGH_CONFIDENCE"
+    },
+    {
+      "pair": "ATP6_I106V + ATP5MJ",
+      "pdb_id": "8H9S",
+      "engine": "Boltz-2 (MIT License, ColabFold MSA, Apple Silicon MPS)",
+      "wt": {
+        "confidence_score": 0.8636,
+        "ptm": 0.83,
+        "iptm": 0.6536,
+        "complex_plddt": 0.9161,
+        "complex_iplddt": 0.8982,
+        "complex_ipde_A": 4.443,
+        "chainA_rmsd_vs_cryoem_A": 1.005,
+        "dimer_rmsd_vs_cryoem_A": 2.454,
+        "min_interface_ca_A": 4.01
+      },
+      "mutant": {
+        "confidence_score": 0.8717,
+        "ptm": 0.8236,
+        "iptm": 0.677,
+        "complex_plddt": 0.9203,
+        "complex_iplddt": 0.9053,
+        "complex_ipde_A": 4.19,
+        "chainA_rmsd_vs_cryoem_A": 1.056,
+        "dimer_rmsd_vs_cryoem_A": 2.101,
+        "min_interface_ca_A": 3.93
+      },
+      "delta_iptm": 0.0234,
+      "delta_complex_plddt": 0.0042,
+      "wt_vs_mut_chainA_rmsd_A": 0.634,
+      "wt_vs_mut_dimer_rmsd_A": 1.099,
+      "wt_vs_mut_10A_pocket_rmsd_A": 0.326,
+      "verdict": "INTERFACE_PRESERVED_HIGH_CONFIDENCE"
+    },
+    {
+      "pair": "CYTB_M53T + UQCRFS1",
+      "pdb_id": "9HZL",
+      "engine": "Boltz-2 (MIT License, ColabFold MSA, Apple Silicon MPS)",
+      "wt": {
+        "confidence_score": 0.8846,
+        "ptm": 0.8656,
+        "iptm": 0.7563,
+        "complex_plddt": 0.9167,
+        "complex_iplddt": 0.8947,
+        "complex_ipde_A": 2.997,
+        "chainA_rmsd_vs_cryoem_A": 0.918,
+        "dimer_rmsd_vs_cryoem_A": 26.533,
+        "min_interface_ca_A": 4.38
+      },
+      "mutant": {
+        "confidence_score": 0.8898,
+        "ptm": 0.8682,
+        "iptm": 0.7693,
+        "complex_plddt": 0.92,
+        "complex_iplddt": 0.9002,
+        "complex_ipde_A": 2.75,
+        "chainA_rmsd_vs_cryoem_A": 0.852,
+        "dimer_rmsd_vs_cryoem_A": 26.459,
+        "min_interface_ca_A": 4.43
+      },
+      "delta_iptm": 0.0129,
+      "delta_complex_plddt": 0.0033,
+      "wt_vs_mut_chainA_rmsd_A": 0.234,
+      "wt_vs_mut_dimer_rmsd_A": 1.146,
+      "wt_vs_mut_10A_pocket_rmsd_A": 0.077,
+      "verdict": "INTERFACE_PRESERVED_HIGH_CONFIDENCE"
+    }
+  ],
+  "openmm_amber14_relaxation": [
+    {
+      "variant": "COX3_W116R",
+      "role": "Stage3_Finalist_1",
+      "pdb_id": "9I6F",
+      "target_chain": "C",
+      "resseq": 116,
+      "subassembly_chains": [
+        "COX1(A)",
+        "COX3(C)",
+        "COX6B1(H)",
+        "HIGD2A(N)"
+      ],
+      "wt": {
+        "n_atoms": 14756,
+        "E_init_kJ_mol": 135835.4,
+        "E_min_kJ_mol": -88963.0,
+        "relaxation_drop_kJ_mol": -224798.4,
+        "pocket_8A_heavy_rmsd_A": 0.654,
+        "site_ca_shift_A": 0.371,
+        "post_relax_sc_dmin_A": 3.24,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 14756,
+        "E_init_kJ_mol": 246690.8,
+        "E_min_kJ_mol": -89750.5,
+        "relaxation_drop_kJ_mol": -336441.3,
+        "pocket_8A_heavy_rmsd_A": 0.668,
+        "site_ca_shift_A": 0.306,
+        "post_relax_sc_dmin_A": 2.93,
+        "polar_contacts_3p5A": [
+          "NE--C:SER104.OG(3.38A)",
+          "NE--C:SER105.N(3.46A)",
+          "NH1--C:SER105.OG(3.50A)",
+          "NH2--C:PHE101.O(3.07A)",
+          "NH2--C:SER104.OG(2.93A)",
+          "NH2--C:SER105.OG(3.07A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": 0.014,
+      "delta_site_ca_shift_A": -0.065,
+      "new_mutant_polar_contacts_3p5A": [
+        "NE--C:SER104.OG(3.38A)",
+        "NE--C:SER105.N(3.46A)",
+        "NH1--C:SER105.OG(3.50A)",
+        "NH2--C:PHE101.O(3.07A)",
+        "NH2--C:SER104.OG(2.93A)",
+        "NH2--C:SER105.OG(3.07A)"
+      ],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "ND4L_A11T",
+      "role": "Stage3_Finalist_2",
+      "pdb_id": "9I4I",
+      "target_chain": "k",
+      "resseq": 11,
+      "subassembly_chains": [
+        "ND4L(k)",
+        "ND6(m)"
+      ],
+      "wt": {
+        "n_atoms": 4170,
+        "E_init_kJ_mol": 37903.9,
+        "E_min_kJ_mol": -24543.3,
+        "relaxation_drop_kJ_mol": -62447.1,
+        "pocket_8A_heavy_rmsd_A": 0.391,
+        "site_ca_shift_A": 0.269,
+        "post_relax_sc_dmin_A": 3.36,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 4174,
+        "E_init_kJ_mol": 38476.1,
+        "E_min_kJ_mol": -24588.2,
+        "relaxation_drop_kJ_mol": -63064.2,
+        "pocket_8A_heavy_rmsd_A": 0.368,
+        "site_ca_shift_A": 0.133,
+        "post_relax_sc_dmin_A": 2.64,
+        "polar_contacts_3p5A": [
+          "OG1--k:ASN7.O(2.64A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": -0.023,
+      "delta_site_ca_shift_A": -0.136,
+      "new_mutant_polar_contacts_3p5A": [
+        "OG1--k:ASN7.O(2.64A)"
+      ],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "COX3_I165T",
+      "role": "Stage3_Finalist_3",
+      "pdb_id": "9I6F",
+      "target_chain": "C",
+      "resseq": 165,
+      "subassembly_chains": [
+        "COX3(C)",
+        "COX6A1(G)"
+      ],
+      "wt": {
+        "n_atoms": 5399,
+        "E_init_kJ_mol": 53265.1,
+        "E_min_kJ_mol": -30400.6,
+        "relaxation_drop_kJ_mol": -83665.7,
+        "pocket_8A_heavy_rmsd_A": 0.344,
+        "site_ca_shift_A": 0.203,
+        "post_relax_sc_dmin_A": 3.41,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 5394,
+        "E_init_kJ_mol": 52393.6,
+        "E_min_kJ_mol": -30498.7,
+        "relaxation_drop_kJ_mol": -82892.2,
+        "pocket_8A_heavy_rmsd_A": 0.368,
+        "site_ca_shift_A": 0.333,
+        "post_relax_sc_dmin_A": 3.22,
+        "polar_contacts_3p5A": [
+          "OG1--C:GLN161.O(3.22A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": 0.024,
+      "delta_site_ca_shift_A": 0.13,
+      "new_mutant_polar_contacts_3p5A": [
+        "OG1--C:GLN161.O(3.22A)"
+      ],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "ATP6_I106V",
+      "role": "Stage3_Finalist_4",
+      "pdb_id": "8H9S",
+      "target_chain": "N",
+      "resseq": 106,
+      "subassembly_chains": [
+        "ATP6(N)",
+        "ATP5MJ(P)"
+      ],
+      "wt": {
+        "n_atoms": 4309,
+        "E_init_kJ_mol": 80387.4,
+        "E_min_kJ_mol": -24097.4,
+        "relaxation_drop_kJ_mol": -104484.7,
+        "pocket_8A_heavy_rmsd_A": 0.277,
+        "site_ca_shift_A": 0.18,
+        "post_relax_sc_dmin_A": 3.53,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 4306,
+        "E_init_kJ_mol": 71722.4,
+        "E_min_kJ_mol": -24138.9,
+        "relaxation_drop_kJ_mol": -95861.3,
+        "pocket_8A_heavy_rmsd_A": 0.298,
+        "site_ca_shift_A": 0.136,
+        "post_relax_sc_dmin_A": 3.45,
+        "polar_contacts_3p5A": []
+      },
+      "delta_pocket_rmsd_A": 0.021,
+      "delta_site_ca_shift_A": -0.044,
+      "new_mutant_polar_contacts_3p5A": [],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "CYTB_M53T",
+      "role": "Stage3_Finalist_5",
+      "pdb_id": "9HZL",
+      "target_chain": "J",
+      "resseq": 53,
+      "subassembly_chains": [
+        "UQCRFS1(C)",
+        "CYTB(J)",
+        "CYTB(V)"
+      ],
+      "wt": {
+        "n_atoms": 15093,
+        "E_init_kJ_mol": 135507.9,
+        "E_min_kJ_mol": -91922.4,
+        "relaxation_drop_kJ_mol": -227430.3,
+        "pocket_8A_heavy_rmsd_A": 0.506,
+        "site_ca_shift_A": 0.109,
+        "post_relax_sc_dmin_A": 3.47,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 15090,
+        "E_init_kJ_mol": 135473.3,
+        "E_min_kJ_mol": -92060.9,
+        "relaxation_drop_kJ_mol": -227534.1,
+        "pocket_8A_heavy_rmsd_A": 0.542,
+        "site_ca_shift_A": 0.146,
+        "post_relax_sc_dmin_A": 3.22,
+        "polar_contacts_3p5A": [
+          "OG1--J:LEU49.O(3.22A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": 0.036,
+      "delta_site_ca_shift_A": 0.037,
+      "new_mutant_polar_contacts_3p5A": [
+        "OG1--J:LEU49.O(3.22A)"
+      ],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "ATP6_L156R",
+      "role": "Pathogenic_Control_Leigh",
+      "pdb_id": "8H9S",
+      "target_chain": "N",
+      "resseq": 156,
+      "subassembly_chains": [
+        "ATP5MC1(2)",
+        "ATP5MC1(3)",
+        "ATP6(N)"
+      ],
+      "wt": {
+        "n_atoms": 5776,
+        "E_init_kJ_mol": 93824.9,
+        "E_min_kJ_mol": -32391.2,
+        "relaxation_drop_kJ_mol": -126216.1,
+        "pocket_8A_heavy_rmsd_A": 0.406,
+        "site_ca_shift_A": 0.472,
+        "post_relax_sc_dmin_A": 3.52,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 5781,
+        "E_init_kJ_mol": 118766.7,
+        "E_min_kJ_mol": -33102.5,
+        "relaxation_drop_kJ_mol": -151869.2,
+        "pocket_8A_heavy_rmsd_A": 0.566,
+        "site_ca_shift_A": 0.372,
+        "post_relax_sc_dmin_A": 3.23,
+        "polar_contacts_3p5A": [
+          "NE--N:PHE214.O(3.37A)",
+          "NH2--N:PHE214.O(3.32A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": 0.16,
+      "delta_site_ca_shift_A": -0.1,
+      "new_mutant_polar_contacts_3p5A": [
+        "NE--N:PHE214.O(3.37A)",
+        "NH2--N:PHE214.O(3.32A)"
+      ],
+      "physics_verdict": "MODERATE_LOCAL_REMODELING"
+    },
+    {
+      "variant": "ND1_A52T",
+      "role": "Pathogenic_Control_LHON",
+      "pdb_id": "9I4I",
+      "target_chain": "s",
+      "resseq": 52,
+      "subassembly_chains": [
+        "NDUFS7(E)",
+        "ND1(s)"
+      ],
+      "wt": {
+        "n_atoms": 7676,
+        "E_init_kJ_mol": 76957.2,
+        "E_min_kJ_mol": -55965.4,
+        "relaxation_drop_kJ_mol": -132922.6,
+        "pocket_8A_heavy_rmsd_A": 0.405,
+        "site_ca_shift_A": 0.246,
+        "post_relax_sc_dmin_A": 3.44,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 7680,
+        "E_init_kJ_mol": 76960.8,
+        "E_min_kJ_mol": -56129.6,
+        "relaxation_drop_kJ_mol": -133090.4,
+        "pocket_8A_heavy_rmsd_A": 0.444,
+        "site_ca_shift_A": 0.33,
+        "post_relax_sc_dmin_A": 3.2,
+        "polar_contacts_3p5A": [
+          "OG1--s:PRO48.O(3.20A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": 0.039,
+      "delta_site_ca_shift_A": 0.084,
+      "new_mutant_polar_contacts_3p5A": [
+        "OG1--s:PRO48.O(3.20A)"
+      ],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    }
+  ],
+  "alphagenome_8gene_promoter_law": {
+    "n_genes_scanned": 8,
+    "total_snvs_scored": 984,
+    "oxphos_partners_mean_snvs_ge15": 41.0,
+    "buffers_mean_snvs_ge15": 3.0,
+    "oxphos_partners_mean_max_phred": 27.49,
+    "buffers_mean_max_phred": 15.54,
+    "mann_whitney_p_max_phred_greater": 0.0357,
+    "mann_whitney_p_n15_greater": 0.0357,
+    "db_rows_updated_with_alphagenome": 28,
+    "genes": [
+      {
+        "gene": "COX6A1",
+        "role": "Nuclear_OXPHOS_Partner",
+        "description": "Complex IV (contacts COX3 I165/128/135)",
+        "window": "chr12:120438092-120438132",
+        "total_snvs": 123,
+        "snvs_phred_ge_15": 51,
+        "snvs_phred_ge_20": 25,
+        "median_avi_phred": 11.19,
+        "max_avi_phred": 34.87,
+        "top_variant": "chr12:120438129:G>C",
+        "top_modality": "Start Lost",
+        "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=COX6A1&m=entity"
+      },
+      {
+        "gene": "NDUFA13",
+        "role": "Nuclear_OXPHOS_Partner",
+        "description": "Complex I (contacts ND1/ND4L)",
+        "window": "chr19:19516204-19516244",
+        "total_snvs": 123,
+        "snvs_phred_ge_15": 38,
+        "snvs_phred_ge_20": 33,
+        "median_avi_phred": 5.14,
+        "max_avi_phred": 32.61,
+        "top_variant": "chr19:19516241:G>T",
+        "top_modality": "Start Lost",
+        "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=NDUFA13&m=entity"
+      },
+      {
+        "gene": "HIGD2A",
+        "role": "Nuclear_OXPHOS_Partner",
+        "description": "Complex IV hypoxia assembly factor (contacts COX3 at 2.63 A)",
+        "window": "chr5:176388730-176388770",
+        "total_snvs": 123,
+        "snvs_phred_ge_15": 26,
+        "snvs_phred_ge_20": 10,
+        "median_avi_phred": 6.78,
+        "max_avi_phred": 26.39,
+        "top_variant": "chr5:176388760:G>T",
+        "top_modality": "Cactus",
+        "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=HIGD2A&m=entity"
+      },
+      {
+        "gene": "ATP5MJ",
+        "role": "Nuclear_OXPHOS_Partner",
+        "description": "Complex V (contacts ATP6 I106V at 3.8 A)",
+        "window": "chr14:104679803-104679843",
+        "total_snvs": 123,
+        "snvs_phred_ge_15": 49,
+        "snvs_phred_ge_20": 27,
+        "median_avi_phred": 7.63,
+        "max_avi_phred": 24.24,
+        "top_variant": "chr14:103921529:C>A",
+        "top_modality": "Cactus",
+        "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=ATP5MJ&m=entity"
+      },
+      {
+        "gene": "COX4I1",
+        "role": "Nuclear_OXPHOS_Partner",
+        "description": "Complex IV hypoxia regulatory subunit",
+        "window": "chr16:85799674-85799714",
+        "total_snvs": 123,
+        "snvs_phred_ge_15": 43,
+        "snvs_phred_ge_20": 25,
+        "median_avi_phred": 10.27,
+        "max_avi_phred": 24.04,
+        "top_variant": "chr16:85799675:C>G",
+        "top_modality": "Cactus",
+        "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=COX4I1&m=entity"
+      },
+      {
+        "gene": "UQCRFS1",
+        "role": "Nuclear_OXPHOS_Partner",
+        "description": "Complex III Rieske Fe-S (contacts CYTB M53T)",
+        "window": "chr19:29213878-29213918",
+        "total_snvs": 123,
+        "snvs_phred_ge_15": 39,
+        "snvs_phred_ge_20": 9,
+        "median_avi_phred": 9.06,
+        "max_avi_phred": 22.78,
+        "top_variant": "chr19:29213160:C>T",
+        "top_modality": "Cactus",
+        "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=UQCRFS1&m=entity"
+      },
+      {
+        "gene": "UCP2",
+        "role": "Endogenous_Buffer",
+        "description": "Uncoupling protein 2 (localized promoter switch)",
+        "window": "chr11:73982823-73982863",
+        "total_snvs": 123,
+        "snvs_phred_ge_15": 6,
+        "snvs_phred_ge_20": 0,
+        "median_avi_phred": 5.15,
+        "max_avi_phred": 19.53,
+        "top_variant": "chr11:73982830:C>G",
+        "top_modality": "PRO-cap",
+        "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=UCP2&m=entity"
+      },
+      {
+        "gene": "SOD2",
+        "role": "Endogenous_Buffer",
+        "description": "Mn-SOD2 antioxidant (distal enhancer regulated)",
+        "window": "chr6:159693221-159693261",
+        "total_snvs": 123,
+        "snvs_phred_ge_15": 0,
+        "snvs_phred_ge_20": 0,
+        "median_avi_phred": 2.88,
+        "max_avi_phred": 11.54,
+        "top_variant": "chr6:159693241:T>G",
+        "top_modality": "PRO-cap",
+        "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=SOD2&m=entity"
+      }
+    ]
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "forcefield": "AMBER14 + OBC2 implicit solvent",
+  "results": [
+    {
+      "variant": "COX3_W116R",
+      "role": "Stage3_Finalist_1",
+      "pdb_id": "9I6F",
+      "target_chain": "C",
+      "resseq": 116,
+      "subassembly_chains": [
+        "COX1(A)",
+        "COX3(C)",
+        "COX6B1(H)",
+        "HIGD2A(N)"
+      ],
+      "wt": {
+        "n_atoms": 14756,
+        "E_init_kJ_mol": 135835.4,
+        "E_min_kJ_mol": -88963.0,
+        "relaxation_drop_kJ_mol": -224798.4,
+        "pocket_8A_heavy_rmsd_A": 0.654,
+        "site_ca_shift_A": 0.371,
+        "post_relax_sc_dmin_A": 3.24,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 14756,
+        "E_init_kJ_mol": 246690.8,
+        "E_min_kJ_mol": -89750.5,
+        "relaxation_drop_kJ_mol": -336441.3,
+        "pocket_8A_heavy_rmsd_A": 0.668,
+        "site_ca_shift_A": 0.306,
+        "post_relax_sc_dmin_A": 2.93,
+        "polar_contacts_3p5A": [
+          "NE--C:SER104.OG(3.38A)",
+          "NE--C:SER105.N(3.46A)",
+          "NH1--C:SER105.OG(3.50A)",
+          "NH2--C:PHE101.O(3.07A)",
+          "NH2--C:SER104.OG(2.93A)",
+          "NH2--C:SER105.OG(3.07A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": 0.014,
+      "delta_site_ca_shift_A": -0.065,
+      "new_mutant_polar_contacts_3p5A": [
+        "NE--C:SER104.OG(3.38A)",
+        "NE--C:SER105.N(3.46A)",
+        "NH1--C:SER105.OG(3.50A)",
+        "NH2--C:PHE101.O(3.07A)",
+        "NH2--C:SER104.OG(2.93A)",
+        "NH2--C:SER105.OG(3.07A)"
+      ],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "ND4L_A11T",
+      "role": "Stage3_Finalist_2",
+      "pdb_id": "9I4I",
+      "target_chain": "k",
+      "resseq": 11,
+      "subassembly_chains": [
+        "ND4L(k)",
+        "ND6(m)"
+      ],
+      "wt": {
+        "n_atoms": 4170,
+        "E_init_kJ_mol": 37903.9,
+        "E_min_kJ_mol": -24543.3,
+        "relaxation_drop_kJ_mol": -62447.1,
+        "pocket_8A_heavy_rmsd_A": 0.391,
+        "site_ca_shift_A": 0.269,
+        "post_relax_sc_dmin_A": 3.36,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 4174,
+        "E_init_kJ_mol": 38476.1,
+        "E_min_kJ_mol": -24588.2,
+        "relaxation_drop_kJ_mol": -63064.2,
+        "pocket_8A_heavy_rmsd_A": 0.368,
+        "site_ca_shift_A": 0.133,
+        "post_relax_sc_dmin_A": 2.64,
+        "polar_contacts_3p5A": [
+          "OG1--k:ASN7.O(2.64A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": -0.023,
+      "delta_site_ca_shift_A": -0.136,
+      "new_mutant_polar_contacts_3p5A": [
+        "OG1--k:ASN7.O(2.64A)"
+      ],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "COX3_I165T",
+      "role": "Stage3_Finalist_3",
+      "pdb_id": "9I6F",
+      "target_chain": "C",
+      "resseq": 165,
+      "subassembly_chains": [
+        "COX3(C)",
+        "COX6A1(G)"
+      ],
+      "wt": {
+        "n_atoms": 5399,
+        "E_init_kJ_mol": 53265.1,
+        "E_min_kJ_mol": -30400.6,
+        "relaxation_drop_kJ_mol": -83665.7,
+        "pocket_8A_heavy_rmsd_A": 0.344,
+        "site_ca_shift_A": 0.203,
+        "post_relax_sc_dmin_A": 3.41,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 5394,
+        "E_init_kJ_mol": 52393.6,
+        "E_min_kJ_mol": -30498.7,
+        "relaxation_drop_kJ_mol": -82892.2,
+        "pocket_8A_heavy_rmsd_A": 0.368,
+        "site_ca_shift_A": 0.333,
+        "post_relax_sc_dmin_A": 3.22,
+        "polar_contacts_3p5A": [
+          "OG1--C:GLN161.O(3.22A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": 0.024,
+      "delta_site_ca_shift_A": 0.13,
+      "new_mutant_polar_contacts_3p5A": [
+        "OG1--C:GLN161.O(3.22A)"
+      ],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "ATP6_I106V",
+      "role": "Stage3_Finalist_4",
+      "pdb_id": "8H9S",
+      "target_chain": "N",
+      "resseq": 106,
+      "subassembly_chains": [
+        "ATP6(N)",
+        "ATP5MJ(P)"
+      ],
+      "wt": {
+        "n_atoms": 4309,
+        "E_init_kJ_mol": 80387.4,
+        "E_min_kJ_mol": -24097.4,
+        "relaxation_drop_kJ_mol": -104484.7,
+        "pocket_8A_heavy_rmsd_A": 0.277,
+        "site_ca_shift_A": 0.18,
+        "post_relax_sc_dmin_A": 3.53,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 4306,
+        "E_init_kJ_mol": 71722.4,
+        "E_min_kJ_mol": -24138.9,
+        "relaxation_drop_kJ_mol": -95861.3,
+        "pocket_8A_heavy_rmsd_A": 0.298,
+        "site_ca_shift_A": 0.136,
+        "post_relax_sc_dmin_A": 3.45,
+        "polar_contacts_3p5A": []
+      },
+      "delta_pocket_rmsd_A": 0.021,
+      "delta_site_ca_shift_A": -0.044,
+      "new_mutant_polar_contacts_3p5A": [],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "CYTB_M53T",
+      "role": "Stage3_Finalist_5",
+      "pdb_id": "9HZL",
+      "target_chain": "J",
+      "resseq": 53,
+      "subassembly_chains": [
+        "UQCRFS1(C)",
+        "CYTB(J)",
+        "CYTB(V)"
+      ],
+      "wt": {
+        "n_atoms": 15093,
+        "E_init_kJ_mol": 135507.9,
+        "E_min_kJ_mol": -91922.4,
+        "relaxation_drop_kJ_mol": -227430.3,
+        "pocket_8A_heavy_rmsd_A": 0.506,
+        "site_ca_shift_A": 0.109,
+        "post_relax_sc_dmin_A": 3.47,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 15090,
+        "E_init_kJ_mol": 135473.3,
+        "E_min_kJ_mol": -92060.9,
+        "relaxation_drop_kJ_mol": -227534.1,
+        "pocket_8A_heavy_rmsd_A": 0.542,
+        "site_ca_shift_A": 0.146,
+        "post_relax_sc_dmin_A": 3.22,
+        "polar_contacts_3p5A": [
+          "OG1--J:LEU49.O(3.22A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": 0.036,
+      "delta_site_ca_shift_A": 0.037,
+      "new_mutant_polar_contacts_3p5A": [
+        "OG1--J:LEU49.O(3.22A)"
+      ],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "ATP6_L156R",
+      "role": "Pathogenic_Control_Leigh",
+      "pdb_id": "8H9S",
+      "target_chain": "N",
+      "resseq": 156,
+      "subassembly_chains": [
+        "ATP5MC1(2)",
+        "ATP5MC1(3)",
+        "ATP6(N)"
+      ],
+      "wt": {
+        "n_atoms": 5776,
+        "E_init_kJ_mol": 93824.9,
+        "E_min_kJ_mol": -32391.2,
+        "relaxation_drop_kJ_mol": -126216.1,
+        "pocket_8A_heavy_rmsd_A": 0.406,
+        "site_ca_shift_A": 0.472,
+        "post_relax_sc_dmin_A": 3.52,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 5781,
+        "E_init_kJ_mol": 118766.7,
+        "E_min_kJ_mol": -33102.5,
+        "relaxation_drop_kJ_mol": -151869.2,
+        "pocket_8A_heavy_rmsd_A": 0.566,
+        "site_ca_shift_A": 0.372,
+        "post_relax_sc_dmin_A": 3.23,
+        "polar_contacts_3p5A": [
+          "NE--N:PHE214.O(3.37A)",
+          "NH2--N:PHE214.O(3.32A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": 0.16,
+      "delta_site_ca_shift_A": -0.1,
+      "new_mutant_polar_contacts_3p5A": [
+        "NE--N:PHE214.O(3.37A)",
+        "NH2--N:PHE214.O(3.32A)"
+      ],
+      "physics_verdict": "MODERATE_LOCAL_REMODELING"
+    },
+    {
+      "variant": "ND1_A52T",
+      "role": "Pathogenic_Control_LHON",
+      "pdb_id": "9I4I",
+      "target_chain": "s",
+      "resseq": 52,
+      "subassembly_chains": [
+        "NDUFS7(E)",
+        "ND1(s)"
+      ],
+      "wt": {
+        "n_atoms": 7676,
+        "E_init_kJ_mol": 76957.2,
+        "E_min_kJ_mol": -55965.4,
+        "relaxation_drop_kJ_mol": -132922.6,
+        "pocket_8A_heavy_rmsd_A": 0.405,
+        "site_ca_shift_A": 0.246,
+        "post_relax_sc_dmin_A": 3.44,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 7680,
+        "E_init_kJ_mol": 76960.8,
+        "E_min_kJ_mol": -56129.6,
+        "relaxation_drop_kJ_mol": -133090.4,
+        "pocket_8A_heavy_rmsd_A": 0.444,
+        "site_ca_shift_A": 0.33,
+        "post_relax_sc_dmin_A": 3.2,
+        "polar_contacts_3p5A": [
+          "OG1--s:PRO48.O(3.20A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": 0.039,
+      "delta_site_ca_shift_A": 0.084,
+      "new_mutant_polar_contacts_3p5A": [
+        "OG1--s:PRO48.O(3.20A)"
+      ],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    }
+  ]
+}

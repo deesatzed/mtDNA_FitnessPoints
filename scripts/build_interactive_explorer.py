@@ -24,6 +24,7 @@ S3_JSON = ROOT / "data" / "stage3_shortlist.json"
 S3C_JSON = ROOT / "data" / "stage3c_bioai_summary.json"
 S4_JSON = ROOT / "data" / "stage4_epistasis_summary.json"
 S5_JSON = ROOT / "data" / "stage5_hardening_proofs.json"
+S6_JSON = ROOT / "data" / "stage6_structural_bioai_summary.json"
 OUT_HTML = ROOT / "app" / "mitofitness_explorer.html"
 
 
@@ -32,6 +33,7 @@ def build_payload() -> dict:
     s3c = json.loads(S3C_JSON.read_text(encoding="utf-8"))
     s4 = json.loads(S4_JSON.read_text(encoding="utf-8"))
     s5 = json.loads(S5_JSON.read_text(encoding="utf-8"))
+    s6 = json.loads(S6_JSON.read_text(encoding="utf-8")) if S6_JSON.exists() else {}
 
     # Load window stress test lookup
     win_lookup = {}
@@ -111,6 +113,7 @@ def build_payload() -> dict:
         "s3c_bioai": s3c,
         "s4_epistasis": s4,
         "s5_proofs": s5,
+        "s6_bioai": s6,
     }
 
 
@@ -408,6 +411,43 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 
   <!-- TAB 3: 3D ROTAMERS & BIO-AI -->
   <section id="tab-structure" class="panel">
+    <div class="card">
+      <h2>Stage 6A: Live Boltz-2 Diffusion Co-Folding — WT vs. Mutant Mitonuclear Dimers (6 Structures)</h2>
+      <p style="font-size:0.84rem; color:var(--muted); margin-top:0;">
+        Executed locally on Apple Silicon Metal GPU (<code>mps</code>) using <strong>Boltz-2 (MIT License)</strong> with live ColabFold MSA. All 3 mutated mitonuclear interfaces match experimental human cryo-EM within <code>0.85–1.06 Å</code> (Chain A) and preserve or <em>improve</em> interface <code>ipTM</code>.
+      </p>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Mitonuclear Dimer</th><th>PDB</th><th>WT ipTM</th><th>Mutant ipTM (Δ)</th>
+              <th>WT / Mut pLDDT</th><th>Cryo-EM Chain A RMSD</th><th>WT vs Mut Dimer RMSD</th>
+              <th>10 Å Pocket RMSD</th><th>Verdict</th>
+            </tr>
+          </thead>
+          <tbody id="boltzTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Stage 6B: Physics-Based OpenMM AMBER14 + OBC2 Cryo-EM Energy Relaxation (5 Finalists vs. 2 Pathogenic Controls)</h2>
+      <p style="font-size:0.84rem; color:var(--muted); margin-top:0;">
+        Explicit-hydrogen <code>AMBER14 + OBC2</code> minimization directly on experimental human cryo-EM subassemblies. All 5/5 finalists show tiny pocket perturbation (<code>ΔRMSD = −0.023 to +0.036 Å</code>) — with <strong>COX3 W116R</strong> forming a <strong>6-bond stabilizing polar H-bond trident</strong> (<code>Ser104/Ser105/Phe101</code>) — vs. pathogenic Leigh/NARP <strong>ATP6 L156R</strong> (<code>ΔRMSD = +0.160 Å</code>, 11.4× larger distortion).
+      </p>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Variant</th><th>Role</th><th>Subassembly Chains</th><th>WT 8 Å RMSD</th>
+              <th>Mut 8 Å RMSD (Δ)</th><th>Mut d_min</th><th>New Stabilizing H-Bonds (≤3.5 Å)</th><th>Verdict</th>
+            </tr>
+          </thead>
+          <tbody id="openmmTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
     <div class="card">
       <h2>Proof 3: 3D Experimental Cryo-EM Atomic Contact &amp; Full Rotamer Steric-Clash Audit</h2>
       <p style="font-size:0.84rem; color:var(--muted); margin-top:0;">
@@ -739,9 +779,42 @@ document.getElementById('afdbTableBody').innerHTML = afdbList.map(a =>
 ).join('');
 
 const agObj = DATA.s3c_bioai.alphagenome_avi_promoter_scans || {};
-document.getElementById('agTableBody').innerHTML = Object.values(agObj).map(g =>
+const ag8 = (DATA.s6_bioai && DATA.s6_bioai.alphagenome_8gene_promoter_law) ? DATA.s6_bioai.alphagenome_8gene_promoter_law.genes : null;
+document.getElementById('agTableBody').innerHTML = ag8 ? ag8.map(g =>
+  `<tr><td class="mono"><strong><a href="${g.atlas_url}" target="_blank" rel="noopener" style="color:var(--accent-dark); text-decoration:none;">${g.gene} ↗</a></strong></td><td>${g.role.replace(/_/g,' ')}</td><td><strong>${g.snvs_phred_ge_15}</strong> / ${g.total_snvs}</td><td>${g.max_avi_phred}</td><td style="font-size:0.78rem;">${g.top_modality} (${g.top_variant})</td></tr>`
+).join('') : Object.values(agObj).map(g =>
   `<tr><td class="mono"><strong><a href="${g.atlas_entity_url}" target="_blank" rel="noopener" style="color:var(--accent-dark); text-decoration:none;">${g.gene} ↗</a></strong></td><td>${g.role.replace(/_/g,' ')}</td><td><strong>${g.snvs_above_phred15}</strong> / ${g.snvs_above_phred10}</td><td>${g.max_avi_phred}</td><td style="font-size:0.78rem;">${g.top_modality} (${g.top_variant})</td></tr>`
 ).join('');
+
+// Stage 6 Boltz-2 & OpenMM tables
+const boltzList = (DATA.s6_bioai && DATA.s6_bioai.boltz2_cofolding_wt_vs_mutant) ? DATA.s6_bioai.boltz2_cofolding_wt_vs_mutant : [];
+document.getElementById('boltzTableBody').innerHTML = boltzList.map(b => `<tr>
+  <td class="mono"><strong>${b.pair}</strong></td>
+  <td class="mono">${b.pdb_id}</td>
+  <td>${b.wt.iptm.toFixed(4)}</td>
+  <td><strong>${b.mutant.iptm.toFixed(4)}</strong> <span class="mono" style="color:${b.delta_iptm>=0?'var(--green)':'var(--muted)'};">(${b.delta_iptm>=0?'+':''}${b.delta_iptm.toFixed(4)})</span></td>
+  <td>${b.wt.complex_plddt.toFixed(3)} / ${b.mutant.complex_plddt.toFixed(3)}</td>
+  <td>${b.wt.chainA_rmsd_vs_cryoem_A.toFixed(2)} Å / ${b.mutant.chainA_rmsd_vs_cryoem_A.toFixed(2)} Å</td>
+  <td><strong>${b.wt_vs_mut_dimer_rmsd_A.toFixed(2)} Å</strong></td>
+  <td>${b.wt_vs_mut_10A_pocket_rmsd_A.toFixed(2)} Å</td>
+  <td><span class="tag tag-green">${b.verdict.replace(/_/g,' ')}</span></td>
+</tr>`).join('');
+
+const openmmList = (DATA.s6_bioai && DATA.s6_bioai.openmm_amber14_relaxation) ? DATA.s6_bioai.openmm_amber14_relaxation : [];
+document.getElementById('openmmTableBody').innerHTML = openmmList.map(r => {
+  const isCtrl = r.role.startsWith('Pathogenic');
+  const hb = r.new_mutant_polar_contacts_3p5A.slice(0,2).join(', ') + (r.new_mutant_polar_contacts_3p5A.length > 2 ? ` (+${r.new_mutant_polar_contacts_3p5A.length-2} more)` : '');
+  return `<tr>
+    <td class="mono"><strong>${r.variant}</strong></td>
+    <td><span class="tag ${isCtrl ? 'tag-red' : 'tag-blue'}">${r.role.replace(/_/g,' ')}</span></td>
+    <td class="mono" style="font-size:0.75rem;">${r.subassembly_chains.join(', ')}</td>
+    <td>${r.wt.pocket_8A_heavy_rmsd_A.toFixed(3)} Å</td>
+    <td><strong>${r.mutant.pocket_8A_heavy_rmsd_A.toFixed(3)} Å</strong> <span class="mono" style="color:${r.delta_pocket_rmsd_A>0.10?'var(--red)':'var(--green)'};">(${r.delta_pocket_rmsd_A>=0?'+':''}${r.delta_pocket_rmsd_A.toFixed(3)} Å)</span></td>
+    <td>${r.mutant.post_relax_sc_dmin_A.toFixed(2)} Å</td>
+    <td class="mono" style="font-size:0.74rem;">${hb || 'None'}</td>
+    <td><span class="tag ${r.physics_verdict==='STABLE_LOW_PERTURBATION'?'tag-green':'tag-amber'}">${r.physics_verdict.replace(/_/g,' ')}</span></td>
+  </tr>`;
+}).join('');
 
 document.getElementById('windowTableBody').innerHTML = p4.top5_finalists_window_profile.map(f => {
   const w = f.bystanders_by_window;

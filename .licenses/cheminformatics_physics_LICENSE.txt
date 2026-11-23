@@ -1,0 +1,8 @@
+cheminformatics-physics License Notification Record
+Timestamp: 2026-11-23T06:05:00-05:00
+Tools & Licenses:
+- OpenMM & PDBFixer: MIT and LGPL (Eastman et al. 2017)
+- OpenFF Sage: Open Force Field Initiative (MIT)
+- AutoDock Vina: Apache 2.0 (Trott & Olson 2010; Eberhardt et al. 2021)
+- Open Babel: GPLv2 (https://openbabel.org/; O'Boyle et al. 2011)
+- RCSB PDB: https://www.rcsb.org/pages/policies

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "COX3_WT_COX6A1",
+    "json_path": "/Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/data/stage6_boltz2/inputs/COX3_WT_COX6A1.json",
+    "len_A": 261,
+    "len_B": 75,
+    "total_aa": 336,
+    "ref_pdb": "9I6F",
+    "ref_chain_A": "C",
+    "ref_chain_B": "G"
+  },
+  {
+    "name": "COX3_W116R_COX6A1",
+    "json_path": "/Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/data/stage6_boltz2/inputs/COX3_W116R_COX6A1.json",
+    "len_A": 261,
+    "len_B": 75,
+    "total_aa": 336,
+    "ref_pdb": "9I6F",
+    "ref_chain_A": "C",
+    "ref_chain_B": "G"
+  },
+  {
+    "name": "ATP6_WT_ATP5MJ",
+    "json_path": "/Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/data/stage6_boltz2/inputs/ATP6_WT_ATP5MJ.json",
+    "len_A": 226,
+    "len_B": 41,
+    "total_aa": 267,
+    "ref_pdb": "8H9S",
+    "ref_chain_A": "a",
+    "ref_chain_B": "P"
+  },
+  {
+    "name": "ATP6_I106V_ATP5MJ",
+    "json_path": "/Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/data/stage6_boltz2/inputs/ATP6_I106V_ATP5MJ.json",
+    "len_A": 226,
+    "len_B": 41,
+    "total_aa": 267,
+    "ref_pdb": "8H9S",
+    "ref_chain_A": "a",
+    "ref_chain_B": "P"
+  },
+  {
+    "name": "CYTB_WT_UQCRFS1",
+    "json_path": "/Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/data/stage6_boltz2/inputs/CYTB_WT_UQCRFS1.json",
+    "len_A": 380,
+    "len_B": 187,
+    "total_aa": 567,
+    "ref_pdb": "9HZL",
+    "ref_chain_A": "b",
+    "ref_chain_B": "C"
+  },
+  {
+    "name": "CYTB_M53T_UQCRFS1",
+    "json_path": "/Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/data/stage6_boltz2/inputs/CYTB_M53T_UQCRFS1.json",
+    "len_A": 380,
+    "len_B": 187,
+    "total_aa": 567,
+    "ref_pdb": "9HZL",
+    "ref_chain_A": "b",
+    "ref_chain_B": "C"
+  }
+]

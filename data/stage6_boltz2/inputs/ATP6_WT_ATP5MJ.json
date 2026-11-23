@@ -1,0 +1,26 @@
+{
+  "name": "ATP6_WT_ATP5MJ",
+  "dialect": "alphafold3",
+  "version": 1,
+  "modelSeeds": [
+    20261122
+  ],
+  "sequences": [
+    {
+      "protein": {
+        "id": [
+          "A"
+        ],
+        "sequence": "MNENLFASFIAPTILGLPAAVLIILFPPLLIPTSKYLINNRLITTQQWLIKLTSKQMMTMHNTKGRTWSLMLVSLIIFIATTNLLGLLPHSFTPTTQLSMNLAMAIPLWAGTVIMGFRSKIKNALAHFLPQGTPTPLIPMLVIIETISLLIQPMALAVRLTANITAGHLLMHLIGSATLAMSTINLPSTLIIFTILILLTILEIAVALIQAYVFTLLVSLYLHDNT"
+      }
+    },
+    {
+      "protein": {
+        "id": [
+          "B"
+        ],
+        "sequence": "LQSIIKNIWIPMKPYYTKVYQEIWIGMGLMGFIVYKIRAAD"
+      }
+    }
+  ]
+}

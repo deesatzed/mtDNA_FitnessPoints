@@ -19,3 +19,10 @@ __pycache__/
 *.tmp
 *.log
 .cache/
+
+# Stage 6 Boltz-2 large intermediate MSA / processed / NPZ caches (keep final .cif & confidence JSONs)
+data/stage6_boltz2/preds/boltz_results_yamls/msa/
+data/stage6_boltz2/preds/boltz_results_yamls/processed/
+data/stage6_boltz2/preds/boltz_results_yamls/lightning_logs/
+data/stage6_boltz2/preds/boltz_results_yamls/predictions/*/*.npz
+data/stage6_openmm/*.pdb
