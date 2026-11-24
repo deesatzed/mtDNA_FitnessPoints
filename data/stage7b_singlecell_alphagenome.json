@@ -1,0 +1,751 @@
+{
+  "model": "AlphaGenome 2 (alphagenome.models.v2.dna_client)",
+  "scorers": [
+    "SC_GENE_EXPRESSION",
+    "SC_ATAC",
+    "RNA_SEQ",
+    "CHIP_TF",
+    "SPLICE_SITES"
+  ],
+  "cell_conditions": {
+    "cardiomyocyte": {
+      "curie": "UBERON:0000948_CL:2000046",
+      "label": "Heart Ventricular Cardiomyocyte"
+    },
+    "cd8_tcell": {
+      "curie": "UBERON:0000178_CL:0000913",
+      "label": "Blood Effector Memory CD8+ T Cell (CAR-T)"
+    },
+    "brain_endothelial": {
+      "curie": "UBERON:0000955_CL:2000044",
+      "label": "Brain Microvascular Endothelial Cell"
+    },
+    "brain_astrocyte": {
+      "curie": "UBERON:0009834_CL:0000127",
+      "label": "Cortical Astrocyte"
+    },
+    "glutamatergic_neuron": {
+      "curie": "UBERON:0009834_CL:0000679",
+      "label": "Cortical Glutamatergic Neuron"
+    },
+    "dopaminergic_neuron": {
+      "curie": "UBERON:0000955_CL:0000700",
+      "label": "Brain Dopaminergic Neuron"
+    }
+  },
+  "active_8genes_mean_composite": 0.3096,
+  "negative_controls_mean_composite": 0.0214,
+  "signal_to_null_ratio": 14.47,
+  "variants": [
+    {
+      "gene": "COX6A1",
+      "role": "Nuclear_OXPHOS_Partner",
+      "variant": "chr12:120438129:G>C",
+      "mean_singlecell_composite": 0.5423,
+      "max_singlecell_composite": 0.7609,
+      "top_responsive_cell": "cardiomyocyte",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr12:120438129:G%3EC&m=variant",
+      "cells": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.64896,
+          "sc_atac_max_delta": 0.03469,
+          "rna_target_lfc": -0.32271,
+          "top_tf_delta": -0.75332,
+          "splice_delta": 0.05586,
+          "composite": 0.7609
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.41095,
+          "sc_atac_max_delta": 0.16868,
+          "rna_target_lfc": -0.25836,
+          "top_tf_delta": -0.75425,
+          "splice_delta": 0.12723,
+          "composite": 0.5917
+        },
+        "brain_endothelial": {
+          "label": "Brain Microvascular Endothelial Cell",
+          "curie": "UBERON:0000955_CL:2000044",
+          "sc_rna_target_lfc": -0.54209,
+          "sc_atac_max_delta": 0.18108,
+          "rna_target_lfc": -0.20046,
+          "top_tf_delta": -0.73195,
+          "splice_delta": 0.03744,
+          "composite": 0.6921
+        },
+        "brain_astrocyte": {
+          "label": "Cortical Astrocyte",
+          "curie": "UBERON:0009834_CL:0000127",
+          "sc_rna_target_lfc": -0.28149,
+          "sc_atac_max_delta": 0.05202,
+          "rna_target_lfc": -0.18149,
+          "top_tf_delta": -0.68961,
+          "splice_delta": 0.0396,
+          "composite": 0.3628
+        },
+        "glutamatergic_neuron": {
+          "label": "Cortical Glutamatergic Neuron",
+          "curie": "UBERON:0009834_CL:0000679",
+          "sc_rna_target_lfc": -0.25106,
+          "sc_atac_max_delta": 0.07778,
+          "rna_target_lfc": -0.09266,
+          "top_tf_delta": -0.57145,
+          "splice_delta": 0.01527,
+          "composite": 0.3169
+        },
+        "dopaminergic_neuron": {
+          "label": "Brain Dopaminergic Neuron",
+          "curie": "UBERON:0000955_CL:0000700",
+          "sc_rna_target_lfc": -0.49881,
+          "sc_atac_max_delta": -0.02924,
+          "rna_target_lfc": -0.06283,
+          "top_tf_delta": -0.63361,
+          "splice_delta": 0.00238,
+          "composite": 0.5297
+        }
+      }
+    },
+    {
+      "gene": "NDUFA13",
+      "role": "Nuclear_OXPHOS_Partner",
+      "variant": "chr19:19516241:G>T",
+      "mean_singlecell_composite": 0.1856,
+      "max_singlecell_composite": 0.3608,
+      "top_responsive_cell": "cardiomyocyte",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr19:19516241:G%3ET&m=variant",
+      "cells": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.27658,
+          "sc_atac_max_delta": 0.03308,
+          "rna_target_lfc": -0.13094,
+          "top_tf_delta": -0.28079,
+          "splice_delta": 0.13977,
+          "composite": 0.3608
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.09027,
+          "sc_atac_max_delta": 0.0686,
+          "rna_target_lfc": -0.08437,
+          "top_tf_delta": -0.30272,
+          "splice_delta": 0.02564,
+          "composite": 0.1521
+        },
+        "brain_endothelial": {
+          "label": "Brain Microvascular Endothelial Cell",
+          "curie": "UBERON:0000955_CL:2000044",
+          "sc_rna_target_lfc": -0.18779,
+          "sc_atac_max_delta": 0.03409,
+          "rna_target_lfc": -0.07727,
+          "top_tf_delta": -0.29282,
+          "splice_delta": 0.00873,
+          "composite": 0.2263
+        },
+        "brain_astrocyte": {
+          "label": "Cortical Astrocyte",
+          "curie": "UBERON:0009834_CL:0000127",
+          "sc_rna_target_lfc": -0.08099,
+          "sc_atac_max_delta": 0.03212,
+          "rna_target_lfc": -0.04808,
+          "top_tf_delta": -0.22453,
+          "splice_delta": 0.0329,
+          "composite": 0.1173
+        },
+        "glutamatergic_neuron": {
+          "label": "Cortical Glutamatergic Neuron",
+          "curie": "UBERON:0009834_CL:0000679",
+          "sc_rna_target_lfc": -0.0545,
+          "sc_atac_max_delta": 0.01937,
+          "rna_target_lfc": -0.05749,
+          "top_tf_delta": -0.18467,
+          "splice_delta": 0.03314,
+          "composite": 0.0868
+        },
+        "dopaminergic_neuron": {
+          "label": "Brain Dopaminergic Neuron",
+          "curie": "UBERON:0000955_CL:0000700",
+          "sc_rna_target_lfc": -0.13402,
+          "sc_atac_max_delta": 0.04976,
+          "rna_target_lfc": -0.03244,
+          "top_tf_delta": -0.22367,
+          "splice_delta": 0.01237,
+          "composite": 0.1701
+        }
+      }
+    },
+    {
+      "gene": "HIGD2A",
+      "role": "Nuclear_OXPHOS_Partner",
+      "variant": "chr5:176388760:G>T",
+      "mean_singlecell_composite": 0.3779,
+      "max_singlecell_composite": 1.1161,
+      "top_responsive_cell": "cardiomyocyte",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr5:176388760:G%3ET&m=variant",
+      "cells": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.83586,
+          "sc_atac_max_delta": -0.12848,
+          "rna_target_lfc": -0.77035,
+          "top_tf_delta": -0.2264,
+          "splice_delta": 0.09378,
+          "composite": 1.1161
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.18997,
+          "sc_atac_max_delta": -0.03889,
+          "rna_target_lfc": 0.02864,
+          "top_tf_delta": -0.12469,
+          "splice_delta": 0.06258,
+          "composite": 0.2322
+        },
+        "brain_endothelial": {
+          "label": "Brain Microvascular Endothelial Cell",
+          "curie": "UBERON:0000955_CL:2000044",
+          "sc_rna_target_lfc": -0.06133,
+          "sc_atac_max_delta": -0.05733,
+          "rna_target_lfc": 0.14375,
+          "top_tf_delta": -0.20079,
+          "splice_delta": 0.03318,
+          "composite": 0.1342
+        },
+        "brain_astrocyte": {
+          "label": "Cortical Astrocyte",
+          "curie": "UBERON:0009834_CL:0000127",
+          "sc_rna_target_lfc": -0.43971,
+          "sc_atac_max_delta": -0.08257,
+          "rna_target_lfc": -0.30261,
+          "top_tf_delta": -0.18092,
+          "splice_delta": 0.01569,
+          "composite": 0.5606
+        },
+        "glutamatergic_neuron": {
+          "label": "Cortical Glutamatergic Neuron",
+          "curie": "UBERON:0009834_CL:0000679",
+          "sc_rna_target_lfc": -0.06594,
+          "sc_atac_max_delta": 0.011,
+          "rna_target_lfc": 0.02644,
+          "top_tf_delta": -0.13923,
+          "splice_delta": 0.00373,
+          "composite": 0.079
+        },
+        "dopaminergic_neuron": {
+          "label": "Brain Dopaminergic Neuron",
+          "curie": "UBERON:0000955_CL:0000700",
+          "sc_rna_target_lfc": 0.10728,
+          "sc_atac_max_delta": -0.03137,
+          "rna_target_lfc": 0.08833,
+          "top_tf_delta": -0.16769,
+          "splice_delta": 0.00151,
+          "composite": 0.1454
+        }
+      }
+    },
+    {
+      "gene": "ATP5MJ",
+      "role": "Nuclear_OXPHOS_Partner",
+      "variant": "chr14:103921529:C>A",
+      "mean_singlecell_composite": 0.2374,
+      "max_singlecell_composite": 0.7543,
+      "top_responsive_cell": "cardiomyocyte",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr14:103921529:C%3EA&m=variant",
+      "cells": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.48112,
+          "sc_atac_max_delta": -0.23149,
+          "rna_target_lfc": -0.50304,
+          "top_tf_delta": -0.26006,
+          "splice_delta": 0.12673,
+          "composite": 0.7543
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": 0.03127,
+          "sc_atac_max_delta": 0.05816,
+          "rna_target_lfc": 0.01153,
+          "top_tf_delta": -0.12427,
+          "splice_delta": 0.00979,
+          "composite": 0.0657
+        },
+        "brain_endothelial": {
+          "label": "Brain Microvascular Endothelial Cell",
+          "curie": "UBERON:0000955_CL:2000044",
+          "sc_rna_target_lfc": 0.06448,
+          "sc_atac_max_delta": -0.01469,
+          "rna_target_lfc": -0.05281,
+          "top_tf_delta": -0.15338,
+          "splice_delta": 0.00721,
+          "composite": 0.0868
+        },
+        "brain_astrocyte": {
+          "label": "Cortical Astrocyte",
+          "curie": "UBERON:0009834_CL:0000127",
+          "sc_rna_target_lfc": -0.22607,
+          "sc_atac_max_delta": -0.14142,
+          "rna_target_lfc": -0.15474,
+          "top_tf_delta": -0.19157,
+          "splice_delta": 0.06626,
+          "composite": 0.352
+        },
+        "glutamatergic_neuron": {
+          "label": "Cortical Glutamatergic Neuron",
+          "curie": "UBERON:0009834_CL:0000679",
+          "sc_rna_target_lfc": -0.05293,
+          "sc_atac_max_delta": 0.0095,
+          "rna_target_lfc": -0.01058,
+          "top_tf_delta": -0.12458,
+          "splice_delta": 0.01006,
+          "composite": 0.0628
+        },
+        "dopaminergic_neuron": {
+          "label": "Brain Dopaminergic Neuron",
+          "curie": "UBERON:0000955_CL:0000700",
+          "sc_rna_target_lfc": -0.06148,
+          "sc_atac_max_delta": -0.06871,
+          "rna_target_lfc": -0.00899,
+          "top_tf_delta": -0.15026,
+          "splice_delta": 0.01948,
+          "composite": 0.103
+        }
+      }
+    },
+    {
+      "gene": "COX4I1",
+      "role": "Nuclear_OXPHOS_Partner",
+      "variant": "chr16:85799675:C>G",
+      "mean_singlecell_composite": 0.322,
+      "max_singlecell_composite": 0.502,
+      "top_responsive_cell": "cd8_tcell",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr16:85799675:C%3EG&m=variant",
+      "cells": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.19483,
+          "sc_atac_max_delta": -0.08219,
+          "rna_target_lfc": -0.01754,
+          "top_tf_delta": -0.12252,
+          "splice_delta": 0.03619,
+          "composite": 0.2494
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.27153,
+          "sc_atac_max_delta": -0.35718,
+          "rna_target_lfc": -0.12702,
+          "top_tf_delta": -0.30381,
+          "splice_delta": 0.08054,
+          "composite": 0.502
+        },
+        "brain_endothelial": {
+          "label": "Brain Microvascular Endothelial Cell",
+          "curie": "UBERON:0000955_CL:2000044",
+          "sc_rna_target_lfc": -0.25035,
+          "sc_atac_max_delta": -0.1433,
+          "rna_target_lfc": -0.1384,
+          "top_tf_delta": -0.1263,
+          "splice_delta": 0.06568,
+          "composite": 0.373
+        },
+        "brain_astrocyte": {
+          "label": "Cortical Astrocyte",
+          "curie": "UBERON:0009834_CL:0000127",
+          "sc_rna_target_lfc": -0.1644,
+          "sc_atac_max_delta": -0.01687,
+          "rna_target_lfc": -0.05445,
+          "top_tf_delta": 0.08191,
+          "splice_delta": 0.02114,
+          "composite": 0.1917
+        },
+        "glutamatergic_neuron": {
+          "label": "Cortical Glutamatergic Neuron",
+          "curie": "UBERON:0009834_CL:0000679",
+          "sc_rna_target_lfc": -0.26882,
+          "sc_atac_max_delta": -0.03829,
+          "rna_target_lfc": -0.09663,
+          "top_tf_delta": -0.09349,
+          "splice_delta": 0.04259,
+          "composite": 0.3228
+        },
+        "dopaminergic_neuron": {
+          "label": "Brain Dopaminergic Neuron",
+          "curie": "UBERON:0000955_CL:0000700",
+          "sc_rna_target_lfc": -0.24139,
+          "sc_atac_max_delta": -0.05708,
+          "rna_target_lfc": -0.0717,
+          "top_tf_delta": 0.09241,
+          "splice_delta": 0.0208,
+          "composite": 0.2931
+        }
+      }
+    },
+    {
+      "gene": "UQCRFS1",
+      "role": "Nuclear_OXPHOS_Partner",
+      "variant": "chr19:29213160:C>T",
+      "mean_singlecell_composite": 0.17,
+      "max_singlecell_composite": 0.4992,
+      "top_responsive_cell": "cardiomyocyte",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr19:29213160:C%3ET&m=variant",
+      "cells": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.35457,
+          "sc_atac_max_delta": -0.12994,
+          "rna_target_lfc": -0.31847,
+          "top_tf_delta": -0.11132,
+          "splice_delta": 0.0,
+          "composite": 0.4992
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.03011,
+          "sc_atac_max_delta": 0.00617,
+          "rna_target_lfc": -0.0222,
+          "top_tf_delta": -0.0474,
+          "splice_delta": 0.0,
+          "composite": 0.0387
+        },
+        "brain_endothelial": {
+          "label": "Brain Microvascular Endothelial Cell",
+          "curie": "UBERON:0000955_CL:2000044",
+          "sc_rna_target_lfc": -0.10619,
+          "sc_atac_max_delta": -0.0302,
+          "rna_target_lfc": 0.00557,
+          "top_tf_delta": -0.09931,
+          "splice_delta": 0.0,
+          "composite": 0.1227
+        },
+        "brain_astrocyte": {
+          "label": "Cortical Astrocyte",
+          "curie": "UBERON:0009834_CL:0000127",
+          "sc_rna_target_lfc": -0.16525,
+          "sc_atac_max_delta": -0.03564,
+          "rna_target_lfc": -0.12013,
+          "top_tf_delta": -0.0805,
+          "splice_delta": 0.0,
+          "composite": 0.2131
+        },
+        "glutamatergic_neuron": {
+          "label": "Cortical Glutamatergic Neuron",
+          "curie": "UBERON:0009834_CL:0000679",
+          "sc_rna_target_lfc": -0.1028,
+          "sc_atac_max_delta": 0.02843,
+          "rna_target_lfc": -0.02838,
+          "top_tf_delta": -0.0891,
+          "splice_delta": 0.0,
+          "composite": 0.1241
+        },
+        "dopaminergic_neuron": {
+          "label": "Brain Dopaminergic Neuron",
+          "curie": "UBERON:0000955_CL:0000700",
+          "sc_rna_target_lfc": -0.0196,
+          "sc_atac_max_delta": -0.00178,
+          "rna_target_lfc": 0.00739,
+          "top_tf_delta": -0.06749,
+          "splice_delta": 0.0,
+          "composite": 0.0223
+        }
+      }
+    },
+    {
+      "gene": "UCP2",
+      "role": "Endogenous_Buffer",
+      "variant": "chr11:73982830:C>G",
+      "mean_singlecell_composite": 0.5521,
+      "max_singlecell_composite": 0.8562,
+      "top_responsive_cell": "cardiomyocyte",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr11:73982830:C%3EG&m=variant",
+      "cells": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.5907,
+          "sc_atac_max_delta": -0.35904,
+          "rna_target_lfc": -0.33694,
+          "top_tf_delta": -0.64934,
+          "splice_delta": 0.00688,
+          "composite": 0.8562
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.08514,
+          "sc_atac_max_delta": -0.13897,
+          "rna_target_lfc": -0.04844,
+          "top_tf_delta": -0.3863,
+          "splice_delta": 0.01303,
+          "composite": 0.17
+        },
+        "brain_endothelial": {
+          "label": "Brain Microvascular Endothelial Cell",
+          "curie": "UBERON:0000955_CL:2000044",
+          "sc_rna_target_lfc": -0.38313,
+          "sc_atac_max_delta": -0.3834,
+          "rna_target_lfc": -0.64524,
+          "top_tf_delta": -1.01951,
+          "splice_delta": 0.10128,
+          "composite": 0.7615
+        },
+        "brain_astrocyte": {
+          "label": "Cortical Astrocyte",
+          "curie": "UBERON:0009834_CL:0000127",
+          "sc_rna_target_lfc": -0.25554,
+          "sc_atac_max_delta": -0.32079,
+          "rna_target_lfc": -0.1324,
+          "top_tf_delta": -0.64422,
+          "splice_delta": 0.00565,
+          "composite": 0.4504
+        },
+        "glutamatergic_neuron": {
+          "label": "Cortical Glutamatergic Neuron",
+          "curie": "UBERON:0009834_CL:0000679",
+          "sc_rna_target_lfc": -0.25872,
+          "sc_atac_max_delta": -0.35801,
+          "rna_target_lfc": -0.10099,
+          "top_tf_delta": -0.50603,
+          "splice_delta": 0.00264,
+          "composite": 0.4636
+        },
+        "dopaminergic_neuron": {
+          "label": "Brain Dopaminergic Neuron",
+          "curie": "UBERON:0000955_CL:0000700",
+          "sc_rna_target_lfc": -0.41528,
+          "sc_atac_max_delta": -0.25108,
+          "rna_target_lfc": -0.27082,
+          "top_tf_delta": -0.42335,
+          "splice_delta": 0.0083,
+          "composite": 0.6106
+        }
+      }
+    },
+    {
+      "gene": "SOD2",
+      "role": "Endogenous_Buffer",
+      "variant": "chr6:159693241:T>G",
+      "mean_singlecell_composite": 0.0899,
+      "max_singlecell_composite": 0.1237,
+      "top_responsive_cell": "brain_endothelial",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr6:159693241:T%3EG&m=variant",
+      "cells": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.03491,
+          "sc_atac_max_delta": -0.0156,
+          "rna_target_lfc": -0.01686,
+          "top_tf_delta": -0.14434,
+          "splice_delta": 0.00591,
+          "composite": 0.0484
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.06321,
+          "sc_atac_max_delta": -0.03536,
+          "rna_target_lfc": -0.05228,
+          "top_tf_delta": -0.20004,
+          "splice_delta": 0.01114,
+          "composite": 0.0967
+        },
+        "brain_endothelial": {
+          "label": "Brain Microvascular Endothelial Cell",
+          "curie": "UBERON:0000955_CL:2000044",
+          "sc_rna_target_lfc": -0.08399,
+          "sc_atac_max_delta": 0.01621,
+          "rna_target_lfc": 0.03602,
+          "top_tf_delta": 0.16135,
+          "splice_delta": 0.09046,
+          "composite": 0.1237
+        },
+        "brain_astrocyte": {
+          "label": "Cortical Astrocyte",
+          "curie": "UBERON:0009834_CL:0000127",
+          "sc_rna_target_lfc": -0.07603,
+          "sc_atac_max_delta": -0.02545,
+          "rna_target_lfc": -0.01085,
+          "top_tf_delta": -0.12555,
+          "splice_delta": 0.07209,
+          "composite": 0.1095
+        },
+        "glutamatergic_neuron": {
+          "label": "Cortical Glutamatergic Neuron",
+          "curie": "UBERON:0009834_CL:0000679",
+          "sc_rna_target_lfc": -0.06488,
+          "sc_atac_max_delta": -0.02093,
+          "rna_target_lfc": 0.0217,
+          "top_tf_delta": -0.10089,
+          "splice_delta": 0.00713,
+          "composite": 0.0826
+        },
+        "dopaminergic_neuron": {
+          "label": "Brain Dopaminergic Neuron",
+          "curie": "UBERON:0000955_CL:0000700",
+          "sc_rna_target_lfc": -0.06053,
+          "sc_atac_max_delta": -0.01906,
+          "rna_target_lfc": -0.02595,
+          "top_tf_delta": 0.12214,
+          "splice_delta": 0.00877,
+          "composite": 0.0787
+        }
+      }
+    },
+    {
+      "gene": "NEG_CTRL_rs9904290",
+      "role": "Negative_Control_Blank",
+      "variant": "chr17:45985000:C>T",
+      "mean_singlecell_composite": 0.0246,
+      "max_singlecell_composite": 0.0274,
+      "top_responsive_cell": "cd8_tcell",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr17:45985000:C%3ET&m=variant",
+      "cells": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": 0.01741,
+          "sc_atac_max_delta": 0.01588,
+          "rna_target_lfc": -0.00389,
+          "top_tf_delta": 0.4217,
+          "splice_delta": 0.00048,
+          "composite": 0.0264
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.02054,
+          "sc_atac_max_delta": 0.01004,
+          "rna_target_lfc": 0.00679,
+          "top_tf_delta": 0.35273,
+          "splice_delta": 0.00057,
+          "composite": 0.0274
+        },
+        "brain_endothelial": {
+          "label": "Brain Microvascular Endothelial Cell",
+          "curie": "UBERON:0000955_CL:2000044",
+          "sc_rna_target_lfc": 0.02465,
+          "sc_atac_max_delta": 0.00178,
+          "rna_target_lfc": 0.00407,
+          "top_tf_delta": -0.02278,
+          "splice_delta": 0.00023,
+          "composite": 0.0266
+        },
+        "brain_astrocyte": {
+          "label": "Cortical Astrocyte",
+          "curie": "UBERON:0009834_CL:0000127",
+          "sc_rna_target_lfc": -0.02312,
+          "sc_atac_max_delta": -0.00133,
+          "rna_target_lfc": -0.00329,
+          "top_tf_delta": -0.03874,
+          "splice_delta": 0.0007,
+          "composite": 0.0248
+        },
+        "glutamatergic_neuron": {
+          "label": "Cortical Glutamatergic Neuron",
+          "curie": "UBERON:0009834_CL:0000679",
+          "sc_rna_target_lfc": -0.01761,
+          "sc_atac_max_delta": -0.00715,
+          "rna_target_lfc": 0.00257,
+          "top_tf_delta": -0.01429,
+          "splice_delta": 0.00194,
+          "composite": 0.0223
+        },
+        "dopaminergic_neuron": {
+          "label": "Brain Dopaminergic Neuron",
+          "curie": "UBERON:0000955_CL:0000700",
+          "sc_rna_target_lfc": 0.01815,
+          "sc_atac_max_delta": 0.0011,
+          "rna_target_lfc": 0.00351,
+          "top_tf_delta": -0.01694,
+          "splice_delta": 0.00107,
+          "composite": 0.0198
+        }
+      }
+    },
+    {
+      "gene": "NEG_CTRL_rs10799812",
+      "role": "Negative_Control_Blank",
+      "variant": "chr1:215190400:G>A",
+      "mean_singlecell_composite": 0.0182,
+      "max_singlecell_composite": 0.0507,
+      "top_responsive_cell": "brain_endothelial",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr1:215190400:G%3EA&m=variant",
+      "cells": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": 0.01147,
+          "sc_atac_max_delta": -0.01146,
+          "rna_target_lfc": -0.00173,
+          "top_tf_delta": -0.05057,
+          "splice_delta": 1e-05,
+          "composite": 0.0176
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": 0.00646,
+          "sc_atac_max_delta": -0.00457,
+          "rna_target_lfc": -0.00424,
+          "top_tf_delta": -0.05572,
+          "splice_delta": 0.0,
+          "composite": 0.0098
+        },
+        "brain_endothelial": {
+          "label": "Brain Microvascular Endothelial Cell",
+          "curie": "UBERON:0000955_CL:2000044",
+          "sc_rna_target_lfc": -0.00928,
+          "sc_atac_max_delta": -0.07532,
+          "rna_target_lfc": 0.00987,
+          "top_tf_delta": -0.25126,
+          "splice_delta": 0.00505,
+          "composite": 0.0507
+        },
+        "brain_astrocyte": {
+          "label": "Cortical Astrocyte",
+          "curie": "UBERON:0009834_CL:0000127",
+          "sc_rna_target_lfc": -0.00537,
+          "sc_atac_max_delta": -0.00839,
+          "rna_target_lfc": -0.00175,
+          "top_tf_delta": -0.03538,
+          "splice_delta": 0.0,
+          "composite": 0.01
+        },
+        "glutamatergic_neuron": {
+          "label": "Cortical Glutamatergic Neuron",
+          "curie": "UBERON:0009834_CL:0000679",
+          "sc_rna_target_lfc": -0.00512,
+          "sc_atac_max_delta": -0.00795,
+          "rna_target_lfc": 0.00175,
+          "top_tf_delta": -0.03757,
+          "splice_delta": 0.0003,
+          "composite": 0.0096
+        },
+        "dopaminergic_neuron": {
+          "label": "Brain Dopaminergic Neuron",
+          "curie": "UBERON:0000955_CL:0000700",
+          "sc_rna_target_lfc": 0.00623,
+          "sc_atac_max_delta": -0.0102,
+          "rna_target_lfc": 0.00108,
+          "top_tf_delta": -0.03055,
+          "splice_delta": 9e-05,
+          "composite": 0.0116
+        }
+      }
+    }
+  ]
+}

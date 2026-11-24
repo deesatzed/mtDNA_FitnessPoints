@@ -19,6 +19,7 @@ All 13 human mtDNA protein-coding genes (`NC_012920.1`, rCRS, `16,569 bp`) are e
 | **Stage 4: Epistasis ODE, UQ & GSA** | `scripts/stage4_epistasis_synergy_uq.py` | 4-state I/R ODE (`[W, Q_red, Succ, ATP]`) coupled to $\mathrm{EP} = \dot{e}_R \cdot f^2$; `N = 10,000` LHS (`±30%` priors); `10,240`-eval Saltelli-Sobol GSA | `RK4` vs `DOP853`/`Radau` converged (`max |Delta| = 1.029e-07`); proved non-monotonic ATP vs. RET-ROS trade-off and strong positive epistasis (**`COX3 W116R + Yeast NDI1`**, `S = 1.322x`, `E_add = +0.1187`, `93.5%` LHS positive; **`+ Human SOD2`**, `95.1%`; **`+ Ciona AOX`**, `+4.8 kPa` cliff expansion) |
 | **Stage 5: Hardening, 6 Proofs & Explorer** | `scripts/stage5_hardening_and_proofs.py`, `scripts/build_interactive_explorer.py` | Full-proteome ClinVar/gnomAD (`42` Path vs `935` Benign), 3D Dunbrack rotamer scans, ±2..±6 nt windows, 4 alt ODE forms + adversarial controls | Adjusted mitonuclear interface **`OR = 1.519` (`p = 0.027`)** vs non-sig Control Null; blind Tier-1→Tier-2 ClinVar **`AUROC = 0.888`**; 5/5 finalists clash-free in cryo-EM (`COX3 W116R` `3.21 Å`, `0` bystanders to `±6 nt`); `100%` supermodularity & `>=85–95%` clonal heteroplasmy threshold; standalone offline explorer (`app/mitofitness_explorer.html`) |
 | **Stage 6: Boltz-2, OpenMM & 8-Gene AlphaGenome** | `scripts/stage6a_prepare_cofold_inputs.py`, `scripts/stage6c_openmm_relaxation.py`, `scripts/stage6_synthesize_and_plot.py` | Live **Boltz-2 (MIT)** on Apple Silicon MPS (6 WT/Mut dimers) + **OpenMM AMBER14+OBC2** cryo-EM relaxation + 8 live **AlphaGenome AVI** promoter scans (`984` SNVs) | Boltz-2 recovers cryo-EM at `0.85–1.06 Å` (`COX3 W116R+COX6A1` `ipTM = 0.917`, WT vs Mut `0.70 Å`); OpenMM proves 5/5 finalists `ΔRMSD ≤ 0.036 Å` (`COX3 W116R` forms 6 H-bonds) vs pathogenic `ATP6 L156R` (`+0.160 Å`); AlphaGenome 6 OXPHOS partners (`41.0` SNVs ≥15) vs 2 buffers (`3.0`), `p = 0.0357` |
+| **Stage 7: Cross-Project Bridges (`Mito_Papers` + `BAA-Mito`)** | `scripts/stage7a_heteroplasmy_amplification_and_cart.py`, `scripts/stage7b_singlecell_alphagenome_buffers.py`, `scripts/stage7_synthesize_and_plot.py` | Biphasic mitophagy-selection ODE (`10,000` LHS + Sobol) + 72-h CAR-T hypoxia cycling + Live **AlphaGenome 2 `v2.dna_client`** across 6 observed single-cell types + 2 blank controls | Biphasic selection shifts `50%` → **`83.2%`** (`TwoCycle` triples safety nadir to `0.243`); 100%-human **`COX3 W116R + Human SOD2`** boosts CAR-T persistence **`6.07×`** (`0.161 → 0.979`); AlphaGenome 2 single-cell **`14.47×` Signal/Null** uncovers **`UCP2`'s `7×` cardiac-selective switch**; Explorer v2 adds `E1–E4` badges & in-app Freshman Guide |
 
 ---
 
@@ -26,7 +27,7 @@ All 13 human mtDNA protein-coding genes (`NC_012920.1`, rCRS, `16,569 bp`) are e
 
 - **Design Decisions & Audit Trail:** `DESIGN_LOG.md`
 - **Database Schema & SQLite Catalog:** `schema/mitofitness_schema.sql`, `data/mitofitness.db`
-- **Interactive Offline Explorer & Freshman Guide:** `app/mitofitness_explorer.html`, `docs/EXPLORER_GUIDE.md`
+- **Interactive Offline Explorer & Guides:** `app/mitofitness_explorer.html` (7 tabs incl. `E1–E4` provenance & in-app Freshman Guide), `docs/EXPLORER_GUIDE.md`, `docs/PHYSICIAN_EXECUTIVE_BRIEF.md`, `docs/cross_project_bridges/`
 - **Stage Reports:**
   - `data/stage1_report.md` (`data/stage1_convergent_summary.json`)
   - `data/stage2_report.md` (`data/stage2_3d_fbt_summary.json`)
@@ -34,11 +35,13 @@ All 13 human mtDNA protein-coding genes (`NC_012920.1`, rCRS, `16,569 bp`) are e
   - `data/stage4_report.md` (`data/stage4_epistasis_summary.json`)
   - `data/stage5_hardening_report.md` (`data/stage5_hardening_proofs.json`)
   - `data/stage6_report.md` (`data/stage6_structural_bioai_summary.json`)
+  - `data/stage7_report.md` (`data/stage7a_heteroplasmy_and_cart.json`, `data/stage7b_singlecell_alphagenome.json`)
 - **Publication Figures:**
   - `figures/stage2_3d_fbt_equivalence_clusters.png`
   - `figures/stage4_epistasis_synergy_and_cliffs.png`
   - `figures/stage5_hardening_and_proofs.png`
   - `figures/stage6_boltz2_openmm_alphagenome.png`
+  - `figures/stage7_cross_project_bridges.png`
 - **Co-Folding Manifests (AF3 JSON & Boltz-2 YAML):** `data/cofolding_manifests/`
 - **Third-Party Data Attribution Licenses:** `.licenses/`
 

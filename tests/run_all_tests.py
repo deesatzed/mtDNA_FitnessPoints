@@ -16,6 +16,7 @@ TEST_SUITES = [
     "tests/test_stage4.py",
     "tests/test_stage5_proofs.py",
     "tests/test_stage6_structural_bioai.py",
+    "tests/test_stage7_bridges.py",
 ]
 
 
@@ -32,7 +33,7 @@ def main() -> int:
             print(f"\nFAIL: {rel} exited with code {proc.returncode}")
             return proc.returncode
     print("\n" + "=" * 72)
-    print("ALL 7 VERIFICATION SUITES PASSED (Phase 0 -> Stage 6 Structural & Bio-AI)")
+    print("ALL 8 VERIFICATION SUITES PASSED (Phase 0 -> Stage 7 Cross-Project Bridges)")
     print("=" * 72)
     return 0
 

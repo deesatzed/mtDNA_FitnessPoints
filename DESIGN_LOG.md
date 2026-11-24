@@ -178,6 +178,16 @@ Every phase ends with a human review checkpoint before advancing:
 * **Expanded Live AlphaGenome `AVI` 8-Gene Promoter Law (`984` SNVs):** Added Complex IV partners **`COX6A1` (`34.87`, 51 SNVs ≥15)**, **`HIGD2A` (`26.39`, 26 SNVs ≥15)**, and **`COX4I1` (`24.04`, 43 SNVs ≥15)**. Across all 8 genes, 6 nuclear OXPHOS partners average **`41.0` SNVs ≥ Phred 15** vs. **`3.0`** for 2 endogenous buffers (`UCP2`, `SOD2`) — exact Mann–Whitney `p = 0.0357` (`28` SQLite rows updated).
 * **Explorer & Verification (`tests/test_stage6_structural_bioai.py`):** Integrated live Boltz-2, OpenMM AMBER14, and all 8 AlphaGenome AVI genes directly into `app/mitofitness_explorer.html`; **7/7** unified test suites pass 100%.
 
+### Stage 7 — **CROSS-PROJECT BRIDGES (`Mito_Papers` + `BAA Mito Twin`) COMPLETE & VERIFIED (2026-11-23)**
+* **Track 7A (`Mito_Papers` Bridge — Biphasic Mitophagy-Selection Heteroplasmy Amplification, `scripts/stage7a_heteroplasmy_amplification_and_cart.py`):**
+  * Verified `RK4` vs. `DOP853`/`Radau` (`max |Delta| = 2.595e-4`). Across `N = 10,000` LHS starting at realistic `50%` bulk `TALED` editing: `Unphased_Biogenesis_Trap` stalls at `50.0%`; `Continuous_Mitophagy_Only` collapses `W_tot` to `0.011`; **`Biphasic_Selection_Reset` (7d mild hypoxia `1.1 kPa` + `PINK1`/Urolithin A → 7d normoxic biogenesis)** amplifies `50%` → **`83.2%`** (`W_tot = 0.692`); **`TwoCycle_Pulsed_Biphasic`** triples the mitochondrial mass safety nadir (`0.082` → **`0.243`**) while still shifting `50%` → **`80.9%`** (`96.5%` 95th). Saltelli–Sobol GSA (`10,240` evals) pins **`s_bias_err` (`S_T = 0.805`)** as the exact falsifiable selectivity parameter.
+* **Track 7B (`Mito_Papers` CAR-T Bridge — 72-h Solid-Tumor Hypoxia Cycling):**
+  * Across 6 cycles (`8h 0.45 kPa` / `4h 6.5 kPa`, `N = 10,000` LHS), 100% human-sequence **`COX3 W116R + Human SOD2`** (zero foreign immunogenicity) increases 72-h CAR-T effector persistence **`6.07×`** over WT (`0.1613` → **`0.9794`**, ATP nadir `0.052` → **`0.957`**, cumulative EP excess `18.72` → **`0.36`**), matching foreign `Yeast NDI1` (`0.9828`).
+* **Track 7C (`BAA Mito Twin` Bridge — Live AlphaGenome 2 Single-Cell Conditioning, `scripts/stage7b_singlecell_alphagenome_buffers.py`):**
+  * Scored all 8 nuclear OXPHOS & buffer genes + 2 `BAA-Mito` blank negative controls (`rs9904290`, `rs10799812`) across 6 observed `scRNA+scATAC` cell types (`Cardiomyocyte`, `CD8+ T-Cell`, `Brain Endothelial`, `Astrocyte`, `Glutamatergic`, `Dopaminergic`).
+  * **`14.47×` Signal-to-Null specificity** (`0.3097` vs `0.0214`, zero false alarms). **`6 / 8` nuclear genes peak in Ventricular Cardiomyocytes**, and **`UCP2` (`chr11:73982830:C>G`)** reveals a **`7×` cardiac-selective promoter switch** (`composite = 0.8562`, `scRNA = -0.5907` in Cardiomyocytes vs `-0.0851` in CD8+ T cells).
+* **Explorer v2 & Verification (`tests/test_stage7_bridges.py`):** Added `BAA-Mito` `E1–E4` epistemic provenance badges, Engineered Donor Mitochondria Transfer (`CD38`/`LRP1`) track, Tab 6 (`Cross-Project Bridges`), and Tab 7 (`Plain-English Guide`) directly into `app/mitofitness_explorer.html`; **8/8** unified test suites pass 100%.
+
 
 
 

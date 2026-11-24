@@ -1,0 +1,722 @@
+{
+  "track7a_biphasic_heteroplasmy_amplification": {
+    "solver_convergence": {
+      "h_end_RK4_dt005": 0.8493408,
+      "h_end_DOP853": 0.8496002,
+      "h_end_Radau": 0.8496002,
+      "max_abs_diff": 0.0002595
+    },
+    "n_lhs": 10000,
+    "initial_bulk_taled_h0_pct": 50.0,
+    "regimens": {
+      "Normoxia_NoSelection": {
+        "h_end_pct_median": 50.0,
+        "h_end_pct_iq90": [
+          50.0,
+          50.0
+        ],
+        "w_tot_end_median": 0.744,
+        "w_tot_end_iq90": [
+          0.551,
+          0.957
+        ],
+        "w_tot_nadir_median": 0.744,
+        "pct_draws_ge_85pct_heteroplasmy": 0.0,
+        "pct_draws_ge_90pct_heteroplasmy": 0.0
+      },
+      "Unphased_Biogenesis_Trap": {
+        "h_end_pct_median": 50.0,
+        "h_end_pct_iq90": [
+          50.0,
+          50.0
+        ],
+        "w_tot_end_median": 0.898,
+        "w_tot_end_iq90": [
+          0.655,
+          1.147
+        ],
+        "w_tot_nadir_median": 0.898,
+        "pct_draws_ge_85pct_heteroplasmy": 0.0,
+        "pct_draws_ge_90pct_heteroplasmy": 0.0
+      },
+      "Continuous_Mitophagy_Only": {
+        "h_end_pct_median": 96.05,
+        "h_end_pct_iq90": [
+          35.69,
+          99.93
+        ],
+        "w_tot_end_median": 0.011,
+        "w_tot_end_iq90": [
+          0.001,
+          0.044
+        ],
+        "w_tot_nadir_median": 0.011,
+        "pct_draws_ge_85pct_heteroplasmy": 71.0,
+        "pct_draws_ge_90pct_heteroplasmy": 64.6
+      },
+      "Biphasic_Selection_Reset": {
+        "h_end_pct_median": 83.21,
+        "h_end_pct_iq90": [
+          42.39,
+          97.53
+        ],
+        "w_tot_end_median": 0.692,
+        "w_tot_end_iq90": [
+          0.421,
+          0.986
+        ],
+        "w_tot_nadir_median": 0.082,
+        "pct_draws_ge_85pct_heteroplasmy": 46.0,
+        "pct_draws_ge_90pct_heteroplasmy": 32.3
+      },
+      "TwoCycle_Pulsed_Biphasic": {
+        "h_end_pct_median": 80.9,
+        "h_end_pct_iq90": [
+          43.09,
+          96.5
+        ],
+        "w_tot_end_median": 0.618,
+        "w_tot_end_iq90": [
+          0.381,
+          0.896
+        ],
+        "w_tot_nadir_median": 0.243,
+        "pct_draws_ge_85pct_heteroplasmy": 40.2,
+        "pct_draws_ge_90pct_heteroplasmy": 26.3
+      }
+    },
+    "trajectories_14d": {
+      "Normoxia_NoSelection": {
+        "days": [
+          0.0,
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          4.5,
+          5.0,
+          5.5,
+          6.0,
+          6.5,
+          7.0,
+          7.5,
+          8.0,
+          8.5,
+          9.0,
+          9.5,
+          10.0,
+          10.5,
+          11.0,
+          11.5,
+          12.0,
+          12.5,
+          13.0,
+          13.5,
+          14.0
+        ],
+        "heteroplasmy_pct": [
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0
+        ],
+        "w_tot": [
+          0.92,
+          0.902,
+          0.886,
+          0.871,
+          0.859,
+          0.847,
+          0.837,
+          0.828,
+          0.819,
+          0.812,
+          0.805,
+          0.799,
+          0.793,
+          0.788,
+          0.783,
+          0.779,
+          0.775,
+          0.772,
+          0.769,
+          0.766,
+          0.763,
+          0.761,
+          0.758,
+          0.756,
+          0.754,
+          0.753,
+          0.751,
+          0.75,
+          0.748
+        ]
+      },
+      "Unphased_Biogenesis_Trap": {
+        "days": [
+          0.0,
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          4.5,
+          5.0,
+          5.5,
+          6.0,
+          6.5,
+          7.0,
+          7.5,
+          8.0,
+          8.5,
+          9.0,
+          9.5,
+          10.0,
+          10.5,
+          11.0,
+          11.5,
+          12.0,
+          12.5,
+          13.0,
+          13.5,
+          14.0
+        ],
+        "heteroplasmy_pct": [
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0
+        ],
+        "w_tot": [
+          0.92,
+          0.916,
+          0.912,
+          0.91,
+          0.908,
+          0.906,
+          0.905,
+          0.904,
+          0.904,
+          0.903,
+          0.903,
+          0.903,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902,
+          0.902
+        ]
+      },
+      "Continuous_Mitophagy_Only": {
+        "days": [
+          0.0,
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          4.5,
+          5.0,
+          5.5,
+          6.0,
+          6.5,
+          7.0,
+          7.5,
+          8.0,
+          8.5,
+          9.0,
+          9.5,
+          10.0,
+          10.5,
+          11.0,
+          11.5,
+          12.0,
+          12.5,
+          13.0,
+          13.5,
+          14.0
+        ],
+        "heteroplasmy_pct": [
+          50.0,
+          53.08,
+          56.13,
+          59.13,
+          62.07,
+          64.93,
+          67.68,
+          70.31,
+          72.82,
+          75.18,
+          77.41,
+          79.49,
+          81.43,
+          83.22,
+          84.87,
+          86.38,
+          87.77,
+          89.03,
+          90.18,
+          91.21,
+          92.15,
+          93.0,
+          93.76,
+          94.44,
+          95.05,
+          95.6,
+          96.09,
+          96.53,
+          96.92
+        ],
+        "w_tot": [
+          0.92,
+          0.731,
+          0.587,
+          0.476,
+          0.389,
+          0.32,
+          0.265,
+          0.221,
+          0.185,
+          0.155,
+          0.131,
+          0.111,
+          0.094,
+          0.08,
+          0.069,
+          0.059,
+          0.05,
+          0.043,
+          0.037,
+          0.032,
+          0.028,
+          0.024,
+          0.021,
+          0.018,
+          0.016,
+          0.014,
+          0.012,
+          0.01,
+          0.009
+        ]
+      },
+      "Biphasic_Selection_Reset": {
+        "days": [
+          0.0,
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          4.5,
+          5.0,
+          5.5,
+          6.0,
+          6.5,
+          7.0,
+          7.5,
+          8.0,
+          8.5,
+          9.0,
+          9.5,
+          10.0,
+          10.5,
+          11.0,
+          11.5,
+          12.0,
+          12.5,
+          13.0,
+          13.5,
+          14.0
+        ],
+        "heteroplasmy_pct": [
+          50.0,
+          53.08,
+          56.13,
+          59.13,
+          62.07,
+          64.93,
+          67.68,
+          70.31,
+          72.82,
+          75.18,
+          77.41,
+          79.49,
+          81.43,
+          83.22,
+          84.84,
+          84.85,
+          84.85,
+          84.86,
+          84.87,
+          84.87,
+          84.88,
+          84.89,
+          84.89,
+          84.9,
+          84.91,
+          84.91,
+          84.92,
+          84.93,
+          84.93
+        ],
+        "w_tot": [
+          0.92,
+          0.732,
+          0.59,
+          0.48,
+          0.394,
+          0.326,
+          0.271,
+          0.227,
+          0.191,
+          0.162,
+          0.137,
+          0.117,
+          0.1,
+          0.086,
+          0.075,
+          0.096,
+          0.121,
+          0.153,
+          0.191,
+          0.235,
+          0.285,
+          0.341,
+          0.4,
+          0.461,
+          0.521,
+          0.579,
+          0.633,
+          0.68,
+          0.722
+        ]
+      },
+      "TwoCycle_Pulsed_Biphasic": {
+        "days": [
+          0.0,
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          4.5,
+          5.0,
+          5.5,
+          6.0,
+          6.5,
+          7.0,
+          7.5,
+          8.0,
+          8.5,
+          9.0,
+          9.5,
+          10.0,
+          10.5,
+          11.0,
+          11.5,
+          12.0,
+          12.5,
+          13.0,
+          13.5,
+          14.0
+        ],
+        "heteroplasmy_pct": [
+          50.0,
+          52.77,
+          55.52,
+          58.24,
+          60.91,
+          63.51,
+          66.04,
+          68.44,
+          68.45,
+          68.46,
+          68.47,
+          68.48,
+          68.5,
+          68.51,
+          68.56,
+          70.9,
+          73.13,
+          75.25,
+          77.26,
+          79.15,
+          80.92,
+          82.54,
+          82.55,
+          82.56,
+          82.57,
+          82.57,
+          82.58,
+          82.59,
+          82.62
+        ],
+        "w_tot": [
+          0.92,
+          0.749,
+          0.619,
+          0.517,
+          0.436,
+          0.37,
+          0.317,
+          0.274,
+          0.329,
+          0.387,
+          0.448,
+          0.509,
+          0.567,
+          0.622,
+          0.668,
+          0.564,
+          0.48,
+          0.412,
+          0.356,
+          0.31,
+          0.271,
+          0.239,
+          0.29,
+          0.346,
+          0.405,
+          0.466,
+          0.526,
+          0.584,
+          0.634
+        ]
+      }
+    },
+    "h0_feasibility_sweep": [
+      {
+        "h0_pct": 20,
+        "h14_median_pct": 55.34,
+        "h14_iq90_pct": [
+          15.54,
+          90.81
+        ],
+        "pct_draws_clearing_85pct": 11.7
+      },
+      {
+        "h0_pct": 30,
+        "h14_median_pct": 68.0,
+        "h14_iq90_pct": [
+          23.97,
+          94.43
+        ],
+        "pct_draws_clearing_85pct": 22.4
+      },
+      {
+        "h0_pct": 40,
+        "h14_median_pct": 76.77,
+        "h14_iq90_pct": [
+          32.91,
+          96.35
+        ],
+        "pct_draws_clearing_85pct": 33.9
+      },
+      {
+        "h0_pct": 50,
+        "h14_median_pct": 83.21,
+        "h14_iq90_pct": [
+          42.39,
+          97.53
+        ],
+        "pct_draws_clearing_85pct": 46.0
+      },
+      {
+        "h0_pct": 60,
+        "h14_median_pct": 88.15,
+        "h14_iq90_pct": [
+          52.46,
+          98.34
+        ],
+        "pct_draws_clearing_85pct": 58.2
+      },
+      {
+        "h0_pct": 70,
+        "h14_median_pct": 92.04,
+        "h14_iq90_pct": [
+          63.19,
+          98.93
+        ],
+        "pct_draws_clearing_85pct": 70.5
+      }
+    ],
+    "sobol_gsa": {
+      "n_evals": 10240,
+      "output_variance": 0.031665,
+      "sobol_S1": {
+        "Km_wt": 0.0552,
+        "Km_mut": 0.0845,
+        "k_mito_base": -0.0,
+        "k_mito_sel": 0.0111,
+        "k_bio_max": 0.0,
+        "depol_slope": 0.0466,
+        "k_copy_cap": 0.0,
+        "s_bias_err": 0.7508
+      },
+      "sobol_ST": {
+        "Km_wt": 0.0694,
+        "Km_mut": 0.0975,
+        "k_mito_base": 0.0,
+        "k_mito_sel": 0.028,
+        "k_bio_max": 0.0,
+        "depol_slope": 0.0557,
+        "k_copy_cap": 0.0,
+        "s_bias_err": 0.805
+      }
+    }
+  },
+  "track7b_ex_vivo_cart_tumor_hypoxia": {
+    "protocol": "72-h solid-tumor hypoxia cycling (6 cycles x [8h 0.45 kPa hypoxia + 4h 6.5 kPa reoxygenation])",
+    "n_lhs": 10000,
+    "arms": {
+      "WT_Human_CART": {
+        "effector_persistence_72h_median": 0.1613,
+        "effector_persistence_72h_iq90": [
+          0.0,
+          1.0
+        ],
+        "W_end_72h_median": 0.2887,
+        "min_atp_72h_median": 0.052,
+        "cum_ep_excess_72h_median": 18.72
+      },
+      "COX3_W116R_Alone_CART": {
+        "effector_persistence_72h_median": 0.3524,
+        "effector_persistence_72h_iq90": [
+          0.0,
+          1.0
+        ],
+        "W_end_72h_median": 0.4142,
+        "min_atp_72h_median": 0.484,
+        "cum_ep_excess_72h_median": 18.67
+      },
+      "Human_SOD2_Alone_CART": {
+        "effector_persistence_72h_median": 0.6788,
+        "effector_persistence_72h_iq90": [
+          0.0,
+          1.0
+        ],
+        "W_end_72h_median": 0.7899,
+        "min_atp_72h_median": 0.148,
+        "cum_ep_excess_72h_median": 0.4
+      },
+      "COX3_W116R_plus_Human_SOD2_CART": {
+        "effector_persistence_72h_median": 0.9794,
+        "effector_persistence_72h_iq90": [
+          0.0,
+          1.0
+        ],
+        "W_end_72h_median": 0.9182,
+        "min_atp_72h_median": 0.957,
+        "cum_ep_excess_72h_median": 0.36
+      },
+      "COX3_W116R_plus_Yeast_NDI1_CART": {
+        "effector_persistence_72h_median": 0.9828,
+        "effector_persistence_72h_iq90": [
+          0.0,
+          1.0
+        ],
+        "W_end_72h_median": 0.9202,
+        "min_atp_72h_median": 0.879,
+        "cum_ep_excess_72h_median": 0.27
+      },
+      "COX3_W116R_plus_Ciona_AOX_CART": {
+        "effector_persistence_72h_median": 0.9308,
+        "effector_persistence_72h_iq90": [
+          0.0,
+          1.0
+        ],
+        "W_end_72h_median": 0.8869,
+        "min_atp_72h_median": 0.85,
+        "cum_ep_excess_72h_median": 1.27
+      }
+    },
+    "human_sod2_cart_synergy": {
+      "pair": "COX3_W116R + Human_SOD2 (100% Human Sequence, Zero Foreign Immunogenicity)",
+      "epistatic_excess_median": 0.001,
+      "epistatic_excess_iq90": [
+        -0.0305,
+        0.6538
+      ],
+      "pct_lhs_positive": 59.4,
+      "fold_persistence_gain_vs_WT": 6.07
+    }
+  }
+}
