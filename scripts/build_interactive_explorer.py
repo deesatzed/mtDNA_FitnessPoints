@@ -27,6 +27,8 @@ S5_JSON = ROOT / "data" / "stage5_hardening_proofs.json"
 S6_JSON = ROOT / "data" / "stage6_structural_bioai_summary.json"
 S7A_JSON = ROOT / "data" / "stage7a_heteroplasmy_and_cart.json"
 S7B_JSON = ROOT / "data" / "stage7b_singlecell_alphagenome.json"
+S8A_JSON = ROOT / "data" / "stage8a_replication_engraftment.json"
+S8B_JSON = ROOT / "data" / "stage8b_thermal_baric.json"
 OUT_HTML = ROOT / "app" / "mitofitness_explorer.html"
 
 
@@ -38,6 +40,8 @@ def build_payload() -> dict:
     s6 = json.loads(S6_JSON.read_text(encoding="utf-8")) if S6_JSON.exists() else {}
     s7a = json.loads(S7A_JSON.read_text(encoding="utf-8")) if S7A_JSON.exists() else {}
     s7b = json.loads(S7B_JSON.read_text(encoding="utf-8")) if S7B_JSON.exists() else {}
+    s8a = json.loads(S8A_JSON.read_text(encoding="utf-8")) if S8A_JSON.exists() else {}
+    s8b = json.loads(S8B_JSON.read_text(encoding="utf-8")) if S8B_JSON.exists() else {}
 
     # Load window stress test lookup
     win_lookup = {}
@@ -120,6 +124,8 @@ def build_payload() -> dict:
         "s6_bioai": s6,
         "s7a_bridges": s7a,
         "s7b_sc_ag2": s7b,
+        "stage8a_replication": s8a,
+        "stage8b_thermal_baric": s8b,
     }
 
 
@@ -377,6 +383,13 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
           <option value="Complex_IV">Complex IV</option>
           <option value="Complex_V">Complex V</option>
         </select>
+        <select id="fAxis">
+          <option value="">All Stress Axes</option>
+          <option value="High_Altitude_Hypoxia">High-Altitude Hypoxia</option>
+          <option value="Diving_Subterranean_Hypoxia">Diving / Subterranean</option>
+          <option value="Arctic_Cold">Arctic Cold (4°C→37°C)</option>
+          <option value="Desert_Heat">Desert Heat (37°C→41.5°C)</option>
+        </select>
         <select id="fStrategy">
           <option value="">All Strategies</option>
           <option value="Motif_Grafting_BaseEdit">Motif_Grafting_BaseEdit</option>
@@ -515,8 +528,16 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <section id="tab-epistasis" class="panel">
     <div class="grid-2">
       <div class="card">
-        <h2>5×5 Driver × Nuclear Buffer Positive-Epistasis Matrix (N=10,000 LHS)</h2>
-        <p style="font-size:0.82rem; color:var(--muted); margin-top:0;">Click any cell to inspect its full 90% uncertainty interval, EP peak suppression, and cliff widening.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:6px;">
+          <h2 id="heatmapTitle" style="margin:0;">Driver × Nuclear Buffer Synergy Matrix (N=10,000 LHS)</h2>
+          <select id="regimeSelector" style="padding:6px 10px; border-radius:6px; border:1px solid var(--accent); font-size:0.82rem; font-weight:600; color:var(--accent-dark); background:#f0f9ff;">
+            <option value="Hypoxia_IR">Hypoxia I/R (20m → 40m Reperfusion)</option>
+            <option value="Cold_Storage_4C_to_37C">Organ Cold Storage (4°C 6h → 37°C)</option>
+            <option value="Hyperthermia_37C_to_41_5C">Hyperthermia Tight-Coupling (37°C → 41.5°C)</option>
+            <option value="Hydrostatic_Dive_150atm">Deep-Sea Hydrostatic Dive (150 atm → Surface)</option>
+          </select>
+        </div>
+        <p id="heatmapSubtitle" style="font-size:0.82rem; color:var(--muted); margin-top:0;">Click any cell to inspect its full 90% uncertainty interval, EP/ATP rescue, and thermal/baric cliff rules.</p>
         <table class="heatmap-table" id="heatmapTable"></table>
         <div id="pairDetailBox" style="margin-top:12px; padding:12px 14px; background:var(--surface-2); border-radius:8px; font-size:0.83rem;"></div>
       </div>
@@ -622,6 +643,37 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
           <tbody id="cartTableBody"></tbody>
         </table>
         <div id="cartCallout" style="margin-top:12px; padding:10px 14px; background:var(--green-bg); border:1px solid #a7f3d0; border-radius:8px; font-size:0.83rem;"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Stage 8A: Full Mito_Papers 3-State Replication Physics (Trap A/B), Donor-Mito Reversibility &amp; Surgery Clocks <span class="tag tag-amber">E3: Mechanistic Sim</span> <span class="tag tag-red">E4: Clinical Clock</span></h2>
+      <div class="grid-2">
+        <div>
+          <h3 style="margin-top:0;">Wet-Lab Trap B (25 mM Glucose) &amp; Trap A (POLG 1.32×) Audit (Aged Cell: 40% M / 20% D / 40% W)</h3>
+          <p style="font-size:0.81rem; color:var(--muted); margin-top:0;">Standard high-glucose lab media lets stalled WT Complex V run backward ("Phantom Voltage"), blinding <code>PINK1</code> unless unmasked with galactose / <code>PDK1</code> inhibition (<code>AZD7545</code>).</p>
+          <table>
+            <thead><tr><th>14-Day Protocol (N=10k LHS)</th><th>Final M (W116R)</th><th>Residual Aged D</th><th>Mass Nadir</th></tr></thead>
+            <tbody id="s8aTrapBody"></tbody>
+          </table>
+        </div>
+        <div>
+          <h3 style="margin-top:0;">60-Day Context-Sensitive Donor-Mitochondria Reversibility (From 10% Bolus)</h3>
+          <p style="font-size:0.81rem; color:var(--muted); margin-top:0;">Auto-dilutes in healthy normoxic organs (reversible!), while selectively self-expanding inside chronically hypoxic/aged injured zones under cyclic BCR.</p>
+          <div id="s8aDonorSvgWrap"></div>
+        </div>
+      </div>
+      <div style="margin-top:14px;">
+        <h3 style="margin-bottom:6px;">Scheduled-Surgery Pre-Op Lead-Time Clocks (-48 h Pre-Op → +12 h Post-Clamp)</h3>
+        <div class="grid-2">
+          <div id="s8aClockSvgWrap"></div>
+          <div>
+            <table>
+              <thead><tr><th>Delivery Clock</th><th>Opt Pre-Op</th><th>0h Surprise</th><th>+2h Delayed ER</th></tr></thead>
+              <tbody id="s8aClockBody"></tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -750,6 +802,7 @@ function renderCatalog() {
   const q = document.getElementById('qSearch').value.trim().toLowerCase();
   const tier = document.getElementById('fTier').value;
   const comp = document.getElementById('fComplex').value;
+  const axis = document.getElementById('fAxis').value;
   const strat = document.getElementById('fStrategy').value;
   const ed = document.getElementById('fEditor').value;
   const ifaceOnly = document.getElementById('fIface').checked;
@@ -758,6 +811,7 @@ function renderCatalog() {
   filteredCands = DATA.candidates.filter(c => {
     if (tier && String(c.tier) !== tier) return false;
     if (comp && c.complex !== comp) return false;
+    if (axis && !(c.axes || []).includes(axis)) return false;
     if (strat && c.strategy !== strat) return false;
     if (ed && c.editor_class !== ed) return false;
     if (ifaceOnly && c.min_nuclear_A > 4.5) return false;
@@ -820,13 +874,13 @@ function showDrawer(c) {
     </div>`;
 }
 
-['qSearch','fTier','fComplex','fStrategy','fEditor','fIface','fZeroBys'].forEach(id => {
+['qSearch','fTier','fComplex','fAxis','fStrategy','fEditor','fIface','fZeroBys'].forEach(id => {
   document.getElementById(id).addEventListener('input', renderCatalog);
   document.getElementById(id).addEventListener('change', renderCatalog);
 });
 document.getElementById('btnReset').addEventListener('click', () => {
   document.getElementById('qSearch').value = '';
-  ['fTier','fComplex','fStrategy','fEditor'].forEach(id => document.getElementById(id).value = '');
+  ['fTier','fComplex','fAxis','fStrategy','fEditor'].forEach(id => document.getElementById(id).value = '');
   document.getElementById('fIface').checked = false;
   document.getElementById('fZeroBys').checked = false;
   renderCatalog();
@@ -925,19 +979,14 @@ function hmColor(s) {
   if (s >= 0.65) return '#bae6fd';
   return '#f1f5f9';
 }
-let hmHtml = '<thead><tr><th>Driver \\ Buffer</th>' + buffers.map(b => `<th>${b.replace('_',' ')}</th>`).join('') + '</tr></thead><tbody>';
-drivers.forEach(d => {
-  hmHtml += `<tr><td class="mono"><strong>${d.replace('_',' ')}</strong></td>`;
-  buffers.forEach(b => {
-    const p = pairMap[d + '|' + b];
-    const bg = hmColor(p.synergy_index_median);
-    const fg = p.synergy_index_median >= 1.15 ? '#fff' : '#0f172a';
-    hmHtml += `<td class="hm-cell" data-key="${d}|${b}" style="background:${bg}; color:${fg};">S=${p.synergy_index_median.toFixed(2)}<br/><span style="font-size:0.72rem; font-weight:500;">(${p.epistatic_excess_median>=0?'+':''}${p.epistatic_excess_median.toFixed(3)})</span></td>`;
-  });
-  hmHtml += '</tr>';
-});
-hmHtml += '</tbody>';
-document.getElementById('heatmapTable').innerHTML = hmHtml;
+function tbColor(dv) {
+  if (dv >= 0.25) return '#047857';
+  if (dv >= 0.14) return '#059669';
+  if (dv >= 0.05) return '#6ee7b7';
+  if (dv >= 0.00) return '#ecfdf5';
+  if (dv >= -0.05) return '#fef3c7';
+  return '#fecaca';
+}
 
 function showPairDetail(key) {
   const p = pairMap[key];
@@ -948,8 +997,62 @@ function showPairDetail(key) {
     Reperfusion EP Peak: <code>${p.ep_peak_driver_only}</code> → <b><code>${p.ep_peak_driver_plus_buffer}</code></b> · Steady-State Cliff Expansion: <b>${p.expanded_cliff_margin_kPa>=0?'+':''}${p.expanded_cliff_margin_kPa} kPa</b>
   `;
 }
-document.querySelectorAll('.hm-cell').forEach(td => td.addEventListener('click', () => showPairDetail(td.dataset.key)));
-showPairDetail('COX3_W116R|Yeast_NDI1');
+
+function showTbDetail(regKey, dKey, bKey) {
+  const reg = DATA.stage8b_thermal_baric.regimes[regKey];
+  const dObj = reg.matrix[dKey];
+  const c = dObj.combos[bKey];
+  const warn = (regKey === 'Hyperthermia_37C_to_41_5C' && bKey === 'Human_UCP2')
+    ? `<br/><span style="color:var(--red); font-weight:700;">⚠ FBT Thermal Sign Reversal: Adding extra proton leak (UCP2) at 41.5 °C collapses ATP (nadir ${c.atp_nadir_med} vs ${dObj.driver_only_atp_nadir_med} alone)!</span>` : '';
+  document.getElementById('pairDetailBox').innerHTML = `
+    <strong>${dKey.replace('_',' ')} (${dObj.meta.rcrs_edit}, ${dObj.meta.species}) + ${bKey.replace('_',' ')}</strong><br/>
+    Regime: <b>${reg.label}</b> (WT median V = ${reg.wt_viability_med})<br/>
+    Viability Gain vs WT: <b>${c.delta_vs_wt_med>=0?'+':''}${c.delta_vs_wt_med.toFixed(4)}</b> (90% LHS CI: [${c.delta_vs_wt_p05}, ${c.delta_vs_wt_p95}]) ·
+    ATP Nadir: <b>${c.atp_nadir_med}</b> (WT: ${reg.wt_atp_nadir_med}) · W_end: <b>${c.w_end_med}</b> · Beats WT: <b>${(c.prob_beats_wt*100).toFixed(1)}%</b>${warn}
+  `;
+}
+
+function renderRegimeHeatmap(regKey) {
+  if (regKey === 'Hypoxia_IR' || !DATA.stage8b_thermal_baric || !DATA.stage8b_thermal_baric.regimes) {
+    document.getElementById('heatmapTitle').textContent = '5×5 Driver × Nuclear Buffer Positive-Epistasis Matrix (Hypoxia I/R, N=10,000 LHS)';
+    let hmHtml = '<thead><tr><th>Driver \\ Buffer</th>' + buffers.map(b => `<th>${b.replace('_',' ')}</th>`).join('') + '</tr></thead><tbody>';
+    drivers.forEach(d => {
+      hmHtml += `<tr><td class="mono"><strong>${d.replace('_',' ')}</strong></td>`;
+      buffers.forEach(b => {
+        const p = pairMap[d + '|' + b];
+        const bg = hmColor(p.synergy_index_median);
+        const fg = p.synergy_index_median >= 1.15 ? '#fff' : '#0f172a';
+        hmHtml += `<td class="hm-cell" data-key="${d}|${b}" style="background:${bg}; color:${fg};">S=${p.synergy_index_median.toFixed(2)}<br/><span style="font-size:0.72rem; font-weight:500;">(${p.epistatic_excess_median>=0?'+':''}${p.epistatic_excess_median.toFixed(3)})</span></td>`;
+      });
+      hmHtml += '</tr>';
+    });
+    hmHtml += '</tbody>';
+    document.getElementById('heatmapTable').innerHTML = hmHtml;
+    document.querySelectorAll('#heatmapTable .hm-cell').forEach(td => td.addEventListener('click', () => showPairDetail(td.dataset.key)));
+    showPairDetail('COX3_W116R|Yeast_NDI1');
+  } else {
+    const reg = DATA.stage8b_thermal_baric.regimes[regKey];
+    document.getElementById('heatmapTitle').textContent = 'Stage 8B: ' + reg.label;
+    const bList = reg.buffers;
+    let hmHtml = '<thead><tr><th>Allele \\ Buffer</th>' + bList.map(b => `<th>${b.replace('_',' ')}</th>`).join('') + '</tr></thead><tbody>';
+    reg.drivers.forEach(d => {
+      hmHtml += `<tr><td class="mono"><strong>${d.replace('_',' ')}</strong></td>`;
+      bList.forEach(b => {
+        const c = reg.matrix[d].combos[b];
+        const bg = tbColor(c.delta_vs_wt_med);
+        const fg = c.delta_vs_wt_med >= 0.14 ? '#fff' : '#0f172a';
+        hmHtml += `<td class="hm-cell" data-d="${d}" data-b="${b}" style="background:${bg}; color:${fg};">${c.delta_vs_wt_med>=0?'+':''}${c.delta_vs_wt_med.toFixed(3)}<br/><span style="font-size:0.70rem; font-weight:500;">(A:${c.atp_nadir_med.toFixed(2)})</span></td>`;
+      });
+      hmHtml += '</tr>';
+    });
+    hmHtml += '</tbody>';
+    document.getElementById('heatmapTable').innerHTML = hmHtml;
+    document.querySelectorAll('#heatmapTable .hm-cell').forEach(td => td.addEventListener('click', () => showTbDetail(regKey, td.dataset.d, td.dataset.b)));
+    showTbDetail(regKey, reg.drivers[0], 'Human_SOD2');
+  }
+}
+document.getElementById('regimeSelector').addEventListener('change', e => renderRegimeHeatmap(e.target.value));
+renderRegimeHeatmap('Hypoxia_IR');
 
 // Heteroplasmy Interactive Chart
 const hetGrid = p5.heteroplasmy_curves.Yeast_NDI1.heteroplasmy_pct;
@@ -1095,6 +1198,75 @@ if (DATA.s7a_bridges && DATA.s7a_bridges.track7a_biphasic_heteroplasmy_amplifica
   ).join('');
   const syn = t7b.human_sod2_cart_synergy;
   document.getElementById('cartCallout').innerHTML = `<strong>100%-Human Sequence Breakthrough:</strong> <code>COX3 W116R + Human SOD2</code> boosts 72-h solid-tumor CAR-T persistence <strong>${syn.fold_persistence_gain_vs_WT}× over WT</strong> (<code>0.161 → 0.979</code>, zero foreign-protein immunogenicity, <code>${syn.pct_lhs_positive}%</code> LHS strictly super-additive).`;
+}
+
+// ================= STAGE 8A: TRAP A/B, DONOR REVERSIBILITY & SURGERY CLOCKS =================
+if (DATA.stage8a_replication && DATA.stage8a_replication.trap_a_b_wetlab_14d_lhs10k) {
+  const s8a = DATA.stage8a_replication;
+  const traps = s8a.trap_a_b_wetlab_14d_lhs10k;
+  const trapOrder = [
+    ['HighGlucose_25mM_TrapB_Failure', 'High-Glc 25mM (Trap B Fail)', 'tag-red'],
+    ['Unphased_Biogenesis_TrapA', 'Unphased Build (Trap A POLG)', 'tag-red'],
+    ['TwoCycle_Pulsed_Unmasked_Safe', '2-Cycle Pulsed Unmasked (Safe)', 'tag-green'],
+    ['Biphasic_Unmasked_Galactose_PDK1', 'Biphasic 7d→7d Unmasked (PDK1)', 'tag-blue'],
+    ['Adversarial_Null_Placebo', 'Adversarial Null Placebo', 'tag-slate'],
+  ];
+  document.getElementById('s8aTrapBody').innerHTML = trapOrder.map(([k, lbl, cls]) => {
+    const r = traps[k];
+    return `<tr><td><span class="tag ${cls}">${lbl}</span></td><td><strong>${(r.f_M_end.median*100).toFixed(1)}%</strong></td><td>${(r.f_D_end.median*100).toFixed(1)}%</td><td>${r.tot_nadir.median.toFixed(3)}</td></tr>`;
+  }).join('');
+
+  // 60-day Donor-Mitochondria Reversibility SVG
+  const don = s8a.donor_mitochondria_60d_reversibility;
+  const W = 520, H = 195, pL = 42, pR = 14, pT = 12, pB = 28;
+  const xD = day => pL + (day / 60) * (W - pL - pR);
+  const yD = pct => H - pB - (pct / 70) * (H - pT - pB);
+  let dSvg = `<svg viewBox="0 0 ${W} ${H}">`;
+  [0, 20, 40, 60].forEach(yv => {
+    dSvg += `<line x1="${pL}" y1="${yD(yv)}" x2="${W-pR}" y2="${yD(yv)}" stroke="#e2e8f0"/>`;
+    dSvg += `<text x="${pL-5}" y="${yD(yv)+3}" text-anchor="end" font-size="9.5" fill="#64748b">${yv}%</text>`;
+  });
+  dSvg += `<line x1="${pL}" y1="${yD(10)}" x2="${W-pR}" y2="${yD(10)}" stroke="#94a3b8" stroke-dasharray="3,3"/>`;
+  [
+    ['Healthy_Normoxic_Organ', '#059669', ''],
+    ['PostTransplant_24hHypox_ThenNormox', '#d97706', '5,3'],
+    ['Chronically_Hypoxic_Aged_Tissue_BCR', '#7c3aed', ''],
+  ].forEach(([k, col, dash]) => {
+    const tr = don[k].trace_60d;
+    const pts = tr.t_days.map((d,i)=>`${xD(d).toFixed(1)},${yD(tr.f_M[i]*100).toFixed(1)}`).join(' ');
+    dSvg += `<polyline fill="none" stroke="${col}" stroke-width="2.4" ${dash?`stroke-dasharray="${dash}"`:''} points="${pts}"/>`;
+  });
+  dSvg += `<text x="${W/2}" y="${H-3}" text-anchor="middle" font-size="9.5" fill="#334155" font-weight="600">Days Post 10% Donor-Mito Bolus (Purple: Hypoxic Aged Self-Expand 55% · Green/Amber: Normoxic Washout 2%)</text></svg>`;
+  document.getElementById('s8aDonorSvgWrap').innerHTML = dSvg;
+
+  // 4-Clock Scheduled Surgery Pre-Op SVG & Table
+  const clk = s8a.scheduled_surgery_preop_clocks;
+  const hrs = clk.lead_hours;
+  const xC = h => pL + ((h + 48) / 60) * (W - pL - pR);
+  const yC = pct => H - pB - (pct / 105) * (H - pT - pB);
+  let cSvg = `<svg viewBox="0 0 ${W} ${H}">`;
+  cSvg += `<rect x="${xC(-24)}" y="${pT}" width="${xC(-10)-xC(-24)}" height="${H-pT-pB}" fill="#bae6fd" opacity="0.32"/>`;
+  [0, 25, 50, 75, 100].forEach(yv => {
+    cSvg += `<line x1="${pL}" y1="${yC(yv)}" x2="${W-pR}" y2="${yC(yv)}" stroke="#e2e8f0"/>`;
+    cSvg += `<text x="${pL-5}" y="${yC(yv)+3}" text-anchor="end" font-size="9.5" fill="#64748b">${yv}%</text>`;
+  });
+  cSvg += `<line x1="${xC(0)}" y1="${pT}" x2="${xC(0)}" y2="${H-pB}" stroke="#0f172a" stroke-dasharray="4,3"/>`;
+  [
+    ['Clock1_SmallMol_Malonate', '#dc2626', ''],
+    ['Clock2_BankedMito_TAT_SOD2', '#059669', ''],
+    ['Clock3_mRNA_LNP_SOD2_UCP2', '#0284c7', ''],
+    ['Clock3_BCR_Standard_13_5h', '#64748b', '4,3'],
+  ].forEach(([k, col, dash]) => {
+    const arr = clk.minute0_clamp_release_wave_0_to_1h[k];
+    const pts = hrs.map((h,i)=>`${xC(h).toFixed(1)},${yC(arr[i]*100).toFixed(1)}`).join(' ');
+    cSvg += `<polyline fill="none" stroke="${col}" stroke-width="2.3" ${dash?`stroke-dasharray="${dash}"`:''} points="${pts}"/>`;
+  });
+  cSvg += `<text x="${W/2}" y="${H-3}" text-anchor="middle" font-size="9.5" fill="#334155" font-weight="600">Pre-Op Lead Hours (-48h → 0h Clamp Release → +12h | Red: Clock1 · Green: Clock2 · Blue: Clock3 mRNA)</text></svg>`;
+  document.getElementById('s8aClockSvgWrap').innerHTML = cSvg;
+
+  document.getElementById('s8aClockBody').innerHTML = Object.entries(clk.clock_summary).map(([k, s]) =>
+    `<tr><td style="font-size:0.75rem;"><strong>${s.label}</strong></td><td class="mono">${s.optimal_preop_lead_h}h (${(s.peak_minute0_coverage*100).toFixed(0)}%)</td><td class="mono" style="color:${s.coverage_if_dosed_at_0h_surprise<0.2?'var(--red)':'var(--green)'};"><strong>${(s.coverage_if_dosed_at_0h_surprise*100).toFixed(1)}%</strong></td><td class="mono">${(s.delayed_wave_coverage_if_dosed_at_plus2h_ER*100).toFixed(1)}%</td></tr>`
+  ).join('');
 }
 </script>
 </body>

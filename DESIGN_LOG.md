@@ -188,6 +188,21 @@ Every phase ends with a human review checkpoint before advancing:
   * **`14.47×` Signal-to-Null specificity** (`0.3097` vs `0.0214`, zero false alarms). **`6 / 8` nuclear genes peak in Ventricular Cardiomyocytes**, and **`UCP2` (`chr11:73982830:C>G`)** reveals a **`7×` cardiac-selective promoter switch** (`composite = 0.8562`, `scRNA = -0.5907` in Cardiomyocytes vs `-0.0851` in CD8+ T cells).
 * **Explorer v2 & Verification (`tests/test_stage7_bridges.py`):** Added `BAA-Mito` `E1–E4` epistemic provenance badges, Engineered Donor Mitochondria Transfer (`CD38`/`LRP1`) track, Tab 6 (`Cross-Project Bridges`), and Tab 7 (`Plain-English Guide`) directly into `app/mitofitness_explorer.html`; **8/8** unified test suites pass 100%.
 
+### Stage 8 — **FULL REPLICATION PHYSICS (TRAP A/B), DONOR REVERSIBILITY, SURGERY CLOCKS & THERMAL/BARIC REGIMES COMPLETE & VERIFIED (2026-11-24)**
+* **Stage 8A (`scripts/stage8a_replication_and_engraftment.py`, `data/stage8a_replication_engraftment.json`):**
+  * **3-State `[W_host, D_aged, M_eng]` Replication ODE (`RK4` vs `DOP853`/`Radau` `max |Delta| = 7.611e-11`, `N = 10,000` LHS + `10,240`-eval Sobol GSA):**
+    * **Trap B (`HighGlucose_25mM_TrapB_Failure`):** Standard `25 mM` glucose lets stalled WT Complex V run backward ("Phantom Voltage"), blinding `PINK1` — `COX3 W116R` stalls at **`38.7%`** (`0.0%` probability `≥80%`) while aged deletions `D_aged` climb `20% → 25.3%`.
+    * **Trap A (`Unphased_Biogenesis_TrapA`):** Continuous `mTORC1`/`NAD+` stalls `M` at **`39.1%`** (`D = 22.8%`).
+    * **Unmasked Rescue (`Biphasic_Unmasked_Galactose_PDK1` & `TwoCycle_Pulsed_Unmasked_Safe`):** Glycolytic unmasking (`galactose`/`AZD7545`) collapses `D_aged` **`20% → 3.1%`** and amplifies `COX3 W116R` **`40% → 75.1%`** (2-cycle pulsed: **`71.5%`** with **`2.85×` safer mass nadir `0.348` vs `0.122`**).
+  * **60-Day Context-Sensitive Donor-Mitochondria Reversibility (`M0 = 10%`, `N = 5,000` LHS):** Auto-dilutes in `Healthy_Normoxic_Organ` (`10% → 2.3%`, `AUTO_REVERSIBLE_WASHOUT`) and `PostTransplant_24hHypox_ThenNormox` (`2.4%`), while selectively self-expanding in `Chronically_Hypoxic_Aged_Tissue_BCR` (`10% → 55.3%` LHS med / `72.7%` nom, `D: 30% → 3.7%`, `SELF_TARGETING_ENGRAFTMENT`).
+  * **4-Clock Scheduled-Surgery Pre-Op Lead-Time Curves (`-48 h → +12 h`):** Proves `Clock 3` (`mRNA-LNP SOD2+UCP2`) is **nullified for Minute-0 surprise reperfusion (`11.5%` at `0 h`)**, peaks at **`-12 h` (`99.4%`)** for scheduled surgery, and **survives delayed `+2 h` ER waves (`88.9%`)**; `Clock 1` (`Malonate`) peaks at `0 h` (`83.3%`), `Clock 2` (`Banked Mito`/`TAT-SOD2`) peaks at `-2 h` (`98.8%`, `75.9%` at `0 h`).
+* **Stage 8B (`scripts/stage8b_thermal_baric_ode.py`, `data/stage8b_thermal_baric.json`):**
+  * **3-Regime Arrhenius / Hydrostatic $P\Delta V^\ddagger$ ODE (`max |Delta| = 2.552e-06`, `N = 10,000` LHS, `Null_Placebo = 0.0000` across all 3 regimes, `10,240`-eval Cold-Storage Sobol GSA):**
+    * **Organ Cold Storage (`4°C 6h → 37°C`):** `Arctic_Cold` Muskox `COX1 I57V + Human SOD2` = **`+0.2026`** (Woolly Mammoth `CYTB F181L + SOD2` = **`+0.2048`**); `COX3 W116R` alone hurts (`-0.0496`) on rewarming `RET-ROS` then swings **`+0.2876`** with `Yeast NDI1` (`+0.2380`).
+    * **Hyperthermia (`37°C → 41.5°C`):** `Desert_Heat` Jerboa `ND4L Y85H` (0 bystanders, `3.25 Å` to `NDUFS2`) alone = **`+0.2963`**, `+ Human SOD2` = **`+0.3595`**, while **`+ Human UCP2` reverses sign (`+0.0498`, `-0.2465` thermal leak crash)**!
+    * **Deep-Sea Hydrostatic Dive (`150 atm`):** Sperm Whale `ATP6 I106V` = **`+0.0760`** (`+67%` dive ATP nadir); `ND4L A11T + SOD2` = **`+0.1107`**.
+* **Single-Explorer v3 & Verification (`scripts/stage8_synthesize_and_plot.py`, `tests/test_stage8_replication_thermal.py`):** Added `All Stress Axes` filter (Tab 2), interactive `Stress Regime` selector (Tab 4), and Stage 8A Trap A/B + Donor Reversibility + Surgery Clocks (Tab 6) into the single [mitofitness_explorer.html](file:///Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/app/mitofitness_explorer.html) (`312 KB`, JS syntax `0 CLEAN`); **9/9** unified test suites pass 100%.
+
 ---
 
 ## 5. Logged Future Roadmap (Deferred — Not Executing Yet)
