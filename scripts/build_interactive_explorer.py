@@ -29,6 +29,8 @@ S7A_JSON = ROOT / "data" / "stage7a_heteroplasmy_and_cart.json"
 S7B_JSON = ROOT / "data" / "stage7b_singlecell_alphagenome.json"
 S8A_JSON = ROOT / "data" / "stage8a_replication_engraftment.json"
 S8B_JSON = ROOT / "data" / "stage8b_thermal_baric.json"
+S9A_JSON = ROOT / "data" / "stage9a_openmm_thermal_baric.json"
+S9B_JSON = ROOT / "data" / "stage9b_alphagenome2_organs.json"
 OUT_HTML = ROOT / "app" / "mitofitness_explorer.html"
 
 
@@ -42,6 +44,8 @@ def build_payload() -> dict:
     s7b = json.loads(S7B_JSON.read_text(encoding="utf-8")) if S7B_JSON.exists() else {}
     s8a = json.loads(S8A_JSON.read_text(encoding="utf-8")) if S8A_JSON.exists() else {}
     s8b = json.loads(S8B_JSON.read_text(encoding="utf-8")) if S8B_JSON.exists() else {}
+    s9a = json.loads(S9A_JSON.read_text(encoding="utf-8")) if S9A_JSON.exists() else {}
+    s9b = json.loads(S9B_JSON.read_text(encoding="utf-8")) if S9B_JSON.exists() else {}
 
     # Load window stress test lookup
     win_lookup = {}
@@ -126,6 +130,8 @@ def build_payload() -> dict:
         "s7b_sc_ag2": s7b,
         "stage8a_replication": s8a,
         "stage8b_thermal_baric": s8b,
+        "stage9a_openmm": s9a,
+        "stage9b_organs": s9b,
     }
 
 
@@ -362,7 +368,6 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
           <tbody id="controlsTableBody"></tbody>
         </table>
       </div>
-    </div>
   </section>
 
   <!-- TAB 2: 131-CANDIDATE CATALOG -->
@@ -434,7 +439,6 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         </table>
       </div>
       <div class="drawer" id="candidateDrawer"></div>
-    </div>
   </section>
 
   <!-- TAB 3: 3D ROTAMERS & BIO-AI -->
@@ -472,6 +476,24 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             </tr>
           </thead>
           <tbody id="openmmTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Stage 9A: Live OpenMM AMBER14 + OBC2 Relaxation of Thermal &amp; Baric Leads (5 Newly Activated Stage-8B Alleles) <span class="tag tag-amber">E3: Physics Sim</span></h2>
+      <p style="font-size:0.84rem; color:var(--muted); margin-top:0;">
+        Explicit-hydrogen <code>AMBER14 + OBC2</code> minimization on human cryo-EM subassemblies (<code>9I4I</code> CI, <code>9I6F</code> CIV, <code>9HZL</code> CIII) for Desert-Heat (<code>ND4L Y85H</code>, <code>ND1 S313G</code>), Arctic-Cold (<code>COX1 I57V</code>, <code>CYTB F181L</code>), and Deep-Sea Dive (<code>CYTB Y224H</code>) leads compared against pathogenic Leigh <code>ATP6 L156R</code> (<code>ΔRMSD = +0.160 Å</code>).
+      </p>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Variant</th><th>Axis / Role</th><th>Subassembly Chains</th><th>WT 8 Å RMSD</th>
+              <th>Mut 8 Å RMSD (Δ)</th><th>Mut d_min</th><th>New Stabilizing H-Bonds (≤3.5 Å)</th><th>Verdict</th>
+            </tr>
+          </thead>
+          <tbody id="s9aOpenmmBody"></tbody>
         </table>
       </div>
     </div>
@@ -521,7 +543,6 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         <thead><tr><th>Finalist</th><th>Editor Class</th><th>rCRS Edit</th><th>±2 nt</th><th>±3 nt</th><th>±4 nt</th><th>±5 nt</th><th>±6 nt</th><th>Ultra-Clean ±6</th></tr></thead>
         <tbody id="windowTableBody"></tbody>
       </table>
-    </div>
   </section>
 
   <!-- TAB 4: EPISTASIS & HETEROPLASMY SIMULATOR -->
@@ -564,7 +585,6 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         <h2>Saltelli–Sobol Global Sensitivity (10,240 Evals, Top Pair)</h2>
         <div id="sobolSvgWrap"></div>
       </div>
-    </div>
   </section>
 
   <!-- TAB 5: WET-LAB PROTOCOL -->
@@ -591,8 +611,24 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             <li><strong>Trade-Off Falsification:</strong> FBT non-monotonic cliff is <em>falsified</em> if Arm 2 fails to retain ≥15% higher hypoxic ATP OR fails to show ≥20% higher reperfusion <code>H2O2/O2</code> than Arm 1.</li>
             <li><strong>Positive-Epistasis Falsification:</strong> Synergy (<code>E_add &gt; 0</code>) is <em>falsified</em> if Arm 4 fails to cut reperfusion <code>H2O2/O2</code> by ≥35% vs. Arm 2 while preserving ≥85% of Arm 2's hypoxic ATP gain (<code>E_add ≤ 0</code> at α = 0.05).</li>
           </ul>
+        <div style="background:var(--amber-bg); border:1px solid #fde68a; padding:12px 14px; border-radius:8px; margin-top:12px; font-size:0.84rem;">
+          <strong>⚠ Mandatory Stage-8A Wet-Lab Media Rule (Defeating Trap B Reverse-ATPase Phantom Voltage):</strong>
+          Do <strong>NOT</strong> run Stage-1 hypoxic selection in standard <code>25 mM</code> high-glucose <code>DMEM/RPMI</code>—glycolytic ATP allows stalled WT Complex V to run backward and blind <code>PINK1</code> (stalling editing at <code>38.7%</code>). Switch to <strong><code>10 mM</code> Galactose / Low-Glucose (<code>≤2 mM</code>) + <code>PDK1</code> Inhibitor (<code>AZD7545</code>, <code>1–5 μM</code>) + Urolithin A (<code>25–50 μM</code>)</strong> during Stage-1 mild hypoxia (<code>1.1 kPa</code>, 2-cycle <code>3.5d→3.5d</code> pulsed reset) to collapse aged deletions (<code>20% → 3.6%</code>) while preserving a <code>2.85×</code> safer mitochondrial mass floor.
         </div>
       </div>
+    </div>
+    <div class="card">
+      <h2>Clock 1 / 2 / 3 Scheduled-Surgery &amp; Organ-Perfusion Clinical Dosing Table <span class="tag tag-red">E4: Translational Protocol</span></h2>
+      <table>
+        <thead><tr><th>Clinical Scenario</th><th>Injury Wave</th><th>Optimal Delivery Clock &amp; Lead Time</th><th>Proposed Reversible / Ex Vivo Payload</th><th>Reversibility</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Donor Organ Perfusion (Heart/Lung EVLP/Liver/Kidney NMP)</strong></td><td>Minute-0 Unclamping RET-ROS</td><td class="mono">Clock 3 (4–12h on pump) or Clock 2</td><td><code>SOD2 + UCP2 mRNA-LNP</code> or Banked <code>COX3 W116R + SOD2</code> Mito</td><td>Auto-erases 3–5d / Washout</td></tr>
+          <tr><td><strong>Scheduled Surgery (CABG CSA-AKI, Liver Pringle, TAAA, Free Flaps)</strong></td><td>Minute-0 Clamp Release</td><td class="mono">Clock 3 (-12h to -18h pre-op) + Clock 2 back-table</td><td>Liver/Cardiac-tropic <code>SOD2 + UCP2 mRNA</code>; flap syringe flush</td><td>100% Auto-Erasing (Zero DNA)</td></tr>
+          <tr><td><strong>Surprise ER Minute-0 (STEMI Cath Lab, Stroke Thrombectomy, CO/CN-)</strong></td><td>0–60 min Acute Burst</td><td class="mono">Clock 1 (0h) + Clock 2 (-5 to -15m) · <s>Clock 3</s></td><td><code>Malonate</code> + Banked Donor Mito / <code>TAT-SOD2</code> (<code>TAT-AOX</code> for CO/CN-)</td><td>Hours to Days</td></tr>
+          <tr><td><strong>Delayed 12–72h Acute Waves (Blast Ear, Deep Burn, HIE, 24-wk Preemie)</strong></td><td>Delayed 12–72h mtROS</td><td class="mono">Clock 3 (+1h to +6h post-event SURVIVES)</td><td>Intratympanic drop / Burn gel / Birth Surfactant <code>MTS-SOD2</code></td><td>100% Auto-Erasing (Zero DNA)</td></tr>
+          <tr><td><strong>Ex Vivo Cell Products (Solid-Tumor CAR-T, T1D iPSC-Islets)</strong></td><td>Chronic Hypoxia Cycling</td><td class="mono">Clock 4 (14-d GMP Dish + Stage 8A Gal/AZD7545)</td><td><code>COX3 W116R + Human SOD2</code> (<strong>NO UCP2 in Beta Islets!</strong>)</td><td>Permanent in Cell Product Only</td></tr>
+        </tbody>
+      </table>
     </div>
     <div class="card">
       <h2>Alternative Delivery Track (from BAA-Mito): Engineered Donor Mitochondria Transfer <span class="tag tag-red">E4: Hypothesis</span></h2>
@@ -608,7 +644,6 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         <li>data/stage6_boltz2/preds/.../ATP6_I106V_ATP5MJ_model_0.cif (ipTM = 0.6771, +0.0234 vs WT)</li>
         <li>data/stage6_boltz2/preds/.../CYTB_M53T_UQCRFS1_model_0.cif (ipTM = 0.7685, 0.85 Å vs 9HZL)</li>
       </ul>
-    </div>
   </section>
 
   <!-- TAB 6: CROSS-PROJECT BRIDGES (STAGE 7) -->
@@ -675,6 +710,12 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
           </div>
         </div>
       </div>
+    <div class="card">
+      <h2>Stage 9B: Live AlphaGenome 2 Across 6 Clinical Organ Compartments (Heart, Liver, Lung AEC2, Kidney, Pancreatic Beta, CD8+ T-Cell) <span class="tag tag-blue">E2: Foundation Model</span></h2>
+      <p style="font-size:0.84rem; color:var(--muted); margin-top:0;" id="s9bOrganLead"></p>
+      <div style="overflow-x:auto;">
+        <table class="heatmap-table" id="s9bOrganTable"></table>
+      </div>
     </div>
   </section>
 
@@ -704,7 +745,6 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
           </ul>
         </div>
       </div>
-    </div>
   </section>
 </main>
 
@@ -1267,6 +1307,45 @@ if (DATA.stage8a_replication && DATA.stage8a_replication.trap_a_b_wetlab_14d_lhs
   document.getElementById('s8aClockBody').innerHTML = Object.entries(clk.clock_summary).map(([k, s]) =>
     `<tr><td style="font-size:0.75rem;"><strong>${s.label}</strong></td><td class="mono">${s.optimal_preop_lead_h}h (${(s.peak_minute0_coverage*100).toFixed(0)}%)</td><td class="mono" style="color:${s.coverage_if_dosed_at_0h_surprise<0.2?'var(--red)':'var(--green)'};"><strong>${(s.coverage_if_dosed_at_0h_surprise*100).toFixed(1)}%</strong></td><td class="mono">${(s.delayed_wave_coverage_if_dosed_at_plus2h_ER*100).toFixed(1)}%</td></tr>`
   ).join('');
+}
+
+// ================= STAGE 9A: OPENMM THERMAL/BARIC & STAGE 9B: 6-ORGAN ALPHAGENOME 2 =================
+if (DATA.stage9a_openmm && DATA.stage9a_openmm.results) {
+  document.getElementById('s9aOpenmmBody').innerHTML = DATA.stage9a_openmm.results.map(r => {
+    const hb = r.new_mutant_polar_contacts_3p5A.slice(0,2).join(', ') + (r.new_mutant_polar_contacts_3p5A.length > 2 ? ` (+${r.new_mutant_polar_contacts_3p5A.length-2} more)` : '');
+    const roleCls = r.role.includes('Desert_Heat') ? 'tag-amber' : (r.role.includes('Arctic_Cold') ? 'tag-blue' : 'tag-slate');
+    return `<tr>
+      <td class="mono"><strong>${r.variant}</strong></td>
+      <td><span class="tag ${roleCls}">${r.role.replace(/_/g,' ')}</span></td>
+      <td class="mono" style="font-size:0.75rem;">${r.subassembly_chains.join(', ')}</td>
+      <td>${r.wt.pocket_8A_heavy_rmsd_A.toFixed(3)} Å</td>
+      <td><strong>${r.mutant.pocket_8A_heavy_rmsd_A.toFixed(3)} Å</strong> <span class="mono" style="color:${r.delta_pocket_rmsd_A>0.08?'var(--red)':'var(--green)'};">(${r.delta_pocket_rmsd_A>=0?'+':''}${r.delta_pocket_rmsd_A.toFixed(4)} Å)</span></td>
+      <td>${r.mutant.post_relax_sc_dmin_A.toFixed(2)} Å</td>
+      <td class="mono" style="font-size:0.74rem;">${hb || 'None'}</td>
+      <td><span class="tag ${r.physics_verdict==='STABLE_LOW_PERTURBATION'?'tag-green':'tag-amber'}">${r.physics_verdict.replace(/_/g,' ')}</span></td>
+    </tr>`;
+  }).join('');
+}
+
+if (DATA.stage9b_organs && DATA.stage9b_organs.variants) {
+  const s9b = DATA.stage9b_organs;
+  document.getElementById('s9bOrganLead').innerHTML = `Live <code>alphagenome.models.v2.dna_client</code> single-cell conditioning across <strong>6 Master-Plan Clinical Organ Compartments</strong> (Heart Cardiomyocyte, Liver Hepatocyte, Lung Type II Pneumocyte AEC2, Kidney Proximal Tubule, Pancreatic Beta Cell, Blood CD8+ T Cell) + 2 BAA-Mito blank controls. <strong>Signal/Null specificity = ${s9b.signal_to_null_ratio}×</strong> (${s9b.active_7genes_mean_composite} vs ${s9b.negative_controls_mean_composite}). Notably, <strong>SOD2 peaks in Lung AEC2</strong> (IPF/Preemie/EVLP), while <strong>UCP2 peaks in Heart Cardiomyocytes (0.856)</strong>.`;
+  const oKeys = Object.keys(s9b.organ_conditions);
+  const oShort = {cardiomyocyte:'Heart Cardio.', hepatocyte:'Liver Hepato.', lung_aec2:'Lung AEC2', kidney_pt:'Kidney Tubule', pancreatic_beta:'Panc. Beta', cd8_tcell:'CD8+ T-Cell'};
+  let oHtml = '<thead><tr><th>Gene / Control</th><th>Role</th>' + oKeys.map(k => `<th>${oShort[k]||k}</th>`).join('') + '<th>Top Organ</th></tr></thead><tbody>';
+  s9b.variants.forEach(v => {
+    const isCtrl = v.role === 'Negative_Control_Blank';
+    oHtml += `<tr><td class="mono"><strong><a href="${v.atlas_url}" target="_blank" rel="noopener" style="color:${isCtrl?'var(--muted)':'var(--accent-dark)'}; text-decoration:none;">${v.gene} ↗</a></strong></td><td><span class="tag ${isCtrl?'tag-slate':(v.role==='Endogenous_Buffer'?'tag-amber':'tag-blue')}">${v.role.replace(/_/g,' ')}</span></td>`;
+    oKeys.forEach(k => {
+      const val = v.organs[k].composite;
+      const bg = val >= 0.65 ? '#0369a1' : (val >= 0.30 ? '#0284c7' : (val >= 0.12 ? '#bae6fd' : '#f8fafc'));
+      const fg = val >= 0.30 ? '#fff' : '#0f172a';
+      oHtml += `<td class="hm-cell" style="background:${bg}; color:${fg}; font-size:0.78rem;">${val.toFixed(3)}</td>`;
+    });
+    oHtml += `<td class="mono" style="font-size:0.76rem;"><strong>${v.top_responsive_organ}</strong></td></tr>`;
+  });
+  oHtml += '</tbody>';
+  document.getElementById('s9bOrganTable').innerHTML = oHtml;
 }
 </script>
 </body>

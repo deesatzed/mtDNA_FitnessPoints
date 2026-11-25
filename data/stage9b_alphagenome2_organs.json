@@ -1,0 +1,630 @@
+{
+  "stage": "9B_AlphaGenome2_Clinical_Organ_Compartments",
+  "epistemic_tier": "E2_FOUNDATION_MODEL",
+  "model": "alphagenome.models.v2.dna_client (SEQUENCE_LENGTH_1MB)",
+  "organ_conditions": {
+    "cardiomyocyte": {
+      "curie": "UBERON:0000948_CL:2000046",
+      "label": "Heart Ventricular Cardiomyocyte (CABG/NMP)"
+    },
+    "hepatocyte": {
+      "curie": "UBERON:0002107_CL:0000182",
+      "label": "Liver Hepatocyte (Pringle/MASH)"
+    },
+    "lung_aec2": {
+      "curie": "UBERON:0002048_CL:0002063",
+      "label": "Lung Type II Pneumocyte AEC2 (IPF/Preemie/EVLP)"
+    },
+    "kidney_pt": {
+      "curie": "UBERON:0001225_CL:0002306",
+      "label": "Kidney Proximal Tubule (CSA-AKI/Nephrectomy)"
+    },
+    "pancreatic_beta": {
+      "curie": "UBERON:0000006_CL:0000169",
+      "label": "Pancreatic Beta Cell (T1D iPSC-Islets)"
+    },
+    "cd8_tcell": {
+      "curie": "UBERON:0000178_CL:0000913",
+      "label": "Blood Effector Memory CD8+ T Cell (CAR-T)"
+    }
+  },
+  "active_7genes_mean_composite": 0.2245,
+  "negative_controls_mean_composite": 0.0233,
+  "signal_to_null_ratio": 9.62,
+  "variants": [
+    {
+      "gene": "SOD2",
+      "role": "Endogenous_Buffer",
+      "variant": "chr6:159693241:T>G",
+      "note": "Universal matrix superoxide shield",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas/variant/chr6:159693241:T>G",
+      "organs": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte (CABG/NMP)",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.03491,
+          "sc_atac_max_delta": -0.0156,
+          "rna_target_lfc": -0.01686,
+          "splice_delta": 0.00591,
+          "composite": 0.0484
+        },
+        "hepatocyte": {
+          "label": "Liver Hepatocyte (Pringle/MASH)",
+          "curie": "UBERON:0002107_CL:0000182",
+          "sc_rna_target_lfc": -0.08035,
+          "sc_atac_max_delta": -0.02279,
+          "rna_target_lfc": -0.01635,
+          "splice_delta": 0.01409,
+          "composite": 0.0994
+        },
+        "lung_aec2": {
+          "label": "Lung Type II Pneumocyte AEC2 (IPF/Preemie/EVLP)",
+          "curie": "UBERON:0002048_CL:0002063",
+          "sc_rna_target_lfc": -0.12404,
+          "sc_atac_max_delta": -0.02893,
+          "rna_target_lfc": -0.03663,
+          "splice_delta": 0.01237,
+          "composite": 0.1508
+        },
+        "kidney_pt": {
+          "label": "Kidney Proximal Tubule (CSA-AKI/Nephrectomy)",
+          "curie": "UBERON:0001225_CL:0002306",
+          "sc_rna_target_lfc": -0.09356,
+          "sc_atac_max_delta": -0.0194,
+          "rna_target_lfc": -0.02564,
+          "splice_delta": 0.01153,
+          "composite": 0.1126
+        },
+        "pancreatic_beta": {
+          "label": "Pancreatic Beta Cell (T1D iPSC-Islets)",
+          "curie": "UBERON:0000006_CL:0000169",
+          "sc_rna_target_lfc": -0.11734,
+          "sc_atac_max_delta": -0.02867,
+          "rna_target_lfc": -0.0329,
+          "splice_delta": 0.01065,
+          "composite": 0.1426
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.06321,
+          "sc_atac_max_delta": -0.03536,
+          "rna_target_lfc": -0.05228,
+          "splice_delta": 0.01114,
+          "composite": 0.0967
+        }
+      },
+      "mean_composite": 0.1084,
+      "top_responsive_organ": "lung_aec2",
+      "top_responsive_composite": 0.1508
+    },
+    {
+      "gene": "UCP2",
+      "role": "Endogenous_Buffer",
+      "variant": "chr11:73982830:C>G",
+      "note": "Regulated mild proton-leak buffer (caution in beta/heat)",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas/variant/chr11:73982830:C>G",
+      "organs": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte (CABG/NMP)",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.5907,
+          "sc_atac_max_delta": -0.35904,
+          "rna_target_lfc": -0.33694,
+          "splice_delta": 0.00688,
+          "composite": 0.8562
+        },
+        "hepatocyte": {
+          "label": "Liver Hepatocyte (Pringle/MASH)",
+          "curie": "UBERON:0002107_CL:0000182",
+          "sc_rna_target_lfc": -0.31268,
+          "sc_atac_max_delta": -0.44469,
+          "rna_target_lfc": -0.15835,
+          "splice_delta": 0.00553,
+          "composite": 0.576
+        },
+        "lung_aec2": {
+          "label": "Lung Type II Pneumocyte AEC2 (IPF/Preemie/EVLP)",
+          "curie": "UBERON:0002048_CL:0002063",
+          "sc_rna_target_lfc": 0.07094,
+          "sc_atac_max_delta": -0.28027,
+          "rna_target_lfc": 0.05869,
+          "splice_delta": 0.01305,
+          "composite": 0.229
+        },
+        "kidney_pt": {
+          "label": "Kidney Proximal Tubule (CSA-AKI/Nephrectomy)",
+          "curie": "UBERON:0001225_CL:0002306",
+          "sc_rna_target_lfc": -0.06532,
+          "sc_atac_max_delta": -0.36259,
+          "rna_target_lfc": 0.04595,
+          "splice_delta": 0.00115,
+          "composite": 0.2584
+        },
+        "pancreatic_beta": {
+          "label": "Pancreatic Beta Cell (T1D iPSC-Islets)",
+          "curie": "UBERON:0000006_CL:0000169",
+          "sc_rna_target_lfc": 0.1343,
+          "sc_atac_max_delta": -0.30322,
+          "rna_target_lfc": 0.08217,
+          "splice_delta": 0.01009,
+          "composite": 0.309
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.08514,
+          "sc_atac_max_delta": -0.13897,
+          "rna_target_lfc": -0.04844,
+          "splice_delta": 0.01303,
+          "composite": 0.17
+        }
+      },
+      "mean_composite": 0.3998,
+      "top_responsive_organ": "cardiomyocyte",
+      "top_responsive_composite": 0.8562
+    },
+    {
+      "gene": "PINK1",
+      "role": "Endogenous_Buffer",
+      "variant": "chr1:20633437:C>A",
+      "note": "Mitophagy quality-control kinase (AVI Phred 20.97; IPF AEC2)",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas/variant/chr1:20633437:C>A",
+      "organs": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte (CABG/NMP)",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": 0.02727,
+          "sc_atac_max_delta": -0.02639,
+          "rna_target_lfc": 0.02196,
+          "splice_delta": 0.0,
+          "composite": 0.046
+        },
+        "hepatocyte": {
+          "label": "Liver Hepatocyte (Pringle/MASH)",
+          "curie": "UBERON:0002107_CL:0000182",
+          "sc_rna_target_lfc": -0.06925,
+          "sc_atac_max_delta": -0.02302,
+          "rna_target_lfc": 0.00816,
+          "splice_delta": 0.0,
+          "composite": 0.0828
+        },
+        "lung_aec2": {
+          "label": "Lung Type II Pneumocyte AEC2 (IPF/Preemie/EVLP)",
+          "curie": "UBERON:0002048_CL:0002063",
+          "sc_rna_target_lfc": -0.08313,
+          "sc_atac_max_delta": 0.01675,
+          "rna_target_lfc": -0.03261,
+          "splice_delta": 0.0,
+          "composite": 0.0997
+        },
+        "kidney_pt": {
+          "label": "Kidney Proximal Tubule (CSA-AKI/Nephrectomy)",
+          "curie": "UBERON:0001225_CL:0002306",
+          "sc_rna_target_lfc": -0.04657,
+          "sc_atac_max_delta": -0.03831,
+          "rna_target_lfc": -0.02042,
+          "splice_delta": 0.0,
+          "composite": 0.0708
+        },
+        "pancreatic_beta": {
+          "label": "Pancreatic Beta Cell (T1D iPSC-Islets)",
+          "curie": "UBERON:0000006_CL:0000169",
+          "sc_rna_target_lfc": -0.04839,
+          "sc_atac_max_delta": -0.01828,
+          "rna_target_lfc": -0.00956,
+          "splice_delta": 0.0,
+          "composite": 0.0599
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.08151,
+          "sc_atac_max_delta": 0.03442,
+          "rna_target_lfc": -0.07203,
+          "splice_delta": 0.0,
+          "composite": 0.1167
+        }
+      },
+      "mean_composite": 0.0793,
+      "top_responsive_organ": "cd8_tcell",
+      "top_responsive_composite": 0.1167
+    },
+    {
+      "gene": "NDUFS2",
+      "role": "Thermal_Partner_CI",
+      "variant": "chr1:161197085:G>T",
+      "note": "3.25 A CI contact of Desert-Heat ND4L Y85H (AVI Phred 25.10)",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas/variant/chr1:161197085:G>T",
+      "organs": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte (CABG/NMP)",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.01354,
+          "sc_atac_max_delta": 0.1459,
+          "rna_target_lfc": -0.0117,
+          "splice_delta": 0.0,
+          "composite": 0.0894
+        },
+        "hepatocyte": {
+          "label": "Liver Hepatocyte (Pringle/MASH)",
+          "curie": "UBERON:0002107_CL:0000182",
+          "sc_rna_target_lfc": -0.00683,
+          "sc_atac_max_delta": 0.39635,
+          "rna_target_lfc": -0.00391,
+          "splice_delta": 0.0,
+          "composite": 0.206
+        },
+        "lung_aec2": {
+          "label": "Lung Type II Pneumocyte AEC2 (IPF/Preemie/EVLP)",
+          "curie": "UBERON:0002048_CL:0002063",
+          "sc_rna_target_lfc": -0.00512,
+          "sc_atac_max_delta": 0.28234,
+          "rna_target_lfc": -0.00105,
+          "splice_delta": 0.0,
+          "composite": 0.1466
+        },
+        "kidney_pt": {
+          "label": "Kidney Proximal Tubule (CSA-AKI/Nephrectomy)",
+          "curie": "UBERON:0001225_CL:0002306",
+          "sc_rna_target_lfc": -0.00181,
+          "sc_atac_max_delta": 0.20524,
+          "rna_target_lfc": -0.00048,
+          "splice_delta": 0.0,
+          "composite": 0.1046
+        },
+        "pancreatic_beta": {
+          "label": "Pancreatic Beta Cell (T1D iPSC-Islets)",
+          "curie": "UBERON:0000006_CL:0000169",
+          "sc_rna_target_lfc": -0.0032,
+          "sc_atac_max_delta": 0.0905,
+          "rna_target_lfc": -0.00128,
+          "splice_delta": 0.0,
+          "composite": 0.0488
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": 0.00801,
+          "sc_atac_max_delta": 3.09834,
+          "rna_target_lfc": 0.00878,
+          "splice_delta": 0.0,
+          "composite": 1.5594
+        }
+      },
+      "mean_composite": 0.3591,
+      "top_responsive_organ": "cd8_tcell",
+      "top_responsive_composite": 1.5594
+    },
+    {
+      "gene": "NDUFA13",
+      "role": "Thermal_Partner_CI",
+      "variant": "chr19:19516241:G>T",
+      "note": "3.68 A CI contact of Desert-Heat Camel ND1 S313G",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas/variant/chr19:19516241:G>T",
+      "organs": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte (CABG/NMP)",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.27658,
+          "sc_atac_max_delta": 0.03308,
+          "rna_target_lfc": -0.13094,
+          "splice_delta": 0.13977,
+          "composite": 0.3608
+        },
+        "hepatocyte": {
+          "label": "Liver Hepatocyte (Pringle/MASH)",
+          "curie": "UBERON:0002107_CL:0000182",
+          "sc_rna_target_lfc": -0.15327,
+          "sc_atac_max_delta": 0.0308,
+          "rna_target_lfc": -0.07034,
+          "splice_delta": 0.05283,
+          "composite": 0.1995
+        },
+        "lung_aec2": {
+          "label": "Lung Type II Pneumocyte AEC2 (IPF/Preemie/EVLP)",
+          "curie": "UBERON:0002048_CL:0002063",
+          "sc_rna_target_lfc": -0.15757,
+          "sc_atac_max_delta": 0.0438,
+          "rna_target_lfc": -0.02258,
+          "splice_delta": 0.06479,
+          "composite": 0.2013
+        },
+        "kidney_pt": {
+          "label": "Kidney Proximal Tubule (CSA-AKI/Nephrectomy)",
+          "curie": "UBERON:0001225_CL:0002306",
+          "sc_rna_target_lfc": -0.1268,
+          "sc_atac_max_delta": 0.03176,
+          "rna_target_lfc": -0.04988,
+          "splice_delta": 0.03954,
+          "composite": 0.165
+        },
+        "pancreatic_beta": {
+          "label": "Pancreatic Beta Cell (T1D iPSC-Islets)",
+          "curie": "UBERON:0000006_CL:0000169",
+          "sc_rna_target_lfc": -0.11719,
+          "sc_atac_max_delta": 0.04588,
+          "rna_target_lfc": -0.02253,
+          "splice_delta": 0.03378,
+          "composite": 0.1542
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.09027,
+          "sc_atac_max_delta": 0.0686,
+          "rna_target_lfc": -0.08437,
+          "splice_delta": 0.02564,
+          "composite": 0.1521
+        }
+      },
+      "mean_composite": 0.2055,
+      "top_responsive_organ": "cardiomyocyte",
+      "top_responsive_composite": 0.3608
+    },
+    {
+      "gene": "UQCRFS1",
+      "role": "Cold_Partner_CIII",
+      "variant": "chr19:29213160:C>T",
+      "note": "4.40 A CIII contact of Arctic-Cold Mammoth CYTB F181L",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas/variant/chr19:29213160:C>T",
+      "organs": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte (CABG/NMP)",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.35457,
+          "sc_atac_max_delta": -0.12994,
+          "rna_target_lfc": -0.31847,
+          "splice_delta": 0.0,
+          "composite": 0.4992
+        },
+        "hepatocyte": {
+          "label": "Liver Hepatocyte (Pringle/MASH)",
+          "curie": "UBERON:0002107_CL:0000182",
+          "sc_rna_target_lfc": -0.168,
+          "sc_atac_max_delta": -0.06006,
+          "rna_target_lfc": -0.09975,
+          "splice_delta": 0.0,
+          "composite": 0.223
+        },
+        "lung_aec2": {
+          "label": "Lung Type II Pneumocyte AEC2 (IPF/Preemie/EVLP)",
+          "curie": "UBERON:0002048_CL:0002063",
+          "sc_rna_target_lfc": -0.05297,
+          "sc_atac_max_delta": -0.01727,
+          "rna_target_lfc": -0.01402,
+          "splice_delta": 0.0,
+          "composite": 0.0651
+        },
+        "kidney_pt": {
+          "label": "Kidney Proximal Tubule (CSA-AKI/Nephrectomy)",
+          "curie": "UBERON:0001225_CL:0002306",
+          "sc_rna_target_lfc": -0.14152,
+          "sc_atac_max_delta": -0.04007,
+          "rna_target_lfc": -0.09762,
+          "splice_delta": 0.0,
+          "composite": 0.186
+        },
+        "pancreatic_beta": {
+          "label": "Pancreatic Beta Cell (T1D iPSC-Islets)",
+          "curie": "UBERON:0000006_CL:0000169",
+          "sc_rna_target_lfc": -0.075,
+          "sc_atac_max_delta": -0.02525,
+          "rna_target_lfc": -0.02546,
+          "splice_delta": 0.0,
+          "composite": 0.094
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.03011,
+          "sc_atac_max_delta": 0.00617,
+          "rna_target_lfc": -0.0222,
+          "splice_delta": 0.0,
+          "composite": 0.0387
+        }
+      },
+      "mean_composite": 0.1843,
+      "top_responsive_organ": "cardiomyocyte",
+      "top_responsive_composite": 0.4992
+    },
+    {
+      "gene": "CYC1",
+      "role": "Baric_Partner_CIII",
+      "variant": "chr8:144095032:C>A",
+      "note": "4.04 A CIII contact of Sperm-Whale CYTB Y224H (AVI Phred 23.10)",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas/variant/chr8:144095032:C>A",
+      "organs": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte (CABG/NMP)",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": -0.07837,
+          "sc_atac_max_delta": -0.01353,
+          "rna_target_lfc": 0.01521,
+          "splice_delta": 0.0,
+          "composite": 0.0889
+        },
+        "hepatocyte": {
+          "label": "Liver Hepatocyte (Pringle/MASH)",
+          "curie": "UBERON:0002107_CL:0000182",
+          "sc_rna_target_lfc": -0.24135,
+          "sc_atac_max_delta": -0.04937,
+          "rna_target_lfc": -0.0669,
+          "splice_delta": 0.0,
+          "composite": 0.2828
+        },
+        "lung_aec2": {
+          "label": "Lung Type II Pneumocyte AEC2 (IPF/Preemie/EVLP)",
+          "curie": "UBERON:0002048_CL:0002063",
+          "sc_rna_target_lfc": -0.2777,
+          "sc_atac_max_delta": -0.04305,
+          "rna_target_lfc": -0.11384,
+          "splice_delta": 0.0,
+          "composite": 0.3277
+        },
+        "kidney_pt": {
+          "label": "Kidney Proximal Tubule (CSA-AKI/Nephrectomy)",
+          "curie": "UBERON:0001225_CL:0002306",
+          "sc_rna_target_lfc": -0.19246,
+          "sc_atac_max_delta": -0.06176,
+          "rna_target_lfc": -0.08092,
+          "splice_delta": 0.0,
+          "composite": 0.2436
+        },
+        "pancreatic_beta": {
+          "label": "Pancreatic Beta Cell (T1D iPSC-Islets)",
+          "curie": "UBERON:0000006_CL:0000169",
+          "sc_rna_target_lfc": -0.16929,
+          "sc_atac_max_delta": -0.04431,
+          "rna_target_lfc": -0.10853,
+          "splice_delta": 0.0,
+          "composite": 0.2186
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.19459,
+          "sc_atac_max_delta": -0.01056,
+          "rna_target_lfc": -0.20376,
+          "splice_delta": 0.0,
+          "composite": 0.2508
+        }
+      },
+      "mean_composite": 0.2354,
+      "top_responsive_organ": "lung_aec2",
+      "top_responsive_composite": 0.3277
+    },
+    {
+      "gene": "NEG_CTRL_rs9904290",
+      "role": "Negative_Control_Blank",
+      "variant": "chr17:45985000:C>T",
+      "note": "BAA-Mito blank negative control 1",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas/variant/chr17:45985000:C>T",
+      "organs": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte (CABG/NMP)",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": 0.01741,
+          "sc_atac_max_delta": 0.01588,
+          "rna_target_lfc": -0.00389,
+          "splice_delta": 0.00048,
+          "composite": 0.0264
+        },
+        "hepatocyte": {
+          "label": "Liver Hepatocyte (Pringle/MASH)",
+          "curie": "UBERON:0002107_CL:0000182",
+          "sc_rna_target_lfc": 0.01648,
+          "sc_atac_max_delta": -0.00091,
+          "rna_target_lfc": 0.00439,
+          "splice_delta": 0.00051,
+          "composite": 0.0182
+        },
+        "lung_aec2": {
+          "label": "Lung Type II Pneumocyte AEC2 (IPF/Preemie/EVLP)",
+          "curie": "UBERON:0002048_CL:0002063",
+          "sc_rna_target_lfc": -0.02018,
+          "sc_atac_max_delta": 0.00501,
+          "rna_target_lfc": -0.00426,
+          "splice_delta": 0.00012,
+          "composite": 0.0238
+        },
+        "kidney_pt": {
+          "label": "Kidney Proximal Tubule (CSA-AKI/Nephrectomy)",
+          "curie": "UBERON:0001225_CL:0002306",
+          "sc_rna_target_lfc": 0.01933,
+          "sc_atac_max_delta": 0.00097,
+          "rna_target_lfc": -0.00338,
+          "splice_delta": 0.00011,
+          "composite": 0.0207
+        },
+        "pancreatic_beta": {
+          "label": "Pancreatic Beta Cell (T1D iPSC-Islets)",
+          "curie": "UBERON:0000006_CL:0000169",
+          "sc_rna_target_lfc": 0.0316,
+          "sc_atac_max_delta": -0.00274,
+          "rna_target_lfc": 0.00414,
+          "splice_delta": 0.00252,
+          "composite": 0.0346
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": -0.02054,
+          "sc_atac_max_delta": 0.01004,
+          "rna_target_lfc": 0.00679,
+          "splice_delta": 0.00057,
+          "composite": 0.0274
+        }
+      },
+      "mean_composite": 0.0252,
+      "top_responsive_organ": "pancreatic_beta",
+      "top_responsive_composite": 0.0346
+    },
+    {
+      "gene": "NEG_CTRL_rs10799812",
+      "role": "Negative_Control_Blank",
+      "variant": "chr1:215190400:G>A",
+      "note": "BAA-Mito blank negative control 2",
+      "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas/variant/chr1:215190400:G>A",
+      "organs": {
+        "cardiomyocyte": {
+          "label": "Heart Ventricular Cardiomyocyte (CABG/NMP)",
+          "curie": "UBERON:0000948_CL:2000046",
+          "sc_rna_target_lfc": 0.01147,
+          "sc_atac_max_delta": -0.01146,
+          "rna_target_lfc": -0.00173,
+          "splice_delta": 1e-05,
+          "composite": 0.0176
+        },
+        "hepatocyte": {
+          "label": "Liver Hepatocyte (Pringle/MASH)",
+          "curie": "UBERON:0002107_CL:0000182",
+          "sc_rna_target_lfc": 0.00926,
+          "sc_atac_max_delta": -0.06851,
+          "rna_target_lfc": 0.00373,
+          "splice_delta": 0.0,
+          "composite": 0.0444
+        },
+        "lung_aec2": {
+          "label": "Lung Type II Pneumocyte AEC2 (IPF/Preemie/EVLP)",
+          "curie": "UBERON:0002048_CL:0002063",
+          "sc_rna_target_lfc": -0.01376,
+          "sc_atac_max_delta": -0.0339,
+          "rna_target_lfc": 0.00059,
+          "splice_delta": 0.0,
+          "composite": 0.0309
+        },
+        "kidney_pt": {
+          "label": "Kidney Proximal Tubule (CSA-AKI/Nephrectomy)",
+          "curie": "UBERON:0001225_CL:0002306",
+          "sc_rna_target_lfc": 0.00853,
+          "sc_atac_max_delta": -0.00877,
+          "rna_target_lfc": 0.00135,
+          "splice_delta": 1e-05,
+          "composite": 0.0133
+        },
+        "pancreatic_beta": {
+          "label": "Pancreatic Beta Cell (T1D iPSC-Islets)",
+          "curie": "UBERON:0000006_CL:0000169",
+          "sc_rna_target_lfc": -0.00525,
+          "sc_atac_max_delta": -0.01481,
+          "rna_target_lfc": 0.00118,
+          "splice_delta": 0.0,
+          "composite": 0.0129
+        },
+        "cd8_tcell": {
+          "label": "Blood Effector Memory CD8+ T Cell (CAR-T)",
+          "curie": "UBERON:0000178_CL:0000913",
+          "sc_rna_target_lfc": 0.00646,
+          "sc_atac_max_delta": -0.00457,
+          "rna_target_lfc": -0.00424,
+          "splice_delta": 0.0,
+          "composite": 0.0098
+        }
+      },
+      "mean_composite": 0.0215,
+      "top_responsive_organ": "hepatocyte",
+      "top_responsive_composite": 0.0444
+    }
+  ]
+}

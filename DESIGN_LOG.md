@@ -203,6 +203,22 @@ Every phase ends with a human review checkpoint before advancing:
     * **Deep-Sea Hydrostatic Dive (`150 atm`):** Sperm Whale `ATP6 I106V` = **`+0.0760`** (`+67%` dive ATP nadir); `ND4L A11T + SOD2` = **`+0.1107`**.
 * **Single-Explorer v3 & Verification (`scripts/stage8_synthesize_and_plot.py`, `tests/test_stage8_replication_thermal.py`):** Added `All Stress Axes` filter (Tab 2), interactive `Stress Regime` selector (Tab 4), and Stage 8A Trap A/B + Donor Reversibility + Surgery Clocks (Tab 6) into the single [mitofitness_explorer.html](file:///Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/app/mitofitness_explorer.html) (`312 KB`, JS syntax `0 CLEAN`); **9/9** unified test suites pass 100%.
 
+### Stage 9 — **ATOMIC PHYSICS (OPENMM `AMBER14`) FOR THERMAL/BARIC LEADS & LIVE ALPHAGENOME 2 CLINICAL ORGAN CONDITIONING COMPLETE & VERIFIED (2026-11-24)**
+* **Stage 9A (`scripts/stage9a_openmm_thermal_baric.py`, `data/stage9a_openmm_thermal_baric.json`, `data/stage9_openmm/*.pdb`):**
+  * Minimized complete interacting human cryo-EM subassemblies (`9I4I`, `9I6F`, `9HZL`) using explicit-hydrogen OpenMM `AMBER14 + OBC2` (`CutoffNonPeriodic`, 1.0 nm) across all **5 newly activated Stage-8B Thermal/Baric leads**: **5/5 = `STABLE_LOW_PERTURBATION`** vs. Stage-6 Pathogenic Leigh `ATP6 L156R` (`+0.160 Å`):
+    * **`ND4L Y85H`** (*Desert_Heat*, Jerboa, `0` bystanders, `NDUFS2/ND2/ND4L` on `9I4I`): **`ΔRMSD = -0.0170 Å`**, `d_min = 3.61 Å`.
+    * **`ND1 S313G`** (*Desert_Heat*, Camel, `NDUFA3/NDUFA13/ND3/ND1` on `9I4I`): **`ΔRMSD = +0.0500 Å`**, `d_min = 4.00 Å`.
+    * **`COX1 I57V`** (*Arctic_Cold*, Muskox, `0` bystanders, `COX1/COX7C` on `9I6F`): **`ΔRMSD = -0.0800 Å`**, `d_min = 3.45 Å`.
+    * **`CYTB F181L`** (*Arctic_Cold*, Woolly Mammoth, `CYTB/UQCRFS1` on `9HZL`): **`ΔRMSD = +0.0040 Å`**, `d_min = 3.43 Å`.
+    * **`CYTB Y224H`** (*Diving*, Sperm Whale, `UQCRB/CYC1/CYTB` on `9HZL`): **`ΔRMSD = +0.0310 Å`**, `d_min = 2.80 Å`, **`+1` new stabilizing polar H-bond**.
+* **Stage 9B (`scripts/stage9b_alphagenome2_organ_compartments.py`, `data/stage9b_alphagenome2_organs.json`):**
+  * Live `AlphaGenome 2 v2.dna_client` single-cell conditioning across **6 Master-Plan Clinical Organ Compartments** (`Heart Ventricular Cardiomyocyte`, `Liver Hepatocyte`, `Lung Type II Pneumocyte AEC2`, `Kidney Proximal Tubule`, `Pancreatic Beta Cell`, `Blood CD8+ T Cell`) × 7 peak-`AVI` active promoters (`SOD2`, `UCP2`, `PINK1`, `NDUFS2`, `NDUFA13`, `UQCRFS1`, `CYC1`) + 2 `BAA-Mito` blank negative controls (`rs9904290`, `rs10799812`):
+    * **`9.62×` Signal-to-Null Specificity** (`0.2245` vs `0.0234`).
+    * **`SOD2`** peaks in **`Lung Type II Pneumocyte (AEC2)` (`0.1508`, `scRNA = -0.1240`)** — aligning with `IPF`/`ILD`, `24-week micro-preemie surfactant`, and `EVLP` lung transplant!
+    * **`UCP2`** peaks in **`Heart Cardiomyocyte` (`0.8562`, `scRNA = -0.5907`)** (and shows `0.58` hepatic + `0.31` pancreatic beta chromatin/expression activity — confirming caution against `UCP2` in beta cells!).
+    * **`CYC1`** (`AVI Phred 23.10`, Sperm-Whale `CYTB Y224H` partner) peaks in **`Lung AEC2` (`0.3277`)**; **`UQCRFS1`** (`0.4992`) & **`NDUFA13`** (`0.3608`) peak in **`Heart Cardiomyocyte`**; **`NDUFS2`** (`AVI Phred 25.10`, Jerboa `ND4L Y85H` partner) peaks in **`CD8+ T-Cell` (`1.5594`)**.
+* **Explorer v4 & Verification (`scripts/stage9_synthesize_and_plot.py`, `tests/test_stage9_atomic_and_organs.py`):** Added Stage 9A OpenMM table (Tab 3), Stage 8A Trap-B `Galactose/AZD7545` hardened wet-lab SOP + Clock 1/2/3 Clinical Dosing Table (Tab 5), and Stage 9B 6-Organ AlphaGenome 2 Heatmap (Tab 6) into the single [mitofitness_explorer.html](file:///Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/app/mitofitness_explorer.html) (`342 KB`, JS syntax `0 CLEAN`); **10/10** unified test suites pass 100%.
+
 ---
 
 ## 5. Logged Future Roadmap (Deferred — Not Executing Yet)

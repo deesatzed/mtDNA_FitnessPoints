@@ -1,0 +1,211 @@
+{
+  "stage": "9A_OpenMM_AMBER14_Thermal_Baric_Leads",
+  "epistemic_tier": "E3_MECHANISTIC_SIM",
+  "forcefield": "AMBER14 + OBC2 implicit solvent (OpenMM CPU/L-BFGS)",
+  "benchmark_anchors": {
+    "Stage6_COX3_W116R_delta_rmsd_A": 0.014,
+    "Stage6_Pathogenic_ATP6_L156R_delta_rmsd_A": 0.16
+  },
+  "n_evaluated": 5,
+  "n_stable_low_perturbation": 5,
+  "results": [
+    {
+      "variant": "ND4L_Y85H",
+      "gene": "ND4L",
+      "pos": 85,
+      "ref_aa": "Y",
+      "alt_aa": "H",
+      "role": "Desert_Heat_Lead_0Bys",
+      "pdb_id": "9I4I",
+      "target_chain": "k",
+      "subassembly_chains": [
+        "NDUFS2(Q)",
+        "ND2(i)",
+        "ND4L(k)"
+      ],
+      "wt": {
+        "n_atoms": 14043,
+        "E_init_kJ_mol": 112123.1,
+        "E_min_kJ_mol": -120439.3,
+        "relaxation_drop_kJ_mol": -232562.4,
+        "pocket_8A_heavy_rmsd_A": 0.513,
+        "site_ca_shift_A": 0.193,
+        "post_relax_sc_dmin_A": 3.26,
+        "polar_contacts_3p5A": [
+          "OH--k:ASN92.O(3.26A)"
+        ]
+      },
+      "mutant": {
+        "n_atoms": 14039,
+        "E_init_kJ_mol": 109305.7,
+        "E_min_kJ_mol": -119766.7,
+        "relaxation_drop_kJ_mol": -229072.4,
+        "pocket_8A_heavy_rmsd_A": 0.496,
+        "site_ca_shift_A": 0.207,
+        "post_relax_sc_dmin_A": 3.61,
+        "polar_contacts_3p5A": []
+      },
+      "delta_pocket_rmsd_A": -0.017,
+      "new_mutant_polar_contacts_3p5A": [],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "ND1_S313G",
+      "gene": "ND1",
+      "pos": 313,
+      "ref_aa": "S",
+      "alt_aa": "G",
+      "role": "Desert_Heat_Camel_NDUFA13",
+      "pdb_id": "9I4I",
+      "target_chain": "s",
+      "subassembly_chains": [
+        "NDUFA3(U)",
+        "NDUFA13(W)",
+        "ND3(j)",
+        "ND1(s)"
+      ],
+      "wt": {
+        "n_atoms": 10626,
+        "E_init_kJ_mol": 75875.6,
+        "E_min_kJ_mol": -84828.4,
+        "relaxation_drop_kJ_mol": -160704.0,
+        "pocket_8A_heavy_rmsd_A": 0.421,
+        "site_ca_shift_A": 0.242,
+        "post_relax_sc_dmin_A": 3.29,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 10622,
+        "E_init_kJ_mol": 76069.0,
+        "E_min_kJ_mol": -84951.5,
+        "relaxation_drop_kJ_mol": -161020.5,
+        "pocket_8A_heavy_rmsd_A": 0.471,
+        "site_ca_shift_A": 0.279,
+        "post_relax_sc_dmin_A": 4.0,
+        "polar_contacts_3p5A": []
+      },
+      "delta_pocket_rmsd_A": 0.05,
+      "new_mutant_polar_contacts_3p5A": [],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "COX1_I57V",
+      "gene": "COX1",
+      "pos": 57,
+      "ref_aa": "I",
+      "alt_aa": "V",
+      "role": "Arctic_Cold_Lead_0Bys",
+      "pdb_id": "9I6F",
+      "target_chain": "A",
+      "subassembly_chains": [
+        "COX1(A)",
+        "COX7C(L)"
+      ],
+      "wt": {
+        "n_atoms": 8799,
+        "E_init_kJ_mol": 80153.3,
+        "E_min_kJ_mol": -52725.4,
+        "relaxation_drop_kJ_mol": -132878.7,
+        "pocket_8A_heavy_rmsd_A": 0.591,
+        "site_ca_shift_A": 0.661,
+        "post_relax_sc_dmin_A": 3.21,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 8796,
+        "E_init_kJ_mol": 80017.4,
+        "E_min_kJ_mol": -52680.1,
+        "relaxation_drop_kJ_mol": -132697.5,
+        "pocket_8A_heavy_rmsd_A": 0.511,
+        "site_ca_shift_A": 0.492,
+        "post_relax_sc_dmin_A": 3.45,
+        "polar_contacts_3p5A": []
+      },
+      "delta_pocket_rmsd_A": -0.08,
+      "new_mutant_polar_contacts_3p5A": [],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "CYTB_F181L",
+      "gene": "CYTB",
+      "pos": 181,
+      "ref_aa": "F",
+      "alt_aa": "L",
+      "role": "Arctic_Cold_Mammoth_UQCRFS1",
+      "pdb_id": "9HZL",
+      "target_chain": "J",
+      "subassembly_chains": [
+        "CYTB(J)",
+        "UQCRFS1(P)",
+        "CYTB(V)"
+      ],
+      "wt": {
+        "n_atoms": 15217,
+        "E_init_kJ_mol": 116170.2,
+        "E_min_kJ_mol": -108989.3,
+        "relaxation_drop_kJ_mol": -225159.5,
+        "pocket_8A_heavy_rmsd_A": 0.38,
+        "site_ca_shift_A": 0.259,
+        "post_relax_sc_dmin_A": 3.5,
+        "polar_contacts_3p5A": []
+      },
+      "mutant": {
+        "n_atoms": 15216,
+        "E_init_kJ_mol": 116303.9,
+        "E_min_kJ_mol": -109128.0,
+        "relaxation_drop_kJ_mol": -225431.8,
+        "pocket_8A_heavy_rmsd_A": 0.384,
+        "site_ca_shift_A": 0.176,
+        "post_relax_sc_dmin_A": 3.43,
+        "polar_contacts_3p5A": []
+      },
+      "delta_pocket_rmsd_A": 0.004,
+      "new_mutant_polar_contacts_3p5A": [],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    },
+    {
+      "variant": "CYTB_Y224H",
+      "gene": "CYTB",
+      "pos": 224,
+      "ref_aa": "Y",
+      "alt_aa": "H",
+      "role": "Diving_Whale_CYC1",
+      "pdb_id": "9HZL",
+      "target_chain": "J",
+      "subassembly_chains": [
+        "UQCRB(F)",
+        "CYC1(H)",
+        "CYTB(J)"
+      ],
+      "wt": {
+        "n_atoms": 11729,
+        "E_init_kJ_mol": 72140.8,
+        "E_min_kJ_mol": -102991.8,
+        "relaxation_drop_kJ_mol": -175132.6,
+        "pocket_8A_heavy_rmsd_A": 0.483,
+        "site_ca_shift_A": 0.122,
+        "post_relax_sc_dmin_A": 2.67,
+        "polar_contacts_3p5A": [
+          "OH--J:PRO24.O(2.67A)"
+        ]
+      },
+      "mutant": {
+        "n_atoms": 11725,
+        "E_init_kJ_mol": 71607.5,
+        "E_min_kJ_mol": -102889.1,
+        "relaxation_drop_kJ_mol": -174496.6,
+        "pocket_8A_heavy_rmsd_A": 0.514,
+        "site_ca_shift_A": 0.191,
+        "post_relax_sc_dmin_A": 2.8,
+        "polar_contacts_3p5A": [
+          "NE2--J:THR23.OG1(2.80A)"
+        ]
+      },
+      "delta_pocket_rmsd_A": 0.031,
+      "new_mutant_polar_contacts_3p5A": [
+        "NE2--J:THR23.OG1(2.80A)"
+      ],
+      "physics_verdict": "STABLE_LOW_PERTURBATION"
+    }
+  ]
+}
