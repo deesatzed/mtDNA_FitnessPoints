@@ -1,0 +1,106 @@
+{
+  "stage": "11_HighPower_200Species_RateControl_Remediation",
+  "epistemic_tier": "E1_GENOMICS_plus_E3_STATS",
+  "clade_quotas_fetched": {
+    "Mammalia": 80,
+    "Aves": 50,
+    "Lepidosauria": 30,
+    "Actinopterygii": 40
+  },
+  "mean_vertebrate_species_per_gene": 201.0,
+  "gene_summary": {
+    "ND1": {
+      "n_species": 201,
+      "mean_H200": 0.8803
+    },
+    "ND2": {
+      "n_species": 201,
+      "mean_H200": 1.4892
+    },
+    "COX1": {
+      "n_species": 201,
+      "mean_H200": 0.3179
+    },
+    "COX2": {
+      "n_species": 201,
+      "mean_H200": 1.245
+    },
+    "ATP8": {
+      "n_species": 201,
+      "mean_H200": 1.9461
+    },
+    "ATP6": {
+      "n_species": 201,
+      "mean_H200": 1.0932
+    },
+    "COX3": {
+      "n_species": 201,
+      "mean_H200": 0.5774
+    },
+    "ND3": {
+      "n_species": 201,
+      "mean_H200": 1.0866
+    },
+    "ND4L": {
+      "n_species": 201,
+      "mean_H200": 1.3404
+    },
+    "ND4": {
+      "n_species": 201,
+      "mean_H200": 1.187
+    },
+    "ND5": {
+      "n_species": 201,
+      "mean_H200": 1.3978
+    },
+    "ND6": {
+      "n_species": 201,
+      "mean_H200": 1.8149
+    },
+    "CYTB": {
+      "n_species": 201,
+      "mean_H200": 1.339
+    }
+  },
+  "n_cryoem_residues_modeled": 3756,
+  "n_candidates": 130,
+  "stage5_44species_adjusted_OR": 1.519,
+  "stage5_44species_p": 0.02696,
+  "stage11_200species_adjusted_OR": 1.4247,
+  "stage11_200species_95CI": [
+    0.9705,
+    2.0915
+  ],
+  "stage11_200species_wald_p": 0.070776,
+  "stage11_bootstrap_500_95CI": [
+    0.9653,
+    2.1441
+  ],
+  "entropy_quartiles": [
+    {
+      "quartile": "Q1 (H200 0.00-0.17)",
+      "n_total": 936,
+      "iface_rate_pct": 2.38,
+      "core_rate_pct": 0.69
+    },
+    {
+      "quartile": "Q2 (H200 0.17-0.97)",
+      "n_total": 942,
+      "iface_rate_pct": 3.14,
+      "core_rate_pct": 4.37
+    },
+    {
+      "quartile": "Q3 (H200 0.97-1.86)",
+      "n_total": 939,
+      "iface_rate_pct": 9.9,
+      "core_rate_pct": 5.11
+    },
+    {
+      "quartile": "Q4 (H200 1.86-3.68)",
+      "n_total": 939,
+      "iface_rate_pct": 2.11,
+      "core_rate_pct": 2.14
+    }
+  ],
+  "verdict": "SIGNAL_ATTENUATED_HONEST_NEGATIVE"
+}

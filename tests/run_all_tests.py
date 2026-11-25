@@ -20,13 +20,14 @@ TEST_SUITES = [
     "tests/test_stage8_replication_thermal.py",
     "tests/test_stage9_atomic_and_organs.py",
     "tests/test_stage10_boltz2_and_ecological.py",
+    "tests/test_stage11_remediation_and_phylo.py",
 ]
 
 
 def main() -> int:
     exe = str(PYTHON) if PYTHON.exists() else sys.executable
     print("=" * 72)
-    print("MitoFitness Atlas — Unified Verification Suite (Phase 0 -> Stage 10)")
+    print("MitoFitness Atlas — Unified Verification Suite (Phase 0 -> Stage 11)")
     print("=" * 72)
     for rel in TEST_SUITES:
         path = ROOT / rel
@@ -36,7 +37,7 @@ def main() -> int:
             print(f"\nFAIL: {rel} exited with code {proc.returncode}")
             return proc.returncode
     print("\n" + "=" * 72)
-    print("ALL 11 VERIFICATION SUITES PASSED (Phase 0 -> Stage 10 Boltz-2 & Tier-3 Ecological)")
+    print("ALL 12 VERIFICATION SUITES PASSED (Phase 0 -> Stage 11 Remediation & 200-Species Audit)")
     print("=" * 72)
     return 0
 

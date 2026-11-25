@@ -75,9 +75,10 @@ def sel_ode_rhs_vec(
 ) -> np.ndarray:
     """Two-population organelle ODE: y = [W_wt, W_mut].
 
-    In mild hypoxia (pO2 ~ 1.1 kPa), WT (Km=1.25 kPa) operates at ~47% O2 saturation
-    while COX3 W116R (Km=0.53 kPa) operates at ~68% saturation -> differential DeltaPsi
-    depolarization triggers preferential PINK1/Urolithin A clearance of unedited WT copies!
+    Conditional E3/E4 hypothesis: IF COX3 W116R (Scott et al. PNAS 2011: altered cyt-c affinity/Vmax)
+    lowers effective intracellular hypoxic half-saturation Km_app (1.25 -> 0.53 kPa), then under mild
+    hypoxia (pO2 ~ 1.1 kPa), WT (~47% sat) depolarizes earlier than W116R (~68% sat), enabling
+    preferential PINK1/Urolithin A clearance of unedited WT copies.
     """
     W_wt, W_mut = np.maximum(1e-6, y[0]), np.maximum(1e-6, y[1])
     W_tot = W_wt + W_mut

@@ -54,11 +54,11 @@ DRIVERS = {
     "COX3_W116R": {
         "gene": "COX3", "aa_pos": 116, "alt_aa": "R", "rcrs_edit": "m.9552T>C",
         "fbt_class": "POLARITY_GAIN_CHANNEL_REMODELING",
-        "km_o2_mult": 0.42,       # Strong O2-affinity gain (Scott et al. 2011 PNAS benchmark)
-        "atp_o_gain": 0.14,       # Tighter proton-pumping coupling
+        "km_o2_mult": 0.42,       # Effective lumped intracellular hypoxic-flux hypothesis (E3/E4); Scott et al. (PNAS 2011) measured higher cyt-c affinity & lower Vmax in bar-headed goose COX, not direct COX1 binuclear Km_O2
+        "atp_o_gain": 0.14,       # Hypothesized tighter proton-pumping coupling under hypoxia (conditional phase-diagram parameter)
         "ret_sensitivity": 1.48,  # Trade-off: tighter CIV/PMF raises reperfusion RET-ROS liability!
         "proton_leak_delta": -0.04,
-        "mech": "High-affinity Complex IV O2/proton channel remodeling; shifts lower hypoxia cliff left at cost of steeper reperfusion RET-ROS peak.",
+        "mech": "Complex IV COX3-COX1 channel remodeling (Scott et al. PNAS 2011: altered cyt-c affinity/Vmax); modeled as an effective hypoxic-flux shift that widens low-O2 ATP retention at the cost of steeper reperfusion RET-ROS.",
     },
     "ND4L_A11T": {
         "gene": "ND4L", "aa_pos": 11, "alt_aa": "T", "rcrs_edit": "m.10500G>A",
