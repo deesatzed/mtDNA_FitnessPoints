@@ -31,6 +31,8 @@ S8A_JSON = ROOT / "data" / "stage8a_replication_engraftment.json"
 S8B_JSON = ROOT / "data" / "stage8b_thermal_baric.json"
 S9A_JSON = ROOT / "data" / "stage9a_openmm_thermal_baric.json"
 S9B_JSON = ROOT / "data" / "stage9b_alphagenome2_organs.json"
+S10A_JSON = ROOT / "data" / "stage10a_boltz2_thermal_baric.json"
+S10B_JSON = ROOT / "data" / "stage10b_ecological_transfer.json"
 OUT_HTML = ROOT / "app" / "mitofitness_explorer.html"
 
 
@@ -46,6 +48,8 @@ def build_payload() -> dict:
     s8b = json.loads(S8B_JSON.read_text(encoding="utf-8")) if S8B_JSON.exists() else {}
     s9a = json.loads(S9A_JSON.read_text(encoding="utf-8")) if S9A_JSON.exists() else {}
     s9b = json.loads(S9B_JSON.read_text(encoding="utf-8")) if S9B_JSON.exists() else {}
+    s10a = json.loads(S10A_JSON.read_text(encoding="utf-8")) if S10A_JSON.exists() else {}
+    s10b = json.loads(S10B_JSON.read_text(encoding="utf-8")) if S10B_JSON.exists() else {}
 
     # Load window stress test lookup
     win_lookup = {}
@@ -132,6 +136,8 @@ def build_payload() -> dict:
         "stage8b_thermal_baric": s8b,
         "stage9a_openmm": s9a,
         "stage9b_organs": s9b,
+        "stage10a_boltz2": s10a,
+        "stage10b_ecological": s10b,
     }
 
 
@@ -717,6 +723,29 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         <table class="heatmap-table" id="s9bOrganTable"></table>
       </div>
     </div>
+
+    <div class="card">
+      <h2>Stage 10B: Tier-3 Ecological &amp; Pollinator Conservation Transfer (5 Live NCBI RefSeq Species · Strictly Non-Gene-Drive) <span class="tag tag-green">E1: RefSeq + E3: Sim</span></h2>
+      <p style="font-size:0.83rem; color:var(--muted); margin-top:0;">
+        Extends our extremophile OXPHOS &amp; <code>Mito_Papers</code> <code>Apis-BCR</code> physics to threatened pollinators, Great Barrier Reef stony corals, and cold-water salmonids—identifying naturally occurring wild heat/hypoxia haplotypes for assisted gene flow &amp; nutritional buffering (<strong>zero synthetic gene drives</strong>).
+      </p>
+      <div class="grid-2">
+        <div>
+          <h3 style="margin-top:0;">Cross-Phylum Complex III Q<sub>o</sub> Fungicide &amp; OXPHOS Conservation</h3>
+          <table>
+            <thead><tr><th>Keystone Species</th><th>RefSeq</th><th>COX1 Id</th><th>CYTB Id</th><th>Q<sub>o</sub> Pocket</th></tr></thead>
+            <tbody id="s10bSpeciesBody"></tbody>
+          </table>
+        </div>
+        <div>
+          <h3 style="margin-top:0;">Ecological Stress Scenarios (N=5,000 LHS Median Viability)</h3>
+          <table>
+            <thead><tr><th>Scenario</th><th>WT</th><th>Tight-Coup</th><th>BCR Buf</th><th>Combined</th></tr></thead>
+            <tbody id="s10bScenBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- TAB 7: PLAIN-ENGLISH FRESHMAN GUIDE -->
@@ -964,8 +993,9 @@ document.getElementById('agTableBody').innerHTML = ag8 ? ag8.map(g =>
   `<tr><td class="mono"><strong><a href="${g.atlas_entity_url}" target="_blank" rel="noopener" style="color:var(--accent-dark); text-decoration:none;">${g.gene} ↗</a></strong></td><td>${g.role.replace(/_/g,' ')}</td><td><strong>${g.snvs_above_phred15}</strong> / ${g.snvs_above_phred10}</td><td>${g.max_avi_phred}</td><td style="font-size:0.78rem;">${g.top_modality} (${g.top_variant})</td></tr>`
 ).join('');
 
-// Stage 6 Boltz-2 & OpenMM tables
-const boltzList = (DATA.s6_bioai && DATA.s6_bioai.boltz2_cofolding_wt_vs_mutant) ? DATA.s6_bioai.boltz2_cofolding_wt_vs_mutant : [];
+// Stage 6 + Stage 10A Boltz-2 & OpenMM tables
+const boltzList = ((DATA.s6_bioai && DATA.s6_bioai.boltz2_cofolding_wt_vs_mutant) ? DATA.s6_bioai.boltz2_cofolding_wt_vs_mutant : [])
+  .concat((DATA.stage10a_boltz2 && DATA.stage10a_boltz2.pairs) ? DATA.stage10a_boltz2.pairs : []);
 document.getElementById('boltzTableBody').innerHTML = boltzList.map(b => `<tr>
   <td class="mono"><strong>${b.pair}</strong></td>
   <td class="mono">${b.pdb_id}</td>
@@ -1346,6 +1376,17 @@ if (DATA.stage9b_organs && DATA.stage9b_organs.variants) {
   });
   oHtml += '</tbody>';
   document.getElementById('s9bOrganTable').innerHTML = oHtml;
+}
+
+if (DATA.stage10b_ecological && DATA.stage10b_ecological.species_alignment_audit) {
+  const s10b = DATA.stage10b_ecological;
+  document.getElementById('s10bSpeciesBody').innerHTML = Object.values(s10b.species_alignment_audit).map(sp =>
+    `<tr><td><strong>${sp.common_name}</strong></td><td class="mono">${sp.refseq_accession}</td><td>${sp.gene_identities_vs_human.COX1.pct_identity_vs_human}%</td><td>${sp.gene_identities_vs_human.CYTB.pct_identity_vs_human}%</td><td><span class="tag tag-green">${sp.qo_strobilurin_pocket_conservation}</span></td></tr>`
+  ).join('');
+  document.getElementById('s10bScenBody').innerHTML = Object.values(s10b.ecological_scenarios_lhs5k).map(sc => {
+    const a = sc.arms;
+    return `<tr><td style="font-size:0.76rem;"><strong>${sc.label.split(':')[0]}</strong></td><td>${a.WT_Vulnerable.viab_med.toFixed(3)}</td><td style="color:${a.Natural_TightCoupled.delta_vs_wt_med<0?'var(--red)':'var(--ink)'};">${a.Natural_TightCoupled.viab_med.toFixed(3)}</td><td>${a.Nutritional_BCR_Buffer.viab_med.toFixed(3)}</td><td><strong style="color:var(--green);">${a.Combined_Haplotype_BCR.viab_med.toFixed(3)} (${a.Combined_Haplotype_BCR.delta_vs_wt_med>=0?'+':''}${a.Combined_Haplotype_BCR.delta_vs_wt_med.toFixed(3)})</strong></td></tr>`;
+  }).join('');
 }
 </script>
 </body>

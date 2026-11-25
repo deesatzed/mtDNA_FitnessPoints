@@ -1,0 +1,58 @@
+{
+  "stage": "10A_Live_Boltz2_Thermal_Baric_Dimers",
+  "epistemic_tier": "E2_FOUNDATION_MODEL",
+  "engine": "Boltz-2 (MIT License, Apple Silicon Metal MPS + ColabFold MSA)",
+  "n_dimers_predicted": 4,
+  "pairs": [
+    {
+      "pair": "ND4L Y85H + NDUFS2",
+      "pair_label": "ND4L_Y85H + NDUFS2 (Desert Heat)",
+      "pdb_id": "9I4I",
+      "wt": {
+        "name": "ND4L_WT_NDUFS2",
+        "iptm": 0.1538,
+        "ptm": 0.7056,
+        "complex_plddt": 0.8833,
+        "chainA_rmsd_vs_cryoem_A": 1.885,
+        "dimer_rmsd_vs_cryoem_A": 10.46
+      },
+      "mutant": {
+        "name": "ND4L_Y85H_NDUFS2",
+        "iptm": 0.1244,
+        "ptm": 0.7112,
+        "complex_plddt": 0.8834,
+        "chainA_rmsd_vs_cryoem_A": 1.87,
+        "dimer_rmsd_vs_cryoem_A": 13.88
+      },
+      "delta_iptm": -0.0294,
+      "wt_vs_mut_dimer_rmsd_A": 11.471,
+      "wt_vs_mut_10A_pocket_rmsd_A": 4.014,
+      "verdict": "SCAFFOLD_DEPENDENT_DIMER_MONOMER_CONSERVED"
+    },
+    {
+      "pair": "CYTB Y224H + CYC1",
+      "pair_label": "CYTB_Y224H + CYC1 (Deep-Sea Dive)",
+      "pdb_id": "9HZL",
+      "wt": {
+        "name": "CYTB_WT_CYC1",
+        "iptm": 0.8695,
+        "ptm": 0.9174,
+        "complex_plddt": 0.9275,
+        "chainA_rmsd_vs_cryoem_A": 0.94,
+        "dimer_rmsd_vs_cryoem_A": 3.621
+      },
+      "mutant": {
+        "name": "CYTB_Y224H_CYC1",
+        "iptm": 0.8657,
+        "ptm": 0.9178,
+        "complex_plddt": 0.9286,
+        "chainA_rmsd_vs_cryoem_A": 0.898,
+        "dimer_rmsd_vs_cryoem_A": 3.691
+      },
+      "delta_iptm": -0.0038,
+      "wt_vs_mut_dimer_rmsd_A": 0.457,
+      "wt_vs_mut_10A_pocket_rmsd_A": 0.139,
+      "verdict": "INTERFACE_PRESERVED_HIGH_FIDELITY"
+    }
+  ]
+}

@@ -1,0 +1,490 @@
+{
+  "stage": "10B_Tier3_Ecological_Pollinator_Conservation_Transfer",
+  "epistemic_tier": "E1_GENOMICS_plus_E3_SIM",
+  "biosafety_governance": "Strictly non-gene-drive conservation biology (assisted natural haplotype selection & nutritional Apis-BCR buffering only).",
+  "solver_convergence": {
+    "max_abs_delta": 2.6722393686728907e-07,
+    "passed": true
+  },
+  "species_alignment_audit": {
+    "Apis_mellifera": {
+      "common_name": "Western Honeybee",
+      "refseq_accession": "NC_001566.1",
+      "clade": "Insecta (Hymenoptera)",
+      "primary_ecological_stress": "Heatwave 42C flight + Complex III strobilurin fungicide (Mito_Papers bridge)",
+      "gene_identities_vs_human": {
+        "COX1": {
+          "pct_identity_vs_human": 66.08,
+          "aa_len": 520
+        },
+        "COX3": {
+          "pct_identity_vs_human": 45.98,
+          "aa_len": 259
+        },
+        "CYTB": {
+          "pct_identity_vs_human": 51.32,
+          "aa_len": 383
+        },
+        "ATP6": {
+          "pct_identity_vs_human": 31.42,
+          "aa_len": 226
+        },
+        "ND4L": {
+          "pct_identity_vs_human": 23.47,
+          "aa_len": 87
+        }
+      },
+      "qo_strobilurin_pocket_conservation": "9/9",
+      "fitness_point_sites": {
+        "COX1_I57V": {
+          "eco_aa": "I",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "COX3_W116R": {
+          "eco_aa": "W",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "CYTB_F181L": {
+          "eco_aa": "L",
+          "status": "PRE_ADAPTED_EXTREMOPHILE_ALLELE"
+        },
+        "CYTB_Y224H": {
+          "eco_aa": "F",
+          "status": "LINEAGE_SPECIFIC"
+        },
+        "ATP6_I106V": {
+          "eco_aa": "L",
+          "status": "LINEAGE_SPECIFIC"
+        },
+        "ATP6_I195V": {
+          "eco_aa": "M",
+          "status": "LINEAGE_SPECIFIC"
+        },
+        "ND4L_Y85H": {
+          "eco_aa": "L",
+          "status": "LINEAGE_SPECIFIC"
+        },
+        "ND4L_A11T": {
+          "eco_aa": "F",
+          "status": "LINEAGE_SPECIFIC"
+        }
+      }
+    },
+    "Bombus_terrestris": {
+      "common_name": "Buff-Tailed Bumblebee",
+      "refseq_accession": "NC_045179.1",
+      "clade": "Insecta (Hymenoptera)",
+      "primary_ecological_stress": "Alpine/temperate pollinator heatwaves + high-altitude hypoxia",
+      "gene_identities_vs_human": {
+        "COX1": {
+          "pct_identity_vs_human": 64.52,
+          "aa_len": 519
+        },
+        "COX3": {
+          "pct_identity_vs_human": 42.15,
+          "aa_len": 260
+        },
+        "CYTB": {
+          "pct_identity_vs_human": 50.53,
+          "aa_len": 380
+        },
+        "ATP6": {
+          "pct_identity_vs_human": 36.28,
+          "aa_len": 225
+        },
+        "ND4L": {
+          "pct_identity_vs_human": 26.53,
+          "aa_len": 88
+        }
+      },
+      "qo_strobilurin_pocket_conservation": "9/9",
+      "fitness_point_sites": {
+        "COX1_I57V": {
+          "eco_aa": "L",
+          "status": "LINEAGE_SPECIFIC"
+        },
+        "COX3_W116R": {
+          "eco_aa": "W",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "CYTB_F181L": {
+          "eco_aa": "F",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "CYTB_Y224H": {
+          "eco_aa": "F",
+          "status": "LINEAGE_SPECIFIC"
+        },
+        "ATP6_I106V": {
+          "eco_aa": "L",
+          "status": "LINEAGE_SPECIFIC"
+        },
+        "ATP6_I195V": {
+          "eco_aa": "M",
+          "status": "LINEAGE_SPECIFIC"
+        },
+        "ND4L_Y85H": {
+          "eco_aa": "Y",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "ND4L_A11T": {
+          "eco_aa": "V",
+          "status": "LINEAGE_SPECIFIC"
+        }
+      }
+    },
+    "Acropora_millepora": {
+      "common_name": "Great Barrier Reef Coral",
+      "refseq_accession": "NC_003522.1",
+      "clade": "Cnidaria (Anthozoa)",
+      "primary_ecological_stress": "Marine heatwave bleaching (27C -> 31.5C coral mitochondrial ROS)",
+      "gene_identities_vs_human": {
+        "COX1": {
+          "pct_identity_vs_human": 69.98,
+          "aa_len": 533
+        },
+        "COX3": {
+          "pct_identity_vs_human": 58.24,
+          "aa_len": 262
+        },
+        "CYTB": {
+          "pct_identity_vs_human": 55.79,
+          "aa_len": 384
+        },
+        "ATP6": {
+          "pct_identity_vs_human": 35.4,
+          "aa_len": 232
+        },
+        "ND4L": {
+          "pct_identity_vs_human": 24.49,
+          "aa_len": 99
+        }
+      },
+      "qo_strobilurin_pocket_conservation": "9/9",
+      "fitness_point_sites": {
+        "COX1_I57V": {
+          "eco_aa": "I",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "COX3_W116R": {
+          "eco_aa": "W",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "CYTB_F181L": {
+          "eco_aa": "L",
+          "status": "PRE_ADAPTED_EXTREMOPHILE_ALLELE"
+        },
+        "CYTB_Y224H": {
+          "eco_aa": "Y",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "ATP6_I106V": {
+          "eco_aa": "F",
+          "status": "LINEAGE_SPECIFIC"
+        },
+        "ATP6_I195V": {
+          "eco_aa": "I",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "ND4L_Y85H": {
+          "eco_aa": "R",
+          "status": "LINEAGE_SPECIFIC"
+        },
+        "ND4L_A11T": {
+          "eco_aa": "V",
+          "status": "LINEAGE_SPECIFIC"
+        }
+      }
+    },
+    "Salmo_salar": {
+      "common_name": "Atlantic Salmon",
+      "refseq_accession": "NC_001960.1",
+      "clade": "Teleostei (Salmonidae)",
+      "primary_ecological_stress": "Warming-river cardiac hypoxia (12C -> 22C CT_max collapse)",
+      "gene_identities_vs_human": {
+        "COX1": {
+          "pct_identity_vs_human": 86.74,
+          "aa_len": 516
+        },
+        "COX3": {
+          "pct_identity_vs_human": 79.69,
+          "aa_len": 261
+        },
+        "CYTB": {
+          "pct_identity_vs_human": 70.79,
+          "aa_len": 380
+        },
+        "ATP6": {
+          "pct_identity_vs_human": 53.54,
+          "aa_len": 227
+        },
+        "ND4L": {
+          "pct_identity_vs_human": 46.94,
+          "aa_len": 98
+        }
+      },
+      "qo_strobilurin_pocket_conservation": "9/9",
+      "fitness_point_sites": {
+        "COX1_I57V": {
+          "eco_aa": "I",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "COX3_W116R": {
+          "eco_aa": "W",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "CYTB_F181L": {
+          "eco_aa": "F",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "CYTB_Y224H": {
+          "eco_aa": "F",
+          "status": "LINEAGE_SPECIFIC"
+        },
+        "ATP6_I106V": {
+          "eco_aa": "V",
+          "status": "PRE_ADAPTED_EXTREMOPHILE_ALLELE"
+        },
+        "ATP6_I195V": {
+          "eco_aa": "I",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "ND4L_Y85H": {
+          "eco_aa": "H",
+          "status": "PRE_ADAPTED_EXTREMOPHILE_ALLELE"
+        },
+        "ND4L_A11T": {
+          "eco_aa": "A",
+          "status": "CONSERVED_HUMAN_WT"
+        }
+      }
+    },
+    "Oncorhynchus_mykiss": {
+      "common_name": "Rainbow Trout",
+      "refseq_accession": "NC_001717.1",
+      "clade": "Teleostei (Salmonidae)",
+      "primary_ecological_stress": "Cold-water salmonid thermal-oxygen ceiling",
+      "gene_identities_vs_human": {
+        "COX1": {
+          "pct_identity_vs_human": 85.96,
+          "aa_len": 516
+        },
+        "COX3": {
+          "pct_identity_vs_human": 79.69,
+          "aa_len": 261
+        },
+        "CYTB": {
+          "pct_identity_vs_human": 71.05,
+          "aa_len": 380
+        },
+        "ATP6": {
+          "pct_identity_vs_human": 52.65,
+          "aa_len": 223
+        },
+        "ND4L": {
+          "pct_identity_vs_human": 46.94,
+          "aa_len": 98
+        }
+      },
+      "qo_strobilurin_pocket_conservation": "9/9",
+      "fitness_point_sites": {
+        "COX1_I57V": {
+          "eco_aa": "I",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "COX3_W116R": {
+          "eco_aa": "W",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "CYTB_F181L": {
+          "eco_aa": "F",
+          "status": "CONSERVED_HUMAN_WT"
+        },
+        "CYTB_Y224H": {
+          "eco_aa": "F",
+          "status": "LINEAGE_SPECIFIC"
+        },
+        "ATP6_I106V": {
+          "eco_aa": "V",
+          "status": "PRE_ADAPTED_EXTREMOPHILE_ALLELE"
+        },
+        "ATP6_I195V": {
+          "eco_aa": "V",
+          "status": "PRE_ADAPTED_EXTREMOPHILE_ALLELE"
+        },
+        "ND4L_Y85H": {
+          "eco_aa": "H",
+          "status": "PRE_ADAPTED_EXTREMOPHILE_ALLELE"
+        },
+        "ND4L_A11T": {
+          "eco_aa": "A",
+          "status": "CONSERVED_HUMAN_WT"
+        }
+      }
+    }
+  },
+  "ecological_scenarios_lhs5k": {
+    "E1_Honeybee_42C_Fungicide_Flight": {
+      "label": "Apis mellifera: 42.5 C Heatwave + 65% Complex III Strobilurin Flight",
+      "wt_viability_med": 0.0859,
+      "arms": {
+        "WT_Vulnerable": {
+          "viab_med": 0.0859,
+          "delta_vs_wt_med": 0.0,
+          "delta_vs_wt_p05": 0.0,
+          "delta_vs_wt_p95": 0.0,
+          "atp_nadir_med": 0.0107,
+          "w_end_med": 0.1585
+        },
+        "Uncoupler_UCP2_Only": {
+          "viab_med": 0.2362,
+          "delta_vs_wt_med": 0.14,
+          "delta_vs_wt_p05": 0.051,
+          "delta_vs_wt_p95": 0.1946,
+          "atp_nadir_med": 0.0132,
+          "w_end_med": 0.4562
+        },
+        "Natural_TightCoupled": {
+          "viab_med": 0.015,
+          "delta_vs_wt_med": -0.0677,
+          "delta_vs_wt_p05": -0.1682,
+          "delta_vs_wt_p95": 0.0,
+          "atp_nadir_med": 0.01,
+          "w_end_med": 0.02
+        },
+        "Natural_HighO2_Affinity": {
+          "viab_med": 0.0288,
+          "delta_vs_wt_med": -0.0359,
+          "delta_vs_wt_p05": -0.0739,
+          "delta_vs_wt_p95": 0.0,
+          "atp_nadir_med": 0.01,
+          "w_end_med": 0.0475
+        },
+        "Nutritional_BCR_Buffer": {
+          "viab_med": 0.4578,
+          "delta_vs_wt_med": 0.37,
+          "delta_vs_wt_p05": 0.2219,
+          "delta_vs_wt_p95": 0.508,
+          "atp_nadir_med": 0.1506,
+          "w_end_med": 0.7563
+        },
+        "Combined_Haplotype_BCR": {
+          "viab_med": 0.6944,
+          "delta_vs_wt_med": 0.6007,
+          "delta_vs_wt_p05": 0.4021,
+          "delta_vs_wt_p95": 0.817,
+          "atp_nadir_med": 0.5053,
+          "w_end_med": 0.8858
+        }
+      }
+    },
+    "E2_Coral_31_5C_Marine_Heatwave": {
+      "label": "Acropora millepora: 27 C -> 31.5 C Marine Heatwave Bleaching",
+      "wt_viability_med": 0.503,
+      "arms": {
+        "WT_Vulnerable": {
+          "viab_med": 0.503,
+          "delta_vs_wt_med": 0.0,
+          "delta_vs_wt_p05": 0.0,
+          "delta_vs_wt_p95": 0.0,
+          "atp_nadir_med": 0.3266,
+          "w_end_med": 0.6626
+        },
+        "Uncoupler_UCP2_Only": {
+          "viab_med": 0.4256,
+          "delta_vs_wt_med": -0.0732,
+          "delta_vs_wt_p05": -0.1939,
+          "delta_vs_wt_p95": -0.0176,
+          "atp_nadir_med": 0.1102,
+          "w_end_med": 0.7317
+        },
+        "Natural_TightCoupled": {
+          "viab_med": 0.8221,
+          "delta_vs_wt_med": 0.303,
+          "delta_vs_wt_p05": 0.2244,
+          "delta_vs_wt_p95": 0.3477,
+          "atp_nadir_med": 0.8233,
+          "w_end_med": 0.8253
+        },
+        "Natural_HighO2_Affinity": {
+          "viab_med": 0.6858,
+          "delta_vs_wt_med": 0.1753,
+          "delta_vs_wt_p05": 0.114,
+          "delta_vs_wt_p95": 0.2066,
+          "atp_nadir_med": 0.6419,
+          "w_end_med": 0.7209
+        },
+        "Nutritional_BCR_Buffer": {
+          "viab_med": 0.7373,
+          "delta_vs_wt_med": 0.2313,
+          "delta_vs_wt_p05": 0.1144,
+          "delta_vs_wt_p95": 0.3678,
+          "atp_nadir_med": 0.5246,
+          "w_end_med": 0.95
+        },
+        "Combined_Haplotype_BCR": {
+          "viab_med": 0.9165,
+          "delta_vs_wt_med": 0.394,
+          "delta_vs_wt_p05": 0.2586,
+          "delta_vs_wt_p95": 0.5207,
+          "atp_nadir_med": 0.8831,
+          "w_end_med": 0.95
+        }
+      }
+    },
+    "E3_Salmon_22C_WarmRiver_Hypoxia": {
+      "label": "Salmo salar: 12 C -> 22 C Warming River + Dissolved O2 Crash",
+      "wt_viability_med": 0.2284,
+      "arms": {
+        "WT_Vulnerable": {
+          "viab_med": 0.2284,
+          "delta_vs_wt_med": 0.0,
+          "delta_vs_wt_p05": 0.0,
+          "delta_vs_wt_p95": 0.0,
+          "atp_nadir_med": 0.0407,
+          "w_end_med": 0.4115
+        },
+        "Uncoupler_UCP2_Only": {
+          "viab_med": 0.2299,
+          "delta_vs_wt_med": 0.003,
+          "delta_vs_wt_p05": -0.0106,
+          "delta_vs_wt_p95": 0.0081,
+          "atp_nadir_med": 0.0177,
+          "w_end_med": 0.4412
+        },
+        "Natural_TightCoupled": {
+          "viab_med": 0.3249,
+          "delta_vs_wt_med": 0.0954,
+          "delta_vs_wt_p05": 0.061,
+          "delta_vs_wt_p95": 0.1855,
+          "atp_nadir_med": 0.1735,
+          "w_end_med": 0.4701
+        },
+        "Natural_HighO2_Affinity": {
+          "viab_med": 0.2761,
+          "delta_vs_wt_med": 0.0468,
+          "delta_vs_wt_p05": 0.0286,
+          "delta_vs_wt_p95": 0.102,
+          "atp_nadir_med": 0.1099,
+          "w_end_med": 0.4362
+        },
+        "Nutritional_BCR_Buffer": {
+          "viab_med": 0.3391,
+          "delta_vs_wt_med": 0.1093,
+          "delta_vs_wt_p05": 0.098,
+          "delta_vs_wt_p95": 0.1325,
+          "atp_nadir_med": 0.0689,
+          "w_end_med": 0.6014
+        },
+        "Combined_Haplotype_BCR": {
+          "viab_med": 0.533,
+          "delta_vs_wt_med": 0.3041,
+          "delta_vs_wt_p05": 0.2098,
+          "delta_vs_wt_p95": 0.4881,
+          "atp_nadir_med": 0.3637,
+          "w_end_med": 0.6984
+        }
+      }
+    }
+  }
+}

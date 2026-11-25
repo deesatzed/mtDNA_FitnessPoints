@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ND4L_WT_NDUFS2",
+    "yaml_path": "/Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/data/stage10_boltz2/yamls/ND4L_WT_NDUFS2.yaml",
+    "len_A": 98,
+    "len_B": 429,
+    "total_aa": 527,
+    "ref_pdb": "9I4I",
+    "ref_chain_A": "k",
+    "ref_chain_B": "Q"
+  },
+  {
+    "name": "ND4L_Y85H_NDUFS2",
+    "yaml_path": "/Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/data/stage10_boltz2/yamls/ND4L_Y85H_NDUFS2.yaml",
+    "len_A": 98,
+    "len_B": 429,
+    "total_aa": 527,
+    "ref_pdb": "9I4I",
+    "ref_chain_A": "k",
+    "ref_chain_B": "Q"
+  },
+  {
+    "name": "CYTB_WT_CYC1",
+    "yaml_path": "/Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/data/stage10_boltz2/yamls/CYTB_WT_CYC1.yaml",
+    "len_A": 380,
+    "len_B": 241,
+    "total_aa": 621,
+    "ref_pdb": "9HZL",
+    "ref_chain_A": "J",
+    "ref_chain_B": "H"
+  },
+  {
+    "name": "CYTB_Y224H_CYC1",
+    "yaml_path": "/Users/o2satz/antigravity/mitorestorer/mtDNA_FinessPoints/data/stage10_boltz2/yamls/CYTB_Y224H_CYC1.yaml",
+    "len_A": 380,
+    "len_B": 241,
+    "total_aa": 621,
+    "ref_pdb": "9HZL",
+    "ref_chain_A": "J",
+    "ref_chain_B": "H"
+  }
+]
